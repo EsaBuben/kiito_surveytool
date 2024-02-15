@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="module">
+import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+    <script type="module" src="KIITO_kyselysivu_files/client"></script>
+
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="https://crfsd3.sse.codesandbox.io/src/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+  <script src="KIITO_kyselysivu_files/client-hook-6.js"></script><style type="text/css" data-vite-dev-id="/sandbox/src/App.module.css">._root_5lp9e_1 {
+  height: 100%;
+  font-family: sans-serif;
+  background-color: __backgroundColor__;
+  flex-basis: 100%;
+  overflow-y: auto;
+  /* __center__ */
+}
+</style><style type="text/css" data-vite-dev-id="/sandbox/src/components/_resets.module.css">:where(._storybrainResets_48zhe_1),
+:where(._storybrainResets_48zhe_1) * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+:where(._storybrainResets_48zhe_1),
+:where(._storybrainResets_48zhe_1) :not(span, a, ul, ol, li, p) {
+  display: flex;
+}
+
+:where(._storybrainResets_48zhe_1) ul,
+:where(._storybrainResets_48zhe_1) ol {
+  text-indent: 0;
+  padding-inline-start: 1.5em;
+}
+
+:where(._storybrainResets_48zhe_1) p:empty::before {
+  content: '';
+  display: inline-block;
+}
+
+:where(._storybrainResets_48zhe_1) img {
+  object-fit: contain;
+}
+
+:where(._storybrainResets_48zhe_1) svg {
+  overflow: visible;
+}
+</style><style type="text/css" data-vite-dev-id="/sandbox/src/components/Desktop2/Desktop2.module.css">._root_mdsak_1 {
+  position: relative;
+  width: 1280px;
+  height: 768px;
+  align-items: flex-start;
+  background-color: #023544;
+  overflow: hidden;
+}
+._pattern21_mdsak_9 {
+  position: absolute;
+  left: -12px;
+  top: 144px;
+  width: 1305px;
+  height: 936px;
+  background-image:/* webpackIgnore: true */ url('/assets/pattern21.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._liukuvari_mdsak_20 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1280px;
+  height: 768px;
+  background-image: linear-gradient(180deg, #023544ff 45%, #012732ba 74%, #0000 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+._kiito_logo_negative_blue1_mdsak_31 {
+  position: absolute;
+  left: 1119px;
+  top: 21px;
+  width: 121px;
+  height: 50px;
+  background-image:/* webpackIgnore: true */ url('/assets/kiito_logo_negative_blue1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._bannerTausta_mdsak_42 {
+  transform-origin: top left;
+  position: absolute;
+  left: 50%;
+  top: 94px;
+  width: 852px;
+  height: 94px;
+  border-radius: 50px 50px 0 0;
+  background-color: #fff;
+  transform: matrix(1, 0, 0, -1, 0, 0) translateX(-50%);
+}
+._nykytilakartoitusKiertotaloude_mdsak_53 {
+  color: #023544;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: calc(50% - 0.5px);
+  top: 21px;
+  width: 581px;
+  height: 86px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateX(-50%);
+}
+._sivu_mdsak_69 {
+  position: absolute;
+  left: 50%;
+  top: 107px;
+  width: 852px;
+  height: 768px;
+  border-radius: 50px 50px 0 0;
+  background-color: #fff;
+  transform: translateX(-50%);
+}
+._rectangle3_mdsak_79 {
+  position: absolute;
+  left: calc(50% - -0.5px);
+  top: 135px;
+  width: 207px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: #40b7d7;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  transform: translateX(-50%);
+}
+._kiertavatRaakaAineet_mdsak_90 {
+  color: #fff;
+  font-size: 15px;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 550px;
+  top: 141px;
+  width: 181px;
+  height: 20px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+._rectangle8_mdsak_104 {
+  position: absolute;
+  left: 267px;
+  top: 135px;
+  width: 166px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: #40b7d7;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+._palaaEtusivulle_mdsak_114 {
+  color: #fff;
+  font-size: 15px;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 312px;
+  top: 141px;
+  width: 112px;
+  height: 18px;
+  flex-direction: column;
+}
+._vector_mdsak_126 {
+  position: absolute;
+  left: 22.3437%;
+  right: 76.0156%;
+  top: 18.4896%;
+  bottom: 79.1667%;
+  overflow: visible;
+}
+._icon_mdsak_134 {
+  width: 100%;
+  height: 100%;
+}
+._kuinkaArvioisitSeuraavienToimi_mdsak_138 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 376px;
+  top: 350px;
+  width: 531px;
+  height: 34px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+._ymparistoystavallistenJaPaikal_mdsak_153 {
+  color: #023544;
+  font-size: 15px;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 271px;
+  top: 409px;
+  width: 460px;
+  height: 56px;
+  flex-direction: column;
+}
+._selvityksetMateriaalienJaRaaka_mdsak_165 {
+  color: #023544;
+  font-size: 15px;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 271px;
+  top: 491px;
+  width: 473px;
+  height: 56px;
+  flex-direction: column;
+}
+._neitseellistenRaakaAineidenJaM_mdsak_177 {
+  position: absolute;
+  left: 271px;
+  top: 578px;
+  width: 473px;
+  height: 56px;
+  flex-direction: column;
+}
+._textBlock_mdsak_185 {
+  color: #023544;
+  font-size: 15px;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+._textBlock2_mdsak_191 {
+  margin-top: 0;
+  color: #023544;
+  font-size: 15px;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+._rectangle24_mdsak_198 {
+  position: absolute;
+  left: 251px;
+  top: 228px;
+  width: 779px;
+  height: 78px;
+  border-radius: 15px;
+  background-color: #40b7d7;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+._materiaalienValintaJaVahentami_mdsak_208 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 383px;
+  top: 270px;
+  width: 531px;
+  height: 34px;
+  text-align: center;
+  align-items: center;
+  text-shadow: 0px 4px 4px #00000040;
+  flex-direction: column;
+}
+._materiaalienKestavaKaytto_mdsak_224 {
+  position: absolute;
+  left: 485px;
+  top: 241px;
+  width: 324px;
+  height: 29px;
+  text-align: center;
+  align-items: center;
+  text-shadow: 0px 4px 4px #00000040;
+  flex-direction: column;
+}
+._list_mdsak_235 {
+  font-size: 20px;
+}
+._list_mdsak_235 ::marker {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+._textBlock3_mdsak_245 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+._icBaselineQuestionMark_mdsak_252 {
+  position: absolute;
+  left: 479px;
+  top: 366px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+._maaritelmienAvaus_mdsak_260 {
+  position: absolute;
+  left: 889px;
+  top: 347px;
+  width: 27px;
+  height: 27px;
+  overflow: visible;
+  filter: drop-shadow(0px 4px 4px #00000040);
+}
+._icon2_mdsak_269 {
+  width: 100%;
+  height: 100%;
+}
+._line1_mdsak_273 {
+  position: absolute;
+  left: 769px;
+  top: 423px;
+  width: 240px;
+  max-width: 100%;
+  height: 0;
+  max-height: 100%;
+  outline: solid 1px #023544;
+}
+._ellipse2_mdsak_283 {
+  position: absolute;
+  left: 755px;
+  top: 411px;
+  width: 27px;
+  height: 27px;
+  overflow: visible;
+}
+._icon3_mdsak_291 {
+  width: 100%;
+  height: 100%;
+}
+._ellipse3_mdsak_295 {
+  position: absolute;
+  left: 815px;
+  top: 411px;
+  width: 27px;
+  height: 27px;
+  overflow: visible;
+}
+._icon4_mdsak_303 {
+  width: 100%;
+  height: 100%;
+}
+._ellipse4_mdsak_307 {
+  position: absolute;
+  left: 875px;
+  top: 411px;
+  width: 27px;
+  height: 27px;
+  overflow: visible;
+}
+._icon5_mdsak_315 {
+  width: 100%;
+  height: 100%;
+}
+._ellipse5_mdsak_319 {
+  position: absolute;
+  left: 935px;
+  top: 411px;
+  width: 27px;
+  height: 27px;
+  overflow: visible;
+}
+._icon6_mdsak_327 {
+  width: 100%;
+  height: 100%;
+}
+._ellipse6_mdsak_331 {
+  position: absolute;
+  left: 995px;
+  top: 411px;
+  width: 27px;
+  height: 27px;
+  overflow: visible;
+}
+._icon7_mdsak_339 {
+  width: 100%;
+  height: 100%;
+}
+.__1_mdsak_343 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 760px;
+  top: 444px;
+  width: 18px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.__2_mdsak_358 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 820px;
+  top: 444px;
+  width: 18px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.__3_mdsak_373 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 880px;
+  top: 444px;
+  width: 18px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.__4_mdsak_388 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 940px;
+  top: 444px;
+  width: 18px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.__5_mdsak_403 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1000px;
+  top: 444px;
+  width: 18px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+._line12_mdsak_418 {
+  position: absolute;
+  left: 769px;
+  top: 505px;
+  width: 240px;
+  max-width: 100%;
+  height: 0;
+  max-height: 100%;
+  outline: solid 1px #023544;
+}
+._ellipse22_mdsak_428 {
+  position: absolute;
+  left: 755px;
+  top: 493px;
+  width: 27px;
+  height: 27px;
+  overflow: visible;
+}
+._icon8_mdsak_436 {
+  width: 100%;
+  height: 100%;
+}
+._ellipse32_mdsak_440 {
+  position: absolute;
+  left: 815px;
+  top: 493px;
+  width: 27px;
+  height: 27px;
+  overflow: visible;
+}
+._icon9_mdsak_448 {
+  width: 100%;
+  height: 100%;
+}
+._ellipse42_mdsak_452 {
+  position: absolute;
+  left: 875px;
+  top: 493px;
+  width: 27px;
+  height: 27px;
+  overflow: visible;
+}
+._icon10_mdsak_460 {
+  width: 100%;
+  height: 100%;
+}
+._ellipse52_mdsak_464 {
+  position: absolute;
+  left: 935px;
+  top: 493px;
+  width: 27px;
+  height: 27px;
+  overflow: visible;
+}
+._icon11_mdsak_472 {
+  width: 100%;
+  height: 100%;
+}
+._ellipse62_mdsak_476 {
+  position: absolute;
+  left: 995px;
+  top: 493px;
+  width: 27px;
+  height: 27px;
+  overflow: visible;
+}
+._icon12_mdsak_484 {
+  width: 100%;
+  height: 100%;
+}
+.__12_mdsak_488 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 760px;
+  top: 526px;
+  width: 18px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.__22_mdsak_503 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 820px;
+  top: 526px;
+  width: 18px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.__32_mdsak_518 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 880px;
+  top: 526px;
+  width: 18px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.__42_mdsak_533 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 940px;
+  top: 526px;
+  width: 18px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.__52_mdsak_548 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1000px;
+  top: 526px;
+  width: 18px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+._line13_mdsak_563 {
+  position: absolute;
+  left: 769px;
+  top: 592px;
+  width: 240px;
+  max-width: 100%;
+  height: 0;
+  max-height: 100%;
+  outline: solid 1px #023544;
+}
+._ellipse23_mdsak_573 {
+  position: absolute;
+  left: 755px;
+  top: 580px;
+  width: 27px;
+  height: 27px;
+  overflow: visible;
+}
+._icon13_mdsak_581 {
+  width: 100%;
+  height: 100%;
+}
+._ellipse33_mdsak_585 {
+  position: absolute;
+  left: 815px;
+  top: 580px;
+  width: 27px;
+  height: 27px;
+  overflow: visible;
+}
+._icon14_mdsak_593 {
+  width: 100%;
+  height: 100%;
+}
+._ellipse43_mdsak_597 {
+  position: absolute;
+  left: 875px;
+  top: 580px;
+  width: 27px;
+  height: 27px;
+  overflow: visible;
+}
+._icon15_mdsak_605 {
+  width: 100%;
+  height: 100%;
+}
+._ellipse53_mdsak_609 {
+  position: absolute;
+  left: 935px;
+  top: 580px;
+  width: 27px;
+  height: 27px;
+  overflow: visible;
+}
+._icon16_mdsak_617 {
+  width: 100%;
+  height: 100%;
+}
+._ellipse63_mdsak_621 {
+  position: absolute;
+  left: 995px;
+  top: 580px;
+  width: 27px;
+  height: 27px;
+  overflow: visible;
+}
+._icon17_mdsak_629 {
+  width: 100%;
+  height: 100%;
+}
+.__13_mdsak_633 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 760px;
+  top: 613px;
+  width: 18px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.__23_mdsak_648 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 820px;
+  top: 613px;
+  width: 18px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.__33_mdsak_663 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 880px;
+  top: 613px;
+  width: 18px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.__43_mdsak_678 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 940px;
+  top: 613px;
+  width: 18px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.__53_mdsak_693 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1000px;
+  top: 613px;
+  width: 18px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+._rectangle25_mdsak_708 {
+  position: absolute;
+  left: 644px;
+  top: 677px;
+  width: 98px;
+  height: 31px;
+  border-radius: 5px;
+  background-color: #40b7d7;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+._vector2_mdsak_718 {
+  position: absolute;
+  left: 55.2344%;
+  right: 43.125%;
+  top: 89.0625%;
+  bottom: 8.5937%;
+  overflow: visible;
+}
+._icon18_mdsak_726 {
+  width: 100%;
+  height: 100%;
+}
+._jatka_mdsak_730 {
+  color: #fff;
+  font-size: 15px;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 658px;
+  top: 683px;
+  width: 75px;
+  height: 23px;
+  flex-direction: column;
+}
+._ellipse8_mdsak_742 {
+  position: absolute;
+  left: 821px;
+  top: 417px;
+  width: 15px;
+  height: 15px;
+  overflow: visible;
+}
+._icon19_mdsak_750 {
+  width: 100%;
+  height: 100%;
+}
+._ellipse9_mdsak_754 {
+  position: absolute;
+  left: 821px;
+  top: 499px;
+  width: 15px;
+  height: 15px;
+  overflow: visible;
+}
+._icon20_mdsak_762 {
+  width: 100%;
+  height: 100%;
+}
+._ellipse10_mdsak_766 {
+  position: absolute;
+  left: 821px;
+  top: 586px;
+  width: 15px;
+  height: 15px;
+  overflow: visible;
+}
+._icon21_mdsak_774 {
+  width: 100%;
+  height: 100%;
+}
+</style><style type="text/css" data-vite-dev-id="/sandbox/src/resets.css">html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  display: flex;
+  flex-basis: 100%;
+  width: 100%;
+}
+
+#root {
+  position: relative;
+}
+
+body button:not(:disabled) {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body label {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+</style></head>
+  <body>
+    <div id="root"><div class="_storybrainResets_48zhe_1 _root_5lp9e_1"><div class="_storybrainResets_48zhe_1 _root_mdsak_1"><div class="_pattern21_mdsak_9"></div><div class="_liukuvari_mdsak_20"></div><div class="_kiito_logo_negative_blue1_mdsak_31"></div><div class="_bannerTausta_mdsak_42"></div><div class="_nykytilakartoitusKiertotaloude_mdsak_53">Nykytilakartoitus kiertotalouden potentiaalista ja kyvykkyyden kypsyystasosta osana uusien liiketoimintamallien suunnittelua</div><div class="_sivu_mdsak_69"></div><div class="_rectangle3_mdsak_79"></div><div class="_kiertavatRaakaAineet_mdsak_90">Kiertävät raaka-aineet</div><div class="_rectangle8_mdsak_104"></div><div class="_palaaEtusivulle_mdsak_114">Palaa etusivulle</div><div class="_vector_mdsak_126"><svg preserveAspectRatio="none" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon_mdsak_134"><path d="M21 8.95791C21 8.51035 20.8206 8.08113 20.5013 7.76466C20.1819 7.4482 19.7488 7.27041 19.2972 7.27041L5.81081 7.27041L10.2836 2.83791C10.5843 2.51801 10.7481 2.09491 10.7403 1.65773C10.7325 1.22056 10.5538 0.803439 10.2418 0.49426C9.92985 0.18508 9.50894 0.00797676 9.06779 0.000263295C8.62665 -0.00745017 8.1997 0.154829 7.8769 0.452909L0.497996 7.76541C0.179113 8.08181 -4.1479e-07 8.51072 -3.95242e-07 8.95791C-3.75695e-07 9.4051 0.179113 9.834 0.497996 10.1504L7.8769 17.4629C8.03279 17.6287 8.22079 17.7617 8.42967 17.8539C8.63854 17.9461 8.86403 17.9957 9.09267 17.9997C9.32131 18.0037 9.54842 17.9621 9.76045 17.8772C9.97248 17.7923 10.1651 17.666 10.3268 17.5057C10.4885 17.3455 10.616 17.1546 10.7016 16.9445C10.7872 16.7344 10.8293 16.5093 10.8253 16.2827C10.8212 16.0561 10.7712 15.8327 10.6781 15.6257C10.585 15.4187 10.4509 15.2324 10.2836 15.0779L5.81081 10.6454L19.2972 10.6454C20.2371 10.6454 21 9.88941 21 8.95791Z" fill="white"></path></svg></div><div class="_kuinkaArvioisitSeuraavienToimi_mdsak_138">Kuinka arvioisit seuraavien toimintojen/kyvykkyyksien kypsyystason?</div><div class="_ymparistoystavallistenJaPaikal_mdsak_153">Ympäristöystävällisten
+ ja paikallisesti tuotettujen materiaalien ja raaka-aineiden käyttö 
+kestävien, korjattavien ja kierrätettävien tuotteiden ja pakkauksien 
+suunnnittelussa.</div><div class="_selvityksetMateriaalienJaRaaka_mdsak_165">Selvitykset
+ materiaalien ja raaka-aineiden alkuperästä ja ympäristövaikutuksista 
+sekä niihin kohdistuvista virallisista vaatimuksista jo tuotteiden ja 
+palveluiden suunnitteluvaiheessa.</div><div class="_neitseellistenRaakaAineidenJaM_mdsak_177"><div class="_textBlock_mdsak_185">Neitseellisten raaka-aineiden ja muiden materiaalien käytön vähentäminen vastuullisella ja ympäristöä huomioivalla tuote- </div><div class="_textBlock2_mdsak_191">ja palvelusuunnittelulla.</div></div><div class="_rectangle24_mdsak_198"></div><div class="_materiaalienValintaJaVahentami_mdsak_208">Materiaalien valinta ja vähentäminen</div><div class="_materiaalienKestavaKaytto_mdsak_224"><ol class="_list_mdsak_235"><li><div class="_textBlock3_mdsak_245">Materiaalien kestävä käyttö</div></li></ol></div><div class="_icBaselineQuestionMark_mdsak_252"></div><div class="_maaritelmienAvaus_mdsak_260"><svg preserveAspectRatio="none" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon2_mdsak_269"><circle cx="13.5" cy="13.5" r="13.5" fill="#40B7D7"></circle><path d="M12.53 13.85C13.3 12.46 14.78 11.64 15.64 10.41C16.55 9.12 16.04 6.71 13.46 6.71C11.77 6.71 10.94 7.99 10.59 9.05L8 7.96C8.71 5.83 10.64 4 13.45 4C15.8 4 17.41 5.07 18.23 6.41C18.93 7.56 19.34 9.71 18.26 11.31C17.06 13.08 15.91 13.62 15.29 14.76C15.04 15.22 14.94 15.52 14.94 17H12.05C12.04 16.22 11.92 14.95 12.53 13.85ZM15.46 21C15.46 22.1 14.56 23 13.46 23C12.36 23 11.46 22.1 11.46 21C11.46 19.9 12.36 19 13.46 19C14.56 19 15.46 19.9 15.46 21Z" fill="white"></path></svg></div><div class="_line1_mdsak_273"></div><div class="_ellipse2_mdsak_283"><svg preserveAspectRatio="none" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon3_mdsak_291"><circle cx="13.5" cy="13.5" r="13.5" fill="white" stroke="#023544" stroke-width="2"></circle></svg></div><div class="_ellipse3_mdsak_295"><svg preserveAspectRatio="none" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon4_mdsak_303"><circle cx="13.5" cy="13.5" r="13.5" fill="white" stroke="#023544" stroke-width="2"></circle></svg></div><div class="_ellipse4_mdsak_307"><svg preserveAspectRatio="none" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon5_mdsak_315"><circle cx="13.5" cy="13.5" r="13.5" fill="white" stroke="#023544" stroke-width="2"></circle></svg></div><div class="_ellipse5_mdsak_319"><svg preserveAspectRatio="none" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon6_mdsak_327"><circle cx="13.5" cy="13.5" r="13.5" fill="white" stroke="#023544" stroke-width="2"></circle></svg></div><div class="_ellipse6_mdsak_331"><svg preserveAspectRatio="none" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon7_mdsak_339"><circle cx="13.5" cy="13.5" r="13.5" fill="white" stroke="#023544" stroke-width="2"></circle></svg></div><div class="__1_mdsak_343">1</div><div class="__2_mdsak_358">2</div><div class="__3_mdsak_373">3</div><div class="__4_mdsak_388">4</div><div class="__5_mdsak_403">5</div><div class="_line12_mdsak_418"></div><div class="_ellipse22_mdsak_428"><svg preserveAspectRatio="none" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon8_mdsak_436"><circle cx="13.5" cy="13.5" r="13.5" fill="white" stroke="#023544" stroke-width="2"></circle></svg></div><div class="_ellipse32_mdsak_440"><svg preserveAspectRatio="none" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon9_mdsak_448"><circle cx="13.5" cy="13.5" r="13.5" fill="white" stroke="#023544" stroke-width="2"></circle></svg></div><div class="_ellipse42_mdsak_452"><svg preserveAspectRatio="none" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon10_mdsak_460"><circle cx="13.5" cy="13.5" r="13.5" fill="white" stroke="#023544" stroke-width="2"></circle></svg></div><div class="_ellipse52_mdsak_464"><svg preserveAspectRatio="none" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon11_mdsak_472"><circle cx="13.5" cy="13.5" r="13.5" fill="white" stroke="#023544" stroke-width="2"></circle></svg></div><div class="_ellipse62_mdsak_476"><svg preserveAspectRatio="none" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon12_mdsak_484"><circle cx="13.5" cy="13.5" r="13.5" fill="white" stroke="#023544" stroke-width="2"></circle></svg></div><div class="__12_mdsak_488">1</div><div class="__22_mdsak_503">2</div><div class="__32_mdsak_518">3</div><div class="__42_mdsak_533">4</div><div class="__52_mdsak_548">5</div><div class="_line13_mdsak_563"></div><div class="_ellipse23_mdsak_573"><svg preserveAspectRatio="none" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon13_mdsak_581"><circle cx="13.5" cy="13.5" r="13.5" fill="white" stroke="#023544" stroke-width="2"></circle></svg></div><div class="_ellipse33_mdsak_585"><svg preserveAspectRatio="none" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon14_mdsak_593"><circle cx="13.5" cy="13.5" r="13.5" fill="white" stroke="#023544" stroke-width="2"></circle></svg></div><div class="_ellipse43_mdsak_597"><svg preserveAspectRatio="none" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon15_mdsak_605"><circle cx="13.5" cy="13.5" r="13.5" fill="white" stroke="#023544" stroke-width="2"></circle></svg></div><div class="_ellipse53_mdsak_609"><svg preserveAspectRatio="none" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon16_mdsak_617"><circle cx="13.5" cy="13.5" r="13.5" fill="white" stroke="#023544" stroke-width="2"></circle></svg></div><div class="_ellipse63_mdsak_621"><svg preserveAspectRatio="none" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon17_mdsak_629"><circle cx="13.5" cy="13.5" r="13.5" fill="white" stroke="#023544" stroke-width="2"></circle></svg></div><div class="__13_mdsak_633">1</div><div class="__23_mdsak_648">2</div><div class="__33_mdsak_663">3</div><div class="__43_mdsak_678">4</div><div class="__53_mdsak_693">5</div><div class="_rectangle25_mdsak_708"></div><div class="_vector2_mdsak_718"><svg preserveAspectRatio="none" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon18_mdsak_726"><path d="M3.00092e-07 9.04209C3.05429e-07 9.48965 0.179405 9.91887 0.498747 10.2353C0.818088 10.5518 1.25121 10.7296 1.70282 10.7296L15.1892 10.7296L10.7164 15.1621C10.4157 15.482 10.2519 15.9051 10.2597 16.3423C10.2675 16.7794 10.4462 17.1966 10.7582 17.5057C11.0702 17.8149 11.4911 17.992 11.9322 17.9997C12.3734 18.0074 12.8003 17.8452 13.1231 17.5471L20.502 10.2346C20.8209 9.91819 21 9.48928 21 9.04209C21 8.5949 20.8209 8.166 20.502 7.84959L13.1231 0.537094C12.9672 0.371298 12.7792 0.238319 12.5703 0.146087C12.3615 0.0538547 12.136 0.00426049 11.9073 0.000262732C11.6787 -0.00373503 11.4516 0.0379451 11.2396 0.122817C11.0275 0.20769 10.8349 0.334015 10.6732 0.494257C10.5115 0.654499 10.384 0.845376 10.2984 1.0555C10.2128 1.26562 10.1707 1.49069 10.1747 1.71727C10.1788 1.94385 10.2288 2.16731 10.3219 2.3743C10.415 2.5813 10.5491 2.7676 10.7164 2.92209L15.1892 7.35459L1.70282 7.35459C0.762866 7.35459 2.88984e-07 8.11059 3.00092e-07 9.04209Z" fill="white"></path></svg></div><div class="_jatka_mdsak_730">Jatka</div><div class="_ellipse8_mdsak_742"><svg preserveAspectRatio="none" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon19_mdsak_750"><circle cx="7.5" cy="7.5" r="7.5" fill="#40B7D7"></circle></svg></div><div class="_ellipse9_mdsak_754"><svg preserveAspectRatio="none" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon20_mdsak_762"><circle cx="7.5" cy="7.5" r="7.5" fill="#40B7D7"></circle></svg></div><div class="_ellipse10_mdsak_766"><svg preserveAspectRatio="none" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon21_mdsak_774"><circle cx="7.5" cy="7.5" r="7.5" fill="#40B7D7"></circle></svg></div></div></div></div>
+    <script type="module" src="KIITO_kyselysivu_files/main.tsx"></script>
+  <script defer="defer" src="KIITO_kyselysivu_files/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon="{&quot;rayId&quot;:&quot;855c4d2c0a5d0d52&quot;,&quot;version&quot;:&quot;2024.2.0&quot;,&quot;token&quot;:&quot;7449176f14aa420c959831edd48bd5b7&quot;}" crossorigin="anonymous"></script>
+
+
+</body></html>

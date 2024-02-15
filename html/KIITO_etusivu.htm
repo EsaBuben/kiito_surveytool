@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="module">
+import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+    <script type="module" src="KIITO_etusivu_files/client"></script>
+
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="https://85h8gj.sse.codesandbox.io/src/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+  <script src="KIITO_etusivu_files/client-hook-6.js"></script><style type="text/css" data-vite-dev-id="/sandbox/src/App.module.css">._root_5lp9e_1 {
+  height: 100%;
+  font-family: sans-serif;
+  background-color: __backgroundColor__;
+  flex-basis: 100%;
+  overflow-y: auto;
+  /* __center__ */
+}
+</style><style type="text/css" data-vite-dev-id="/sandbox/src/components/_resets.module.css">:where(._storybrainResets_48zhe_1),
+:where(._storybrainResets_48zhe_1) * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+:where(._storybrainResets_48zhe_1),
+:where(._storybrainResets_48zhe_1) :not(span, a, ul, ol, li, p) {
+  display: flex;
+}
+
+:where(._storybrainResets_48zhe_1) ul,
+:where(._storybrainResets_48zhe_1) ol {
+  text-indent: 0;
+  padding-inline-start: 1.5em;
+}
+
+:where(._storybrainResets_48zhe_1) p:empty::before {
+  content: '';
+  display: inline-block;
+}
+
+:where(._storybrainResets_48zhe_1) img {
+  object-fit: contain;
+}
+
+:where(._storybrainResets_48zhe_1) svg {
+  overflow: visible;
+}
+</style><style type="text/css" data-vite-dev-id="/sandbox/src/components/Desktop1/Desktop1.module.css">._root_8uzok_1 {
+  position: relative;
+  width: 1280px;
+  height: 768px;
+  align-items: flex-start;
+  background-color: #023544;
+  overflow: hidden;
+}
+._pattern21_8uzok_9 {
+  position: absolute;
+  left: -12px;
+  top: 144px;
+  width: 1305px;
+  height: 936px;
+  background-image:/* webpackIgnore: true */ url('/assets/pattern21.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._liukuvari_8uzok_20 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1280px;
+  height: 768px;
+  background-image: linear-gradient(180deg, #023544ff 45%, #012732ba 74%, #0000 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+._kiito_logo_negative_blue1_8uzok_31 {
+  position: absolute;
+  left: 1119px;
+  top: 21px;
+  width: 121px;
+  height: 50px;
+  background-image:/* webpackIgnore: true */ url('/assets/kiito_logo_negative_blue1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._sivu_8uzok_42 {
+  position: absolute;
+  left: 50%;
+  top: 107px;
+  width: 852px;
+  height: 768px;
+  border-radius: 50px 50px 0 0;
+  background-color: #fff;
+  transform: translateX(-50%);
+}
+._rectangle1_8uzok_52 {
+  position: absolute;
+  left: 447px;
+  top: 147px;
+  width: 266px;
+  height: 23px;
+  background-color: #f9f9f9;
+  box-shadow: inset 0px 3px 4px 0px #00000040;
+}
+._rectangle2_8uzok_61 {
+  position: absolute;
+  left: 837px;
+  top: 144px;
+  width: 97px;
+  height: 23px;
+  background-color: #f9f9f9;
+  box-shadow: inset 0px 3px 4px 0px #00000040;
+}
+._yrityksenNimi_8uzok_70 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 334px;
+  top: 149px;
+  width: 136px;
+  height: 23px;
+  flex-direction: column;
+}
+._valitseKiertotaloudenLiiketoim_8uzok_83 {
+  color: #023544;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 248px;
+  width: 214px;
+  height: 62px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateX(-50%);
+}
+._yritys_8uzok_99 {
+  color: #bdbdbd;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 454px;
+  top: 149px;
+  width: 136px;
+  height: 23px;
+  flex-direction: column;
+}
+._ppKkVvvv_8uzok_112 {
+  color: #bdbdbd;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 844px;
+  top: 147px;
+  width: 136px;
+  height: 23px;
+  flex-direction: column;
+}
+._paivamaara_8uzok_125 {
+  color: #023544;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 745px;
+  top: 147px;
+  width: 92px;
+  height: 23px;
+  flex-direction: column;
+}
+._rectangle7_8uzok_138 {
+  position: absolute;
+  left: calc(50% - 0.5px);
+  top: 517px;
+  width: 207px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: #40b7d7;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  transform: translateX(-50%);
+}
+._resurssienTalteenotto_8uzok_149 {
+  color: #fff;
+  font-size: 15px;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 549px;
+  top: 523px;
+  width: 181px;
+  height: 20px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+._rectangle6_8uzok_163 {
+  position: absolute;
+  left: calc(50% - -0.5px);
+  top: 473px;
+  width: 207px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: #40b7d7;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  transform: translateX(-50%);
+}
+._elinkaarenPidentaminen_8uzok_174 {
+  color: #fff;
+  font-size: 15px;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 550px;
+  top: 479px;
+  width: 181px;
+  height: 20px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+._rectangle5_8uzok_188 {
+  position: absolute;
+  left: calc(50% - 0.5px);
+  top: 429px;
+  width: 207px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: #40b7d7;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  transform: translateX(-50%);
+}
+._jakamisalustat_8uzok_199 {
+  color: #fff;
+  font-size: 15px;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 549px;
+  top: 435px;
+  width: 181px;
+  height: 20px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+._rectangle4_8uzok_213 {
+  position: absolute;
+  left: calc(50% - -0.5px);
+  top: 385px;
+  width: 207px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: #40b7d7;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  transform: translateX(-50%);
+}
+._tuotePalveluna_8uzok_224 {
+  color: #fff;
+  font-size: 15px;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 550px;
+  top: 391px;
+  width: 181px;
+  height: 20px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+._rectangle3_8uzok_238 {
+  position: absolute;
+  left: calc(50% - 0.5px);
+  top: 341px;
+  width: 207px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: #40b7d7;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  transform: translateX(-50%);
+}
+._kiertavatRaakaAineet_8uzok_249 {
+  color: #fff;
+  font-size: 15px;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 549px;
+  top: 347px;
+  width: 181px;
+  height: 20px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+._rectangle26_8uzok_263 {
+  position: absolute;
+  left: 749px;
+  top: 345px;
+  width: 79px;
+  height: 24px;
+  background-color: #d9d9d900;
+}
+._tulokset_8uzok_271 {
+  color: #40b7d7;
+  font-size: 15px;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-decoration: underline;
+  position: absolute;
+  left: 751px;
+  top: 347px;
+  width: 61px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+._vector_8uzok_286 {
+  position: absolute;
+  left: 63.4375%;
+  right: 35.625%;
+  top: 45.9635%;
+  bottom: 52.7344%;
+  overflow: visible;
+}
+._icon_8uzok_294 {
+  width: 100%;
+  height: 100%;
+}
+._rectangle262_8uzok_298 {
+  position: absolute;
+  left: 749px;
+  top: 391px;
+  width: 79px;
+  height: 24px;
+  background-color: #d9d9d900;
+}
+._tulokset2_8uzok_306 {
+  color: #c2c2c2;
+  font-size: 15px;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-decoration: underline;
+  position: absolute;
+  left: 751px;
+  top: 393px;
+  width: 61px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+._vector2_8uzok_321 {
+  position: absolute;
+  left: 63.4375%;
+  right: 35.625%;
+  top: 51.9531%;
+  bottom: 46.7448%;
+  overflow: visible;
+}
+._icon2_8uzok_329 {
+  width: 100%;
+  height: 100%;
+}
+._rectangle263_8uzok_333 {
+  position: absolute;
+  left: 749px;
+  top: 435px;
+  width: 79px;
+  height: 24px;
+  background-color: #d9d9d900;
+}
+._tulokset3_8uzok_341 {
+  color: #c2c2c2;
+  font-size: 15px;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-decoration: underline;
+  position: absolute;
+  left: 751px;
+  top: 437px;
+  width: 61px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+._vector3_8uzok_356 {
+  position: absolute;
+  left: 63.4375%;
+  right: 35.625%;
+  top: 57.6823%;
+  bottom: 41.0156%;
+  overflow: visible;
+}
+._icon3_8uzok_364 {
+  width: 100%;
+  height: 100%;
+}
+._rectangle264_8uzok_368 {
+  position: absolute;
+  left: 747px;
+  top: 479px;
+  width: 79px;
+  height: 24px;
+  background-color: #d9d9d900;
+}
+._tulokset4_8uzok_376 {
+  color: #c2c2c2;
+  font-size: 15px;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-decoration: underline;
+  position: absolute;
+  left: 749px;
+  top: 481px;
+  width: 61px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+._vector4_8uzok_391 {
+  position: absolute;
+  left: 63.2813%;
+  right: 35.7812%;
+  top: 63.4115%;
+  bottom: 35.2865%;
+  overflow: visible;
+}
+._icon4_8uzok_399 {
+  width: 100%;
+  height: 100%;
+}
+._rectangle265_8uzok_403 {
+  position: absolute;
+  left: 747px;
+  top: 521px;
+  width: 79px;
+  height: 24px;
+  background-color: #d9d9d900;
+}
+._tulokset5_8uzok_411 {
+  color: #c2c2c2;
+  font-size: 15px;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-decoration: underline;
+  position: absolute;
+  left: 749px;
+  top: 523px;
+  width: 61px;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+._vector5_8uzok_426 {
+  position: absolute;
+  left: 63.2813%;
+  right: 35.7812%;
+  top: 68.8802%;
+  bottom: 29.8177%;
+  overflow: visible;
+}
+._icon5_8uzok_434 {
+  width: 100%;
+  height: 100%;
+}
+._uUSI_logojono_transparentback1_8uzok_438 {
+  position: absolute;
+  left: 402px;
+  top: 659px;
+  width: 503px;
+  height: 84px;
+  background-image:/* webpackIgnore: true */ url('/assets/uUSI_logojono_transparentback1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._bannerTausta_8uzok_449 {
+  transform-origin: top left;
+  position: absolute;
+  left: 50%;
+  top: 94px;
+  width: 852px;
+  height: 94px;
+  border-radius: 50px 50px 0 0;
+  background-color: #fff;
+  transform: matrix(1, 0, 0, -1, 0, 0) translateX(-50%);
+}
+._nykytilakartoitusKiertotaloude_8uzok_460 {
+  color: #023544;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Outfit, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: calc(50% - 0.5px);
+  top: 21px;
+  width: 581px;
+  height: 86px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateX(-50%);
+}
+</style><style type="text/css" data-vite-dev-id="/sandbox/src/resets.css">html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  display: flex;
+  flex-basis: 100%;
+  width: 100%;
+}
+
+#root {
+  position: relative;
+}
+
+body button:not(:disabled) {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body label {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+</style></head>
+  <body>
+    <div id="root"><div class="_storybrainResets_48zhe_1 _root_5lp9e_1"><div class="_storybrainResets_48zhe_1 _root_8uzok_1"><div class="_pattern21_8uzok_9"></div><div class="_liukuvari_8uzok_20"></div><div class="_kiito_logo_negative_blue1_8uzok_31"></div><div class="_sivu_8uzok_42"></div><div class="_rectangle1_8uzok_52"></div><div class="_rectangle2_8uzok_61"></div><div class="_yrityksenNimi_8uzok_70">Yrityksen nimi</div><div class="_valitseKiertotaloudenLiiketoim_8uzok_83">Valitse kiertotalouden liiketoimintamalli</div><div class="_yritys_8uzok_99">Yritys</div><div class="_ppKkVvvv_8uzok_112">pp.kk.vvvv</div><div class="_paivamaara_8uzok_125">Päivämäärä</div><div class="_rectangle7_8uzok_138"></div><div class="_resurssienTalteenotto_8uzok_149">Resurssien talteenotto</div><div class="_rectangle6_8uzok_163"></div><div class="_elinkaarenPidentaminen_8uzok_174">Elinkaaren pidentäminen</div><div class="_rectangle5_8uzok_188"></div><div class="_jakamisalustat_8uzok_199">Jakamisalustat</div><div class="_rectangle4_8uzok_213"></div><div class="_tuotePalveluna_8uzok_224">Tuote palveluna</div><div class="_rectangle3_8uzok_238"></div><div class="_kiertavatRaakaAineet_8uzok_249">Kiertävät raaka-aineet</div><div class="_rectangle26_8uzok_263"></div><div class="_tulokset_8uzok_271">Tulokset</div><div class="_vector_8uzok_286"><svg preserveAspectRatio="none" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon_8uzok_294"><path d="M1.22544e-08 5.02338C1.52194e-08 5.27203 0.102517 5.51048 0.284998 5.6863C0.467479 5.86211 0.714976 5.96088 0.973042 5.96088L8.67954 5.96088L6.12368 8.42338C5.9518 8.6011 5.85823 8.83616 5.86268 9.07904C5.86713 9.32191 5.96925 9.55365 6.14752 9.72541C6.3258 9.89718 6.56632 9.99557 6.8184 9.99985C7.07049 10.0041 7.31446 9.91398 7.49891 9.74838L11.7154 5.68589C11.8976 5.5101 12 5.27182 12 5.02338C12 4.77495 11.8976 4.53667 11.7154 4.36088L7.49891 0.298385C7.40983 0.206277 7.30241 0.132399 7.18305 0.0811592C7.06369 0.0299193 6.93484 0.00236694 6.80419 0.000145964C6.67354 -0.00207501 6.54376 0.0210806 6.4226 0.0682319C6.30144 0.115383 6.19138 0.185564 6.09898 0.274587C6.00658 0.363611 5.93374 0.469653 5.8848 0.586388C5.83586 0.703124 5.81183 0.82816 5.81413 0.954038C5.81644 1.07992 5.84504 1.20406 5.89822 1.31906C5.9514 1.43406 6.02808 1.53756 6.12368 1.62339L8.67954 4.08588L0.973042 4.08589C0.435923 4.08589 6.08326e-09 4.50588 1.22544e-08 5.02338Z" fill="#40B7D7"></path></svg></div><div class="_rectangle262_8uzok_298"></div><div class="_tulokset2_8uzok_306">Tulokset</div><div class="_vector2_8uzok_321"><svg preserveAspectRatio="none" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon2_8uzok_329"><path d="M1.22544e-08 5.02338C1.52194e-08 5.27203 0.102517 5.51048 0.284998 5.6863C0.467479 5.86211 0.714976 5.96088 0.973042 5.96088L8.67954 5.96088L6.12368 8.42338C5.9518 8.6011 5.85823 8.83616 5.86268 9.07904C5.86713 9.32191 5.96925 9.55365 6.14752 9.72541C6.3258 9.89718 6.56632 9.99557 6.8184 9.99985C7.07049 10.0041 7.31446 9.91398 7.49891 9.74838L11.7154 5.68589C11.8976 5.5101 12 5.27182 12 5.02338C12 4.77495 11.8976 4.53667 11.7154 4.36088L7.49891 0.298385C7.40983 0.206277 7.30241 0.132399 7.18305 0.0811592C7.06369 0.0299193 6.93484 0.00236694 6.80419 0.000145964C6.67354 -0.00207501 6.54376 0.0210806 6.4226 0.0682319C6.30144 0.115383 6.19138 0.185564 6.09898 0.274587C6.00658 0.363611 5.93374 0.469653 5.8848 0.586388C5.83586 0.703124 5.81183 0.82816 5.81413 0.954038C5.81644 1.07992 5.84504 1.20406 5.89822 1.31906C5.9514 1.43406 6.02808 1.53756 6.12368 1.62339L8.67954 4.08588L0.973042 4.08589C0.435923 4.08589 6.08326e-09 4.50588 1.22544e-08 5.02338Z" fill="#C2C2C2"></path></svg></div><div class="_rectangle263_8uzok_333"></div><div class="_tulokset3_8uzok_341">Tulokset</div><div class="_vector3_8uzok_356"><svg preserveAspectRatio="none" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon3_8uzok_364"><path d="M1.22544e-08 5.02338C1.52194e-08 5.27203 0.102517 5.51048 0.284998 5.6863C0.467479 5.86211 0.714976 5.96088 0.973042 5.96088L8.67954 5.96088L6.12368 8.42338C5.9518 8.6011 5.85823 8.83616 5.86268 9.07904C5.86713 9.32191 5.96925 9.55365 6.14752 9.72541C6.3258 9.89718 6.56632 9.99557 6.8184 9.99985C7.07049 10.0041 7.31446 9.91398 7.49891 9.74838L11.7154 5.68589C11.8976 5.5101 12 5.27182 12 5.02338C12 4.77495 11.8976 4.53667 11.7154 4.36088L7.49891 0.298385C7.40983 0.206277 7.30241 0.132399 7.18305 0.0811592C7.06369 0.0299193 6.93484 0.00236694 6.80419 0.000145964C6.67354 -0.00207501 6.54376 0.0210806 6.4226 0.0682319C6.30144 0.115383 6.19138 0.185564 6.09898 0.274587C6.00658 0.363611 5.93374 0.469653 5.8848 0.586388C5.83586 0.703124 5.81183 0.82816 5.81413 0.954038C5.81644 1.07992 5.84504 1.20406 5.89822 1.31906C5.9514 1.43406 6.02808 1.53756 6.12368 1.62339L8.67954 4.08588L0.973042 4.08589C0.435923 4.08589 6.08326e-09 4.50588 1.22544e-08 5.02338Z" fill="#C2C2C2"></path></svg></div><div class="_rectangle264_8uzok_368"></div><div class="_tulokset4_8uzok_376">Tulokset</div><div class="_vector4_8uzok_391"><svg preserveAspectRatio="none" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon4_8uzok_399"><path d="M1.22544e-08 5.02338C1.52194e-08 5.27203 0.102517 5.51048 0.284998 5.6863C0.467479 5.86211 0.714976 5.96088 0.973042 5.96088L8.67954 5.96088L6.12368 8.42338C5.9518 8.6011 5.85823 8.83616 5.86268 9.07904C5.86713 9.32191 5.96925 9.55365 6.14752 9.72541C6.3258 9.89718 6.56632 9.99557 6.8184 9.99985C7.07049 10.0041 7.31446 9.91398 7.49891 9.74838L11.7154 5.68589C11.8976 5.5101 12 5.27182 12 5.02338C12 4.77495 11.8976 4.53667 11.7154 4.36088L7.49891 0.298385C7.40983 0.206277 7.30241 0.132399 7.18305 0.0811592C7.06369 0.0299193 6.93484 0.00236694 6.80419 0.000145964C6.67354 -0.00207501 6.54376 0.0210806 6.4226 0.0682319C6.30144 0.115383 6.19138 0.185564 6.09898 0.274587C6.00658 0.363611 5.93374 0.469653 5.8848 0.586388C5.83586 0.703124 5.81183 0.82816 5.81413 0.954038C5.81644 1.07992 5.84504 1.20406 5.89822 1.31906C5.9514 1.43406 6.02808 1.53756 6.12368 1.62339L8.67954 4.08588L0.973042 4.08589C0.435923 4.08589 6.08326e-09 4.50588 1.22544e-08 5.02338Z" fill="#C2C2C2"></path></svg></div><div class="_rectangle265_8uzok_403"></div><div class="_tulokset5_8uzok_411">Tulokset</div><div class="_vector5_8uzok_426"><svg preserveAspectRatio="none" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon5_8uzok_434"><path d="M1.22544e-08 5.02338C1.52194e-08 5.27203 0.102517 5.51048 0.284998 5.6863C0.467479 5.86211 0.714976 5.96088 0.973042 5.96088L8.67954 5.96088L6.12368 8.42338C5.9518 8.6011 5.85823 8.83616 5.86268 9.07904C5.86713 9.32191 5.96925 9.55365 6.14752 9.72541C6.3258 9.89718 6.56632 9.99557 6.8184 9.99985C7.07049 10.0041 7.31446 9.91398 7.49891 9.74838L11.7154 5.68589C11.8976 5.5101 12 5.27182 12 5.02338C12 4.77495 11.8976 4.53667 11.7154 4.36088L7.49891 0.298385C7.40983 0.206277 7.30241 0.132399 7.18305 0.0811592C7.06369 0.0299193 6.93484 0.00236694 6.80419 0.000145964C6.67354 -0.00207501 6.54376 0.0210806 6.4226 0.0682319C6.30144 0.115383 6.19138 0.185564 6.09898 0.274587C6.00658 0.363611 5.93374 0.469653 5.8848 0.586388C5.83586 0.703124 5.81183 0.82816 5.81413 0.954038C5.81644 1.07992 5.84504 1.20406 5.89822 1.31906C5.9514 1.43406 6.02808 1.53756 6.12368 1.62339L8.67954 4.08588L0.973042 4.08589C0.435923 4.08589 6.08326e-09 4.50588 1.22544e-08 5.02338Z" fill="#C2C2C2"></path></svg></div><div class="_uUSI_logojono_transparentback1_8uzok_438"></div><div class="_bannerTausta_8uzok_449"></div><div class="_nykytilakartoitusKiertotaloude_8uzok_460">Nykytilakartoitus kiertotalouden potentiaalista ja kyvykkyyden kypsyystasosta osana uusien liiketoimintamallien suunnittelua</div></div></div></div>
+    <script type="module" src="KIITO_etusivu_files/main.tsx"></script>
+  <script defer="defer" src="KIITO_etusivu_files/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon="{&quot;rayId&quot;:&quot;855c4c7e5f880a40&quot;,&quot;version&quot;:&quot;2024.2.0&quot;,&quot;token&quot;:&quot;7449176f14aa420c959831edd48bd5b7&quot;}" crossorigin="anonymous"></script>
+
+
+</body></html>
