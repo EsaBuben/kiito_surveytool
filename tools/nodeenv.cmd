@@ -1,7 +1,7 @@
 @echo off
 echo Setting Node.js paths
 set HOMEDRIVE=c:
-set HOMEPATH=\Users\Ebu\Documents\GitHub\kiito_surveytool
+set HOMEPATH=\Users\Ebu\Documents\GitHub\kiito_surveytool\kiito_surveytool
 set HOME=%HOMEDRIVE%%HOMEPATH%
 md %HOME%
 echo Home is set to %HOME%
