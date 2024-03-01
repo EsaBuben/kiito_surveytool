@@ -133,4 +133,16 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+node-v21.6.1-win-x64/CHANGELOG.md
+node-v21.6.1-win-x64/corepack
+node-v21.6.1-win-x64/corepack.cmd
+node-v21.6.1-win-x64/install_tools.bat
+node-v21.6.1-win-x64/LICENSE
+node-v21.6.1-win-x64/node.exe
+node-v21.6.1-win-x64/nodevars.bat
+node-v21.6.1-win-x64/npm
+node-v21.6.1-win-x64/npm.cmd
+node-v21.6.1-win-x64/npx
+node-v21.6.1-win-x64/npx.cmd
+node-v21.6.1-win-x64/README.md
 tools/nodeenv.cmd
