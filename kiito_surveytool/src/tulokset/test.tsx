@@ -7,11 +7,13 @@ tasks:
 - latausnappi
 */
 import {Taulukko} from './taulukko';
+import {TabChoiceBar} from './TabChoiceBar';
 
 export function Tulokset(props:any){
 
   return( <div>
-    <Taulukko />
+    <TabChoiceBar />
+    {/* <Taulukko /> */}
 
 
   </div>);
