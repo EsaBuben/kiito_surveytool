@@ -1,6 +1,6 @@
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-
+import BigArrow from './BigArrow.svg';
 export function TitleBar(props:any){
   const Title : string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
   const subTitle : string = "Lorem ipsum dolor sit amet."
@@ -14,6 +14,7 @@ export function TitleBar(props:any){
     }}
     >
     <Typography sx={{textAlign:"center", fontWeight:"bold"}} variant="h5">{Title}</Typography>
+    <img src={BigArrow} />
     <Typography sx={{textAlign:"center", fontWeight:"bold"}} variant="subtitle1">{subTitle}</Typography>
   </Paper>)
 }
