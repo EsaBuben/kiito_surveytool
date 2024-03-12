@@ -12,12 +12,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("src/assets/tausta.jpg");
+  background-image: url("src/assets/Tausta.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
-  
+
 }
 
 
@@ -32,4 +32,3 @@ body {
   min-height: 50vh;
   padding: 0;
 }
-
