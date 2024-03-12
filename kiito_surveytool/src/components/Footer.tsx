@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <Container>
+    <Container sx={{textAlign:'center'}}>
       <img src={'src/assets/logo.jpg'} alt="logo" />
     </Container>
 

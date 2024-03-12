@@ -10,7 +10,7 @@ const Etusivu = () => {
     alignItems='center'
     justifyContent="center"
     height='100vh'
-    textAlign='center'
+    //textAlign='center'
     >
       <Header />
       <Content />
