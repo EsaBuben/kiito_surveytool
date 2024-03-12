@@ -23,11 +23,7 @@ const Qcategories = (props : any) => (
       sx={{boxShadow:15, borderRadius:2}}
       onClick={() => props.setValittu
       (category.name)}
-      style={{
-        backgroundColor: category.name === 
-        props.valittu ? 'blue' : undefined,
-        color: 'white'
-      }}
+  
       key={category.name}
       >
 
