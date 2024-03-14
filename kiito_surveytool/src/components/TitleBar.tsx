@@ -1,9 +1,30 @@
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { LowerButtons } from './LowerButtons';
+import json from '../test.json'
+import { useState } from 'react';
+
 export function TitleBar(){
-  const Title : string = "1. Materiaalien kestävä käyttä"
-  const subTitle : string = "Materiaalen valinta ja vähentäminen"
+
+  let title : string[] = ['sivu0']
+  let sub : string[] = ['sub0']
+
+  for(let i = 0; i < json.sivut[0].kategoriat.length; i++)
+  {
+    title.push(json.sivut[0].kategoriat[i].otsikko) 
+  }
+
+  for(let i = 0; i < json.sivut[0].kategoriat.length; i++)
+  {
+    for(let j = 0; j < json.sivut[0].kategoriat[i].tasot.length; j++)
+    {
+      sub.push(json.sivut[0].kategoriat[i].tasot[j].alaotsikko) 
+    }
+  }
+
+  const Title : string = "1. " + title[1]
+  const subTitle : string = sub[1]
 
   return(<Paper
     sx={{

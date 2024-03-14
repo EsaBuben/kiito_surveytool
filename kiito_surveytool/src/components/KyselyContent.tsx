@@ -4,6 +4,7 @@ import { Instruction, Questions, } from '.'
 import { TitleButton } from './TitleButton';
 import { TitleBar } from './TitleBar';
 import { LowerButtons } from './LowerButtons';
+import { useState } from 'react';
 
 
 const KyselyContent = () => {
@@ -19,7 +20,7 @@ const KyselyContent = () => {
       color: 'black',
     }}>
         <TitleButton />
-        <TitleBar />
+        <TitleBar  />
         <Instruction />
         <Questions />
         <LowerButtons />

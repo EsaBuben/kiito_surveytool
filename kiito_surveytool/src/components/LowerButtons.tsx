@@ -2,9 +2,21 @@ import {Button} from '@mui/base/Button';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import { useState } from 'react';
+import json from '../test.json';
+
+
 export function LowerButtons(props:any){
 
 let [page, setPage] = useState(1)
+let max = 0
+
+for(let i = 0; i < json.sivut[0].kategoriat.length; i++)
+{
+  for(let j = 0; j < json.sivut[0].kategoriat[i].tasot.length; j++)
+  {
+      max = max + 1   
+  }
+}
 
 return (
     <div style={{
@@ -35,7 +47,7 @@ return (
   </Button>
 
 
-  <Button onClick={()=>{if(page !== 5)setPage(page+1)}} style={{
+  <Button onClick={()=>{if(page !== max)setPage(page+1)}} style={{
     background:'#039BE5',
     opacity:.5,
     border:"none",
