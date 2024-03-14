@@ -3,15 +3,19 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
+import Kyssarit from '../test.json';
+import { useState } from 'react';
+
+
 
 export default function Questions() {
+  
   return (
     <>
-    <div style={{display: "flex", width: "80%", margin: "auto", alignItems: "center", fontFamily: "arial"}}>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Curabitur euismod velit id est varius, eget aliquam velit condimentum.</p>
-    <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label"></FormLabel>
+    <div style={{display: "flex", width: "80%",  fontFamily: "arial", marginBottom: '30px'}}>
+    <FormControl sx={{flexDirection: 'row'}}>
+      <FormLabel id="demo-row-radio-buttons-group-label" sx={{width:'50%'}} >Ympäristöystävällisten ja paikallisesti tuotettujen materiaalien ja raaka-aineiden käyttö  kestävien, 
+      korjattavien ja kierrätettävien tuotteiden ja pakkauksien suunnittelussa.</FormLabel>
       <RadioGroup
         row
         aria-labelledby="demo-row-radio-buttons-group-label"
@@ -27,11 +31,10 @@ export default function Questions() {
     </div>
 
 
-    <div style={{display: "flex", width: "80%", margin: "auto", alignItems: "center", fontFamily: "arial", padding: "30px"}}>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Curabitur euismod velit id est varius, eget aliquam velit condimentum.</p>
-    <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label"></FormLabel>
+    <div style={{display: "flex", width: "80%",  fontFamily: "arial", marginBottom: '30px'}}>
+    <FormControl sx={{flexDirection: 'row'}}>
+      <FormLabel id="demo-row-radio-buttons-group-label" sx={{width:'50%'}} >Selvitykset materiaalien ja raaka-aineiden alkuperästä ja ympäristövaikutuksista 
+      sekä niihin kohdistuvista virall isista vaatimuksista jo tuotteiden ja palveluiden suunnitteluvaiheessa.</FormLabel>
       <RadioGroup
         row
         aria-labelledby="demo-row-radio-buttons-group-label"
@@ -47,11 +50,10 @@ export default function Questions() {
     </div>
 
 
-    <div style={{display: "flex", width: "80%", margin: "auto", alignItems: "center", fontFamily: "arial"}}>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Curabitur euismod velit id est varius, eget aliquam velit condimentum.</p>
-    <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label"></FormLabel>
+    <div style={{display: "flex", width: "80%",  fontFamily: "arial", marginBottom: '30px'}}>
+    <FormControl sx={{flexDirection: 'row'}}>
+      <FormLabel id="demo-row-radio-buttons-group-label" sx={{width:'50%'}} >Neitseellisten raaka-aineiden ja muiden materiaalien käytön
+       vähentäminen vastuullisella ja ympäristöä huomioivalla tuote- ja palvelusuunnittelulla</FormLabel>
       <RadioGroup
         row
         aria-labelledby="demo-row-radio-buttons-group-label"

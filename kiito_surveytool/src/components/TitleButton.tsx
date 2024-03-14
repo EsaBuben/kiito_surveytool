@@ -1,12 +1,10 @@
 import {Button} from '@mui/base/Button';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-export function TitleButton(props:any){
+export function TitleButton(){
 
 return (
     <div style={{
-        display: 'block',
-        margin: "auto",
         width:"80%",
         }}>
     <Button style={{
@@ -16,8 +14,9 @@ return (
     padding: "10px",
     color: "white",
     borderRadius: 10,
-    marginBottom: "10px",
+    marginBottom: "60px",
     cursor: "pointer",
+    marginTop: '30px'
   }}>
     <Stack direction="row" spacing={1}>
       <Typography>
