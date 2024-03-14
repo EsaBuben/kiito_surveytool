@@ -1,6 +1,6 @@
 import React from 'react'
 import { Stack } from '@mui/material'
-import { Header, Footer, Content } from '.'
+import { Header, Content } from '.'
 
 const Etusivu = () => {
   return (
