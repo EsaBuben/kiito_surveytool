@@ -1,9 +1,9 @@
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import { LowerButtons } from './LowerButtons';
 import json from '../test.json'
-import { useState } from 'react';
+import { testi } from './KyselyContent';
+
 
 export function TitleBar(){
 
@@ -12,7 +12,8 @@ export function TitleBar(){
 
   for(let i = 0; i < json.sivut[0].kategoriat.length; i++)
   {
-    title.push(json.sivut[0].kategoriat[i].otsikko) 
+    title.push(i+1 + ". " + json.sivut[0].kategoriat[i].otsikko)
+    title.push(i+1 + ". " + json.sivut[0].kategoriat[i].otsikko)
   }
 
   for(let i = 0; i < json.sivut[0].kategoriat.length; i++)
@@ -23,8 +24,10 @@ export function TitleBar(){
     }
   }
 
-  const Title : string = "1. " + title[1]
-  const subTitle : string = sub[1]
+
+  const Title : string = title[testi]
+  const subTitle : string = sub[testi]
+  
 
   return(<Paper
     sx={{
