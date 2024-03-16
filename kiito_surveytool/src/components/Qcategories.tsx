@@ -1,13 +1,11 @@
-import React from 'react';
-import { Box, Stack, Button, ButtonGroup, Grid } from '@mui/material';
-import { categories } from '../utils/constants';
+import React, { useState } from 'react';
+import { Box, Button, ButtonGroup } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import test from '../test.json';
 
 
 
 const Qcategories = (props : any) => (
-  
-
   <Box
       sx={{
         display: 'flex',
@@ -16,37 +14,53 @@ const Qcategories = (props : any) => (
         },
       }}
     >
-  <ButtonGroup orientation="vertical" sx={{gap:3, display:'flex'}}>
-    {categories.map((category) =>(
+  <ButtonGroup orientation="vertical" sx={{gap:3}}>
+    {test.sivut.map((sivu) =>(
       <Button variant="contained"
-      className="category-btn"
-      sx={{boxShadow:15, borderRadius:2}}
-      onClick={() => props.setValittu
-      (category.name)}
-  
-      key={category.name}
+      className="question-btn"
+      sx={{
+        boxShadow:15, 
+        borderRadius:2,
+        fontSize:14, 
+        color:'white', 
+        textTransform:'none', 
+        fontWeight:'bold', 
+        padding:1
+        }}
+        onClick={() => props.setValittu
+          (test.sivut.indexOf(sivu))}
+          key={test.sivut.indexOf(sivu)}
       >
-
-      {category.name}
+      {sivu.sivu}
       </Button>
     ))}
     </ButtonGroup>
-    <ButtonGroup orientation="vertical" sx={{gap:3}}>
-    {categories.map((category) =>(
-      <Button variant="text"
-      className="tulokset-btn"
-      sx={{textDecoration:'underline',fontSize: 14, color: 'red', fontWeight: 'bold', textTransform: 'none', '&:hover': {backgroundColor: 'lightgrey'}}}
-      onClick={() => props.setValittu
-      (category.name)}
-      key={category.name}>
 
-      Tulokset <ArrowRightAltIcon />
+    <ButtonGroup orientation="vertical" sx={{gap:3}}>
+    {test.sivut.map((sivu) =>(
+      <Button variant="text"
+      className="tulos-btn"
+      sx={{
+        fontSize:14, 
+        color:'blue', 
+        textTransform:'none', 
+        fontWeight:'bold', 
+        padding:1, 
+        width:100, 
+        height:40, 
+        display:'flex', 
+        justifyContent:'space-between'
+      }}
+      onClick={() => props.setValittu
+      (test.sivut.indexOf(sivu))}
+      key={test.sivut.indexOf(sivu)}
+      >
+      {"Tulokset" } <ArrowRightAltIcon />
       </Button>
     ))}
     </ButtonGroup>
     
   </Box>
-  
 )
 
 export default Qcategories

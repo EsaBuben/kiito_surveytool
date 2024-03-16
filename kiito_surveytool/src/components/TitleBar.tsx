@@ -1,7 +1,7 @@
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-export function TitleBar(props:any){
+export function TitleBar(){
   const Title : string = "1. Materiaalien kestävä käyttä"
   const subTitle : string = "Materiaalen valinta ja vähentäminen"
 
@@ -12,7 +12,6 @@ export function TitleBar(props:any){
       padding: "10px 5px",
       borderRadius: 6,
       width:"80%",
-      margin:"auto"
     }}
     >
     <Grid container justifyContent="flex-end" >

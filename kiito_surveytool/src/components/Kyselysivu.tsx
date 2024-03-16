@@ -1,8 +1,8 @@
-import React from 'react'
 import { Stack } from '@mui/material'
-import { Header, Content } from '.'
+import { Header,  } from '.'
+import KyselyContent from './KyselyContent'
 
-const Etusivu = () => {
+const Kyselysivu = () => {
   return (
     <Stack
     spacing={5}
@@ -13,9 +13,9 @@ const Etusivu = () => {
     //textAlign='center'
     >
       <Header />
-      <Content />
+      <KyselyContent />
     </Stack>
   )
 }
 
-export default Etusivu
+export default Kyselysivu

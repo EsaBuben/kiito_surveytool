@@ -1,12 +1,13 @@
 import { useEffect,  useState } from 'react'
 import { Box, Stack } from '@mui/material'
-import { Footer, Qcategories, Tietokentta } from '.'
+import { Qcategories, Tietokentta } from '.'
 import { Typography } from '@mui/material'
+import test from '../test.json'
 
-const alaotsikko = 'Valitse kiertotalouden liiketoimintamalli';
 
 const Content = () => {
-  const [valittu, setValittu] = useState('New')
+  const [valittu, setValittu] = useState()
+  
   return (
     <Stack sx={{
       display: 'flex',
@@ -20,9 +21,7 @@ const Content = () => {
       color: 'black'
     }}>
 
-      <Box>
-        <Tietokentta />
-      </Box>
+      <Tietokentta />
 
       <Box p={2} sx=
       {{
@@ -31,14 +30,16 @@ const Content = () => {
         flex: 2
       }}>
         <Typography variant="h5" align="center" fontWeight='bold' width='300px' paddingBottom='50px'>
-        {alaotsikko}
+        {test.aiheotsikko}
         </Typography>
         <Qcategories justifyContent="center" alignItems="center"
         valittu = {valittu}
         setValittu = {setValittu}
         />
       </Box>
-      <Footer />
+      <Box> 
+        <img src={'src/assets/logo.jpg'} alt="logo" /> 
+      </Box>
     </Stack>
 
   )

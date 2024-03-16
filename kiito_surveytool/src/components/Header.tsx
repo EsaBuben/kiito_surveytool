@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
+import test from '../test.json'
 
 const Header = () => {
-  const otsikko = "Nykytilakartoitus kiertotalouden potentiaalista ja kyvykkyyden kypsyystasosta osana uusien liiketoimintamallien suunnittelua"
   return (
     <Box 
   sx={{
@@ -18,7 +18,7 @@ const Header = () => {
       textAlign: 'center',
   }}>
     <Typography variant="h5" color="black" padding='0px 30px 0px 30px' margin="auto" fontWeight="bold">
-    {otsikko}
+    {test.paaotsikko}
     </Typography>
   </Box>
   )

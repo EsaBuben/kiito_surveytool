@@ -11,7 +11,9 @@ const Div = styled('div')(({ theme }) => ({
 export default function TypographyTheme() {
     return (
         <Div style={{
-                padding: "50px"
+                padding: "50px",
+                width: '80%',
+                flexDirection: 'row'
         }}>
                 Kuinka arvioisit seuraavien toimintojen/kyvykkyyksien kypsyystason?         
                 <svg onClick={()=> {}} style={{marginLeft:"2%", cursor: "pointer"}} width="25px" height="25px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
