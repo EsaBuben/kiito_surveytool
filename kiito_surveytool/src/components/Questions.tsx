@@ -3,13 +3,12 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
-import Kyssarit from '../test.json';
-import { useState } from 'react';
 
 
 
-export default function Questions() {
-  
+
+export default function Questions(props : any) {
+  props.sivu
   return (
     <>
     <div style={{display: "flex", width: "80%",  fontFamily: "arial", marginBottom: '30px'}}>

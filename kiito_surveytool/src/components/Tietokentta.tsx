@@ -3,12 +3,14 @@ import { Stack, TextField } from '@mui/material'
 const Tietokentta = () => {
   return (
     <Stack direction="row" display="flex" gap={70} marginTop="10px">
-        <TextField 
+        <TextField
+            fullWidth
             label="Yrityksen nimi"
             variant="outlined"
             />
     
         <TextField 
+            sx={{ width: '50%' }}
             label="Päivämäärä"
             variant="outlined"
             defaultValue={date()}

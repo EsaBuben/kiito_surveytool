@@ -1,23 +1,31 @@
 import {Button} from '@mui/base/Button';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-export function TitleButton(){
+import Content from './Content';
+import { useState } from 'react';
+
+
+export function TitleButton(props:any){
 
 return (
     <div style={{
         width:"80%",
         }}>
-    <Button style={{
-    background:'#039BE5',
-    opacity:.5,
-    border:"none",
-    padding: "10px",
-    color: "white",
-    borderRadius: 10,
-    marginBottom: "60px",
-    cursor: "pointer",
-    marginTop: '30px'
-  }}>
+    <Button
+      style={{
+        background:'#039BE5',
+        opacity:.5,
+        border:"none",
+        padding: "10px",
+        color: "white",
+        borderRadius: 10,
+        marginBottom: "60px",
+        cursor: "pointer",
+        marginTop: '30px'
+      }}
+      onClick={() => props.setValittu(-1)}
+        key={-1}
+      >
     <Stack direction="row" spacing={1}>
       <Typography>
         Palaa etusivulle

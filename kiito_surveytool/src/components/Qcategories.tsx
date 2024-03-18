@@ -1,11 +1,28 @@
 import React, { useState } from 'react';
-import { Box, Button, ButtonGroup } from '@mui/material';
+import { Box, Button, ButtonGroup, Stack, Typography } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import test from '../test.json';
+import { Tietokentta } from './';
 
 
 
 const Qcategories = (props : any) => (
+  <Stack sx={{
+    position: 'relevant',
+    display: 'contents',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(255,255,255,1)',
+    borderRadius: '100px 100px 0px 0px',
+    color: 'black'
+  }}>
+  <Tietokentta />
+  <Typography variant="h5" align="center" fontWeight='bold' width='300px' paddingBottom='50px'>
+  {test.aiheotsikko}
+  </Typography>
   <Box
       sx={{
         display: 'flex',
@@ -14,6 +31,7 @@ const Qcategories = (props : any) => (
         },
       }}
     >
+  
   <ButtonGroup orientation="vertical" sx={{gap:3}}>
     {test.sivut.map((sivu) =>(
       <Button variant="contained"
@@ -52,15 +70,18 @@ const Qcategories = (props : any) => (
         justifyContent:'space-between'
       }}
       onClick={() => props.setValittu
-      (test.sivut.indexOf(sivu))}
-      key={test.sivut.indexOf(sivu)}
+      (-1, console.log("Tulokset"))}
+      key={-1}
       >
       {"Tulokset" } <ArrowRightAltIcon />
       </Button>
     ))}
     </ButtonGroup>
-    
-  </Box>
+    </Box>
+      <Box sx={{marginTop:'100px', display:'flex'}} >
+      <img src={'src/assets/logo.jpg'} alt="logo" />
+      </Box>
+  </Stack>
 )
 
 export default Qcategories
