@@ -1,12 +1,21 @@
-import React, { useState } from 'react';
+import React, { SetStateAction, useState } from 'react';
 import { Box, Button, ButtonGroup, Stack, Typography } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import test from '../test.json';
 import { Tietokentta } from './';
 
+export function handleClick(e:any, props : any, data : any, sivu : any) 
+{
+  e.preventDefault();
+  props.setValittu(data.sivut.indexOf(sivu))
+}
 
 
-const Qcategories = (props : any) => (
+
+function Qcategories(props : any) {
+  //get data from props
+  const { data } = props;
+
+  return (
   <Stack sx={{
     position: 'relevant',
     display: 'contents',
@@ -19,10 +28,12 @@ const Qcategories = (props : any) => (
     borderRadius: '100px 100px 0px 0px',
     color: 'black'
   }}>
+
   <Tietokentta />
+
   <Typography variant="h5" align="center" fontWeight='bold' width='300px' paddingBottom='50px'>
-  {test.aiheotsikko}
-  </Typography>
+  {data.aiheotsikko}
+  </Typography >
   <Box
       sx={{
         display: 'flex',
@@ -33,7 +44,7 @@ const Qcategories = (props : any) => (
     >
   
   <ButtonGroup orientation="vertical" sx={{gap:3}}>
-    {test.sivut.map((sivu) =>(
+    {data.sivut.map((sivu : any) =>(
       <Button variant="contained"
       className="question-btn"
       sx={{
@@ -45,9 +56,9 @@ const Qcategories = (props : any) => (
         fontWeight:'bold', 
         padding:1
         }}
-        onClick={() => props.setValittu
-          (test.sivut.indexOf(sivu))}
-          key={test.sivut.indexOf(sivu)}
+        onClick={(e) => handleClick(e, props, data, sivu)}
+          key={data.sivut.indexOf(sivu)}
+          
       >
       {sivu.sivu}
       </Button>
@@ -55,7 +66,7 @@ const Qcategories = (props : any) => (
     </ButtonGroup>
 
     <ButtonGroup orientation="vertical" sx={{gap:3}}>
-    {test.sivut.map((sivu) =>(
+    {data.sivut.map((sivu : any) =>(
       <Button variant="text"
       className="tulos-btn"
       sx={{
@@ -83,5 +94,6 @@ const Qcategories = (props : any) => (
       </Box>
   </Stack>
 )
+      }
 
 export default Qcategories

@@ -8,6 +8,8 @@ import FormLabel from '@mui/material/FormLabel';
 
 
 export default function Questions(props : any) {
+  const {data} = props;
+  //jiisonnista sisältö tännekki
   props.sivu
   return (
     <>

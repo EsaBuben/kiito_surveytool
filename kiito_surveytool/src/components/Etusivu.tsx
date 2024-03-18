@@ -2,7 +2,8 @@ import React from 'react'
 import { Stack } from '@mui/material'
 import { Header, Content } from '.'
 
-const Etusivu = () => {
+const Etusivu = (props : any) => {
+  const { data } = props;
   return (
     <Stack
     spacing={5}
@@ -14,8 +15,8 @@ const Etusivu = () => {
       position: 'relative',
     }}
     >
-      <Header />
-      <Content />
+      <Header data = {data}/>
+      <Content data = {data}/>
     </Stack>
   )
 }

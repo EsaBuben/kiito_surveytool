@@ -8,7 +8,9 @@ const Div = styled('div')(({ theme }) => ({
     textAlign: "center"
 }));
 
-export default function TypographyTheme() {
+export default function TypographyTheme(props : any) {
+    const {data} = props
+    //sit vaa katteleen jiisonnista mitä tännekki tulee
     return (
         <Div style={{
                 padding: "50px",

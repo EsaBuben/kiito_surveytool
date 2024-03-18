@@ -1,12 +1,24 @@
 import { Stack, TextField } from '@mui/material'
+import React from 'react';
 
-const Tietokentta = () => {
+const Tietokentta = (props : any) => {
+  const [name, setName] = React.useState("");
+  const handleChange = (e: any) => {
+    setName(e.target.value);
+    e.preventDefault();
+  }
+
   return (
-    <Stack direction="row" display="flex" gap={70} marginTop="10px">
+    <Stack component="form" direction="row" display="flex" gap={70} marginTop="10px" noValidate autoComplete="off">
         <TextField
             fullWidth
             label="Yrityksen nimi"
             variant="outlined"
+            defaultValue={name}
+            //save the value to the state
+            onChange={(e) => (handleChange(e))}
+            key = "name"
+            
             />
     
         <TextField 

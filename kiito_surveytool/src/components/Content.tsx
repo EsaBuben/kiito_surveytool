@@ -5,9 +5,9 @@ import { Qcategories, Kyselysivu } from '.'
 
 
 const Content = (props:any) => {
-
+  const { data } = props;
   const [valittu, setValittu] = useState(-1)
-
+  console.log(valittu)
   return (
     <Stack sx={{
       alignItems: 'center',
@@ -16,9 +16,8 @@ const Content = (props:any) => {
       color: 'black',
       height: { sx: 'auto', md: '100vh'}
     }}>
-    {valittu === -1 && <Qcategories setValittu={ (data: SetStateAction<number>) => setValittu(data) }
-    />}
-    {valittu > -1 && <Kyselysivu sivu = {valittu} setValittu = {setValittu}/>}
+    {valittu === -1 && <Qcategories setValittu={ (data: SetStateAction<number>) => setValittu(data) } data = {data}/>}
+    {valittu > -1 && <Kyselysivu sivu = {valittu} setValittu = {setValittu} data = {data} />}
 
 
     </Stack>

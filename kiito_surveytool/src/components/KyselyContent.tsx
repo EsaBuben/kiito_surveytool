@@ -7,7 +7,9 @@ import { LowerButtons } from './LowerButtons';
 
 
 const KyselyContent = (props : any) => {
-  props.sivu
+  props.valittu
+  console.log(props.sivu)
+  const { data } = props;
   return (
     <Stack sx={{
       // display: 'flex',
@@ -20,9 +22,9 @@ const KyselyContent = (props : any) => {
       // color: 'black',
     }}>
         <TitleButton setValittu = {props.setValittu}/>
-        <TitleBar />
-        <Instruction />
-        <Questions sivu = {props.sivu}/>
+        <TitleBar data = {data} sivu = {props.sivu} />
+        <Instruction data = {data} />
+        <Questions sivu = {props.sivu} data = {data}/>
         <LowerButtons />
     </Stack>
 

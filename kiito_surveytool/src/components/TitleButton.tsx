@@ -4,6 +4,11 @@ import Stack from '@mui/material/Stack';
 import Content from './Content';
 import { useState } from 'react';
 
+function handleClick(e:any, props : any) 
+{
+  e.preventDefault();
+  props.setValittu(-1)
+}
 
 export function TitleButton(props:any){
 
@@ -23,7 +28,7 @@ return (
         cursor: "pointer",
         marginTop: '30px'
       }}
-      onClick={() => props.setValittu(-1)}
+      onClick={(e) => handleClick(e, props)}
         key={-1}
       >
     <Stack direction="row" spacing={1}>
