@@ -1,65 +1,46 @@
 import {Button} from '@mui/base/Button';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-import { useState } from 'react';
-import json from '../test.json';
-
-
-export function LowerButtons(props:any){
-
-let [page, setPage] = useState(1)
-let max = 0
-
-for(let i = 0; i < json.sivut[0].kategoriat.length; i++)
-{
-  for(let j = 0; j < json.sivut[0].kategoriat[i].tasot.length; j++)
-  {
-      max = max + 1   
-  }
-}
+export function TitleButton(props:any){
 
 return (
     <div style={{
-        display: 'flex',
+        display: 'block',
         margin: "auto",
         width:"80%",
-        justifyContent: "center",
-        alignItems: "center",
         }}>
-    <Button onClick={()=>setPage(page-1)} style={{
-    visibility: page !== 1
-    ? "visible"
-    : "hidden",
+    <Button style={{
     background:'#039BE5',
     opacity:.5,
     border:"none",
     padding: "10px",
     color: "white",
     borderRadius: 10,
+    marginBottom: "10px",
     cursor: "pointer",
-    margin: "0.5em"
   }}>
     <Stack direction="row" spacing={1}>
       <Typography>
-        Palaa
+        Palaa etusivulle
       </Typography>
     </Stack>
   </Button>
 
 
-  <Button onClick={()=>{if(page !== max)setPage(page+1)}} style={{
+  <Button disabled style={{
     background:'#039BE5',
     opacity:.5,
     border:"none",
     padding: "10px",
     color: "white",
+    marginBottom: "10px",
     borderRadius: 10,
-    cursor: "pointer",
-    margin: "0.5em"
+    marginLeft: "50%",
+    transform: "translateX(-125%)"
   }}>
     <Stack direction="row" spacing={1}>
       <Typography>
-        Jatka
+        Kiertävät raaka-aineet
       </Typography>
     </Stack>
   </Button>
