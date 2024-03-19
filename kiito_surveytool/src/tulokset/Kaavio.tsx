@@ -51,7 +51,7 @@ export function Kaavio(props:any){
 
   }
 
-  return(<div >
+  return(<div className="Kaavio" >
 
     <Radar
     data={data}

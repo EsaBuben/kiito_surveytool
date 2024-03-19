@@ -1,12 +1,12 @@
 //import { useState } from 'react'
-import { Etusivu } from './components';
+import { Tulokset } from './tulokset/Tulokset';
 import './App.css';
 
 
 function App() {
 
   return (
-    <Etusivu />
+    <Tulokset />
   )
 }
 
