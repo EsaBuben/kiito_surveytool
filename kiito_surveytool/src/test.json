@@ -372,6 +372,110 @@
       ]
 
       
+    },
+    {
+      "sivu": "Resurssien talteenotto\n",
+      "kategoriat": [
+        {
+          "otsikko":"Materiaalien kestävä käyttö\n",
+          "tasot": [
+            {
+              "alaotsikko":"Materiaalien valinta ja vähentäminen\n",
+              "kysymykset": [
+                "Ympäristöystävällisten ja paikallisesti tuotettujen materiaalien ja raaka-aineiden käyttö kestävien, korjattavien ja kierrätettävien tuotteiden ja pakkauksien suunnittelussa\n",
+                "Neitseellisten raaka-aineiden ja muiden materiaalien käytön vähentäminen vastuullisella ja ympäristöä huomioivalla tuote- ja palvelusuunnittelulla.\n"
+              ]
+            },
+            {
+              "alaotsikko":"Materiaalien käyttö, kierrätys ja uudelleenkäyttö\n",
+              "kysymykset": [
+                "Hyvien ratkaisujen tunnistaminen, arviointi ja käyttöönotto materiaalihävikin ja jätteen määrän vähentämiseksi.\n",
+                "Käytettyjen ja ylijäämämateriaalien hyödyntäminen tuotteiden ja palveluiden suunnittelussa ja valmistuksessa käyttämällä esimerkiksi Materiaalitori.fi -palvelua\n"
+              ]
+                
+            }
+          ]
+        },
+        {
+          "otsikko":"Kapasiteetin ja resurssien tehokas hyödyntäminen\n",
+          "tasot":[
+            {
+              "alaotsikko":"Valmistuskapasiteetin käyttöaste\n",
+              "kysymykset": [
+                "Valmistuskapasiteetin käyttötehokkuuden seuranta ja prosessien optimointi vähentämällä tai poistamalla ei-arvoa lisääviä toimintoja.\n"
+              ]
+            },
+            {
+              "alaotsikko":"Koneiden ja laitteiden suorituskyky ja resurssien kulutus\n",
+              "kysymykset": [
+                "Koneiden ja laitteiden suorityskyvyn jatkuva seuranta ja mittaaminen niiden koko käyttöiän aikana.\n"
+              ]
+                
+            }           
+          ]
+        },
+        {
+          "otsikko":"Koneiden ja laitteiden elinkaaren pidentäminen\n",
+          "tasot":[
+            {
+              "alaotsikko":"Kestävä hankinta ja käyttö\n",
+              "kysymykset": [
+                "Selvitykset koneiden ja laitteiden kestävyydestä, energiatehokkuudesta ja ympäristöystävällisyydestä (esim. CO2-päästöt).\n"
+              ]
+            },
+            {
+              "alaotsikko":"Kunnossapito, kierrätys ja uudelleenkäyttö\n",
+              "kysymykset": [
+                "Loppuunkäytettyjen ja vanhentuneiden koneiden ja laitteiden huolellinen lajittelu ja kierrättäminen.\n",
+                "Selvitys käytössä olevien koneiden ja laitteiden uudelleenkäyttömahdollisuuksista ja suunnitelma näiden toimenpiteiden toteutuksesta.\n"
+              ]
+            }
+          ]
+            
+        },
+        {
+          "otsikko":"Tuotteiden ja materiaalien arvo\n",
+          "tasot":[
+            {
+              "alaotsikko":"Arvon säilyttäminen ja lisääminen\n",
+              "kysymykset": [
+                "Tuotteiden ja materiaalien arvon säilyttäminen mahdollisimman pitkään kehittämällä kestävää resurssien hallintaa.\n",
+                "Käyttökelpoisten ja arvoa sisältävien materiaalien ja energian talteenotto tuotannon sivuvirroista, jätteestä ja elinkaarensa päähän tulleista tuotteista.\n",
+                "Talteenotettujen materiaalien käyttö raaka-aineena omassa liiketoiminnassa tai myyminen kiertävinä raaka-aineina tai tuotteistettuna.\n"
+              ]
+            },
+            {
+              "alaotsikko":"Arvo- ja toimitusketjujen kehittäminen\n",
+              "kysymykset": [
+                "Arvo- ja toimitusketjujen kehittämismahdollisuuksien tunnistaminen arvioimalla niiden kestävyyttä, tehokkuutta ja ympäristövaikutuksia.\n",
+                "Arvo- ja toimitusketjujen kehittäminen kiertotalouden periaatteiden mukaisiksi ja parhaan mahdollisen arvon tuottamiseksi asiakkaille.\n",
+                "Arviointi toimittajien ja muiden sidosryhmien sitoutumista kestävän ja vastuullisen liiketoiminnan perusarvoihin ja periaatteisiin.\n"
+              ]
+            }
+          ]
+            
+        },
+        {
+          "otsikko":"Asiakassuhteiden hyödyntäminen\n",
+          "tasot":[
+            {
+              "alaotsikko": "Tuoton kasvattaminen asiakaslähtöisyydellä\n",
+              "kysymykset": [
+                "Lisäpalveluiden asiakaslähtöinen kehittäminen tuotteen koko elinkaaren ajan liiketoiminnan ja ympäristön kestävyyden edistämiseksi (mm. tuotteen myynti palveluna, huolto- ja kierrätyspalvelut).\n",
+                "Arvolupauksen jatkuva arviointi ja päivittäminen asiakaskeskeisyyden ja -ymmärryksen kautta.\n"
+              ]
+            },
+            {
+              "alaotsikko":"Riskien hallinta\n",
+              "kysymykset": [
+                "Ympäristöjalanjäljen arviointi: mm. energian kulutus, tuotteiden/palveluiden hankinta, toimitusketjut, kuljetukset, jätehuolto.\n"
+              ]
+            }
+          ]
+            
+        }
+      ]
+        
     }
     
   ]
