@@ -66,7 +66,7 @@ function Qcategories(props : any) {
     </ButtonGroup>
 
     <ButtonGroup orientation="vertical" sx={{gap:3}}>
-    {data.sivut.map((sivu : any) =>(
+    {data.sivut.map((sivu : any, index: number) =>(
       <Button variant="text"
       className="tulos-btn"
       sx={{
@@ -81,8 +81,8 @@ function Qcategories(props : any) {
         justifyContent:'space-between'
       }}
       onClick={() => props.setValittu
-      (-1, console.log("Tulokset"))}
-      key={-1}
+      (-1*(index + 2), console.log("Tulokset"))}
+      key={-1*(index + 2)}
       >
       {"Tulokset" } <ArrowRightAltIcon />
       </Button>

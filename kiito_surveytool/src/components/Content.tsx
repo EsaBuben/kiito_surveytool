@@ -1,7 +1,7 @@
 import {   SetStateAction, useState } from 'react'
 import {  Stack } from '@mui/material'
 import { Qcategories, Kyselysivu } from '.'
-
+import {Tulokset} from '../tulokset/Tulokset'
 
 
 const Content = (props:any) => {
@@ -18,7 +18,7 @@ const Content = (props:any) => {
     }}>
     {valittu === -1 && <Qcategories setValittu={ (data: SetStateAction<number>) => setValittu(data) } data = {data}/>}
     {valittu > -1 && <Kyselysivu sivu = {valittu} setValittu = {setValittu} data = {data} />}
-
+    {valittu < -1 && <Tulokset sivu={valittu}/>}
 
     </Stack>
 
