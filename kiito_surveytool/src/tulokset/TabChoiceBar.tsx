@@ -1,0 +1,46 @@
+import {useState} from 'react';
+import Box from '@mui/material/Box';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import {Taulukko} from './taulukko';
+import {Kaavio} from './Kaavio';
+interface TabProps {
+  children?: React.ReactNode;
+  index: number;
+  value: number;
+}
+
+function TabPage(props: TabProps) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <Box>
+      {value === index && (
+        <Box>{children}</Box>
+      )}
+    </Box>
+
+  );
+}
+
+
+export function TabChoiceBar(props:any){
+  const [value, setValue] = useState<number>(0)
+
+
+  return (<Box>
+    <Tabs
+      centered
+      value={value}
+      onChange={(event: React.SyntheticEvent, newValue :number) => setValue(newValue)}>
+        <Tab label="Kaavio" />
+        <Tab label="Taulukko" />
+      </Tabs>
+      <TabPage value={value} index={0}>
+        <Kaavio />
+      </TabPage>
+      <TabPage value={value} index={1}>
+        <Taulukko />
+      </TabPage>
+  </Box>)
+}
