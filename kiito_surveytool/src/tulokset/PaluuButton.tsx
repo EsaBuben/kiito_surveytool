@@ -14,7 +14,10 @@ return (
     borderRadius: 10,
     marginLeft: "10%",
     marginBottom: "10px"
-  }}>
+
+    }}
+    onClick={() => props.setValittu(-1)}
+    >
     <Stack direction="row" spacing={1}>
       <img src={smallarrow}/>
       <Typography>

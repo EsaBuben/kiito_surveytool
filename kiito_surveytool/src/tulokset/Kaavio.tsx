@@ -18,13 +18,13 @@ ChartJS.register(
 )
 
 export function Kaavio(props:any){
-
-
+  let data_array = props.data_array;
+  console.log(data_array)
   const data = {
-    labels: ["mon", "tue","wed","thur","fri", "sat"], //tasot alaotsikkot
+    labels: data_array, //tasot alaotsikkot
     datasets:[{
       label:"weekdays",  //keskiarvo
-      data: [2,3,4,1,5,3], //arvot
+      data: [2,3,4,1,5,3,4], //arvot
     }]
   };
 
@@ -51,14 +51,12 @@ export function Kaavio(props:any){
 
   }
 
-  return(<div >
-
+  return(
     <Radar
     data={data}
     options={options}
     >
 
     </Radar>
-  </div>
   )
 }

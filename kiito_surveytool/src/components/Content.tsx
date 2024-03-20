@@ -20,7 +20,7 @@ const Content = (props:any) => {
     {valittu === -1 && <Qcategories setValittu={ (data: SetStateAction<number>) => setValittu(data) }
      data = {data} setName={setName} name = {name}/>}
     {valittu > -1 && <Kyselysivu sivu = {valittu} setValittu = {setValittu} data = {data} />}
-    {valittu < -1 && <Tulokset sivu={valittu}/>}
+    {valittu < -1 && <Tulokset sivu={(valittu*-1) - 2} setValittu = {setValittu} data = {data}/>}
 
     </Stack>
 

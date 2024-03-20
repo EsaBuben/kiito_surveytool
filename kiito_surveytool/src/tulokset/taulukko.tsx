@@ -6,7 +6,7 @@ export function Taulukko(props :any){
   /*
    stack of rows ja row is 2 piece Stack
   */
-  const subCategories : string[] = ["Test_1" , "Test_2", "Test_3"];
+  const subCategories : string[] = props.data_array;
   const answerAverages : number[] = [1, 3, 2];
 
   return(
