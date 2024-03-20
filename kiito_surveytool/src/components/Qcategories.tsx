@@ -29,7 +29,7 @@ function Qcategories(props : any) {
     color: 'black'
   }}>
 
-  <Tietokentta />
+  <Tietokentta setName = {props.setName} name = {props.name} />
 
   <Typography variant="h5" align="center" fontWeight='bold' width='300px' paddingBottom='50px'>
   {data.aiheotsikko}
