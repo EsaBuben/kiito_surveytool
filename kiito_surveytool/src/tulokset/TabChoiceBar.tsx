@@ -4,7 +4,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import {Taulukko} from './taulukko';
 import {Kaavio} from './Kaavio';
-
+import {COLORS} from './style_constants'
 interface TabProps {
   children?: React.ReactNode;
   index: number;
@@ -39,13 +39,18 @@ export function TabChoiceBar(props:any){
   })
 
 
-  return (<Box>
+  return (<Box >
     <Tabs
       centered
+      TabIndicatorProps={{
+      style: {
+        backgroundColor: COLORS.primary
+        }
+      }}
       value={value}
       onChange={(event: React.SyntheticEvent, newValue :number) => setValue(newValue)}>
-        <Tab label="Kaavio" />
-        <Tab label="Taulukko" />
+        <Tab style={{color: value == 0 ? COLORS.primary : 'black'}} label="Kaavio" />
+        <Tab style={{color: value == 1 ? COLORS.primary : 'black'}}label="Taulukko" />
       </Tabs>
       <TabPage value={value} index={0}>
         <Kaavio data_array={data_array} radio_values={radio_values}/>
