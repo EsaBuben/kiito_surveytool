@@ -19,7 +19,6 @@ ChartJS.register(
 
 export function Kaavio(props:any){
   let data_array = props.data_array;
-  console.log(data_array)
   const data = {
     labels: data_array, //tasot alaotsikkot
     datasets:[{
