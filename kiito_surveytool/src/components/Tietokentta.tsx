@@ -1,10 +1,8 @@
 import { Stack, TextField } from '@mui/material'
-import React from 'react';
 
 const Tietokentta = (props : any) => {
-  const [name, setName] = React.useState("");
   const handleChange = (e: any) => {
-    setName(e.target.value);
+    props.setName(e.target.value);
     e.preventDefault();
   }
 
@@ -14,7 +12,7 @@ const Tietokentta = (props : any) => {
             fullWidth
             label="Yrityksen nimi"
             variant="outlined"
-            defaultValue={name}
+            defaultValue={props.name}
             //save the value to the state
             onChange={(e) => (handleChange(e))}
             key = "name"

@@ -2,9 +2,11 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import BigArrow from './BigArrow.svg';
+
 export function TitleBar(props:any){
-  const Title : string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-  const subTitle : string = "Lorem ipsum dolor sit amet."
+
+  const Title : string = props.otsikko
+  const subTitle : string = props.alaOtsikko
 
   return(<Paper
     sx={{
