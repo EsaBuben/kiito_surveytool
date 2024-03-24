@@ -1,0 +1,6 @@
+.radar_canvas{
+  width: 100dvw;
+  height: 100dvh;
+  max-width: 1280px;
+  max-height: 50dvh;
+}

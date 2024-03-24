@@ -39,7 +39,6 @@ export function TabChoiceBar(props:any){
   })
 
 
-console.log(data_array)
   return (<Box>
     <Tabs
       centered
