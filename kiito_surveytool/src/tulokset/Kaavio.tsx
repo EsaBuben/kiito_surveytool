@@ -23,7 +23,7 @@ export function Kaavio(props:any){
     labels: data_array, //tasot alaotsikkot
     datasets:[{
       label:"keskiarvo",  //keskiarvo
-      data: [2.5,3,4,1,5,3,4], //arvot
+      data: props.radio_values, //arvot
     }]
   };
 

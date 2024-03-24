@@ -4,10 +4,10 @@ import {Cell} from './Cell';
 
 export function Taulukko(props :any){
   /*
-   stack of rows ja row is 2 piece Stack
+   stack of rows ja row is 2-piece Stack
   */
   const subCategories : string[] = props.data_array;
-  const answerAverages : number[] = [1, 3, 2];
+  const answerAverages : number[] = props.radio_values;
 
   return(
     <Box sx={{flexGrow:1}}>
