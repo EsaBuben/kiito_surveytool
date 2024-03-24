@@ -6,7 +6,7 @@ import {
   Legend,
   RadialLinearScale
 } from 'chart.js/auto';
-//Tooltip, Legend
+
 import {Radar} from 'react-chartjs-2';
 import './kaavio.css'
 ChartJS.register(
@@ -22,8 +22,8 @@ export function Kaavio(props:any){
   const data = {
     labels: data_array, //tasot alaotsikkot
     datasets:[{
-      label:"weekdays",  //keskiarvo
-      data: [2,3,4,1,5,3,4], //arvot
+      label:"keskiarvo",  //keskiarvo
+      data: [2.5,3,4,1,5,3,4], //arvot
     }]
   };
 
@@ -37,24 +37,31 @@ export function Kaavio(props:any){
      },
      scales: {
         r: {
-            angleLines: {
+            angleLines: { //lines from center to the borders
                 display: false
             },
             suggestedMin: 0,
             suggestedMax: 5,
-            ticks:{
+            ticks:{ //numbering from the center for each line
               display: false,
               stepSize: 1,
               showLabelBackdrop: false,
             },
-            grid: {
+            grid: { //lines in the radar
               color: "rgba(0, 0, 0, 0.6)",
               lineWidth: 1,
             },
+            pointLabels: { //text outside of the radar
+             font: {
+               //family
+               size: 15,
+               weight: 'bold',
+             },
+           }
           },
         },
      elements:{
-        line:{
+        line:{ //data area line options
           borderWidth:3,
           }
         }

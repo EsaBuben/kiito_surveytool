@@ -1,4 +1,5 @@
 .radar_canvas{
+  margin-top: 20px;
   width: 100dvw;
   height: 100dvh;
   max-width: 1280px;
