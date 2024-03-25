@@ -11,6 +11,11 @@ interface TabProps {
   value: number;
 }
 
+interface Kategoria {
+  tasot: { alaotsikko: string }[];
+}
+
+
 function TabPage(props: TabProps) {
   const { children, value, index, ...other } = props;
 
@@ -27,12 +32,12 @@ function TabPage(props: TabProps) {
 
 export function TabChoiceBar(props:any){
   const [value, setValue] = useState<number>(0)
-  const radio_values:number = [2.5,3,4,1,5,3,4];
+  const radio_values:number[] = [2.5,3,4,1,5,3,4];
 //possibly do one step above for less rerunning
   let data_array: string[] = props.sivuData.kategoriat.flatMap(
-        (kategoria) => {
+        (kategoria: Kategoria) => {
         return  kategoria.tasot.map(
-            (taso) => {
+            (taso: { alaotsikko: string }) => {
               return taso.alaotsikko;
             }
           )

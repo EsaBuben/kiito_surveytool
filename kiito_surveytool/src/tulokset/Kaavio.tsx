@@ -27,7 +27,7 @@ export function Kaavio(props:any){
     }]
   };
 
-  const options = {
+  const options : any = {
     maintainAspectRatio: false,
     responsive: true,
     plugins: {
