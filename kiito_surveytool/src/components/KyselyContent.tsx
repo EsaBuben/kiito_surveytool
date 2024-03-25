@@ -4,11 +4,15 @@ import { TitleButton } from './TitleButton';
 import { TitleBar } from './TitleBar';
 import { useState } from 'react';
 
+
 let testi : number = 1
+
 const KyselyContent = (props : any) => {
 
   let [page, setPage] = useState(testi)
   let max = 0
+
+
 
   for(let i = 0; i < props.data.sivut[0].kategoriat.length; i++)
   {
