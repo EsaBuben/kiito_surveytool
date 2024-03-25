@@ -1,6 +1,6 @@
 import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Grid'
-
+import {COLORS} from './style_constants'
 
 export function Cell(props:any){
 
@@ -14,7 +14,7 @@ export function Cell(props:any){
       }>
         <Paper
           sx={{
-            background: isCategory ? "black" : "blue",
+            background: isCategory ? COLORS.secondary : COLORS.primary,
             textAlign: isCategory ? "flex-start" : "center",
             padding: "10px",
             color: "white"

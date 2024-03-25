@@ -2,6 +2,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import BigArrow from './BigArrow.svg';
+import {COLORS} from './style_constants'
 
 export function TitleBar(props:any){
 
@@ -10,7 +11,7 @@ export function TitleBar(props:any){
 
   return(<Paper
     sx={{
-      background:"rgb(11, 101, 205)",
+      background:COLORS.primary,
       color:"white",
       padding: "10px 5px",
       borderRadius: 6,
