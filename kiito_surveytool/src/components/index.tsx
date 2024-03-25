@@ -7,6 +7,3 @@ export {default as Instruction} from './Instruction';
 export {default as Questions} from './Questions';
 export {default as KyselyContent} from './KyselyContent';
 export {default as Kyselysivu} from './Kyselysivu';
-// export {default as LowerButtons} from './LowerButtons';
-// export {default as TitleBar} from './TitleBar';
-// export {default as TitleButton} from './TitleButton';

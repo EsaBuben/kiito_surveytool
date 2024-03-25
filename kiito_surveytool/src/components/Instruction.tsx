@@ -1,15 +1,14 @@
-import { Box, Paper, Popper, Tooltip } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import { Box, Popper } from '@mui/material';
 import HelpRoundedIcon from '@mui/icons-material/HelpRounded';
 import { useState } from 'react';
 
-const Div = styled('div')(({ theme }) => ({
-  ...theme.typography.button,
-  backgroundColor: theme.palette.background.paper,
-  padding: theme.spacing(1),
-  fontWeight: "bold",
-    textAlign: "center"
-}));
+// const Div = styled('div')(({ theme }) => ({
+//   ...theme.typography.button,
+//   backgroundColor: theme.palette.background.paper,
+//   padding: theme.spacing(1),
+//   fontWeight: "bold",
+//     textAlign: "center"
+// }));
 
 export default function TypographyTheme(props : any) {
     const {data} = props

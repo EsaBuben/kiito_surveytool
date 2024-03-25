@@ -1,4 +1,3 @@
-import React, { SetStateAction, useState } from 'react';
 import { Box, Button, ButtonGroup, Stack, Typography } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { Tietokentta } from './';
