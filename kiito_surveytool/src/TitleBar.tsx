@@ -1,6 +1,7 @@
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+
 export function TitleBar(props:any){
   const Title : string = "1. Materiaalien kestävä käyttä"
   const subTitle : string = "Materiaalen valinta ja vähentäminen"

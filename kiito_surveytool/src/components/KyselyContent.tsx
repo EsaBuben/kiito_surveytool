@@ -1,4 +1,3 @@
-
 import { Button, Stack, Typography } from '@mui/material'
 import { Instruction, Questions, } from '.'
 import { TitleButton } from './TitleButton';

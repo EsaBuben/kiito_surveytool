@@ -1,4 +1,3 @@
-import React from 'react'
 import { Stack } from '@mui/material'
 import { Header, Content } from '.'
 
@@ -7,9 +6,6 @@ const Etusivu = (props : any) => {
   return (
     <Stack
     spacing={5}
-    //direction="column"
-    // alignItems='center'
-    // justifyContent="center"
     sx={{
       height: { sx: 'auto', md: '100vh'},
       position: 'relative',

@@ -41,7 +41,7 @@ export function TitleBar(props : any){
     <Grid container justifyContent="flex-end" >
       <Grid item sx={{margin:"auto"}} >
         <Grid item>
-          <Typography sx={{textAlign:"center", fontWeight:"bold"}} variant="h5">{Title}{props.sivu}</Typography>
+          <Typography sx={{textAlign:"center", fontWeight:"bold"}} variant="h5">{Title}</Typography>
         </Grid>
         <Grid item>
           <Typography sx={{textAlign:"center", fontWeight:"bold"}} variant="subtitle1">{subTitle}</Typography>

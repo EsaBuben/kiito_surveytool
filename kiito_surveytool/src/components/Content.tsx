@@ -7,6 +7,7 @@ const Content = (props:any) => {
   const { data } = props;
   const [valittu, setValittu] = useState(-1)
   const [name, setName] = useState('');
+  
   return (
     <Stack sx={{
       alignItems: 'center',
