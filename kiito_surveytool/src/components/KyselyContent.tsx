@@ -14,7 +14,7 @@ const KyselyContent = (props : any) => {
   {
     for(let j = 0; j < props.data.sivut[0].kategoriat[i].tasot.length; j++)
     {
-        max = max + 1   
+        max = max + 1
     }
   }
   function handleChangePlus()  {
@@ -68,6 +68,22 @@ const KyselyContent = (props : any) => {
         <Stack direction="row" spacing={1}>
           <Typography>
             Jatka
+          </Typography>
+        </Stack>
+      </Button>
+      <Button onClick={()=>{props.setValittu((props.sivu + 2)*-1)}} style={{
+        background:'#039BE5',
+        opacity:.5,
+        border:"none",
+        padding: "10px",
+        color: "white",
+        borderRadius: 10,
+        cursor: "pointer",
+        margin: "0.5em"
+      }}>
+        <Stack direction="row" spacing={1}>
+          <Typography>
+            Tulokset
           </Typography>
         </Stack>
       </Button>
