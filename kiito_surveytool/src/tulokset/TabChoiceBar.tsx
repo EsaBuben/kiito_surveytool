@@ -4,7 +4,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import {Taulukko} from './taulukko';
 import {Kaavio} from './Kaavio';
-import {COLORS} from './style_constants'
+import {COLORS} from '../utils/style_constants'
 interface TabProps {
   children?: React.ReactNode;
   index: number;

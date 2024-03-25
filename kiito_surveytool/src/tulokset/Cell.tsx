@@ -1,6 +1,6 @@
 import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Grid'
-import {COLORS} from './style_constants'
+import {COLORS} from '../utils/style_constants'
 
 export function Cell(props:any){
 

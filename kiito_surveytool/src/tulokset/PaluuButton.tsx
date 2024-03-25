@@ -2,7 +2,7 @@ import {Button} from '@mui/base/Button';
 import smallarrow from './smallarrow.svg';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-import {COLORS} from './style_constants'
+import {COLORS} from '../utils/style_constants';
 
 export function PaluuButton(props:any){
 

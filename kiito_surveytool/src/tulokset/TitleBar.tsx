@@ -2,7 +2,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import BigArrow from './BigArrow.svg';
-import {COLORS} from './style_constants'
+import {COLORS} from '../utils/style_constants'
 
 export function TitleBar(props:any){
 
