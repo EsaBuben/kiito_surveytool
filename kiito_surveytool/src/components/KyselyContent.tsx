@@ -8,7 +8,7 @@ import { useState } from 'react';
 let testi : number = 1
 const KyselyContent = (props : any) => {
 
-  let [page, setPage] = useState(1)
+  let [page, setPage] = useState(testi)
   let max = 0
 
   for(let i = 0; i < props.data.sivut[0].kategoriat.length; i++)
@@ -26,9 +26,7 @@ const KyselyContent = (props : any) => {
     setPage(page-1)
     testi = page-1
   }
-
   props.valittu
-  console.log(props.sivu)
   const { data } = props;
   return (
     <Stack sx={{
@@ -38,8 +36,9 @@ const KyselyContent = (props : any) => {
         <TitleBar data = {data} sivu = {props.sivu} />
         <Instruction data = {data} />
         <Questions sivu = {props.sivu} data = {data}/>
+        <Stack direction={'row'}>
         <Button onClick={()=>handleChangeMinus()} style={{
-        visibility: page !== 1
+        visibility: testi !== 1
         ? "visible"
         : "hidden",
         background:'#039BE5',
@@ -73,6 +72,7 @@ const KyselyContent = (props : any) => {
           </Typography>
         </Stack>
       </Button>
+      </Stack>
       </Stack>
   )
 }

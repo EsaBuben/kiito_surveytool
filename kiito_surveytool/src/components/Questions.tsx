@@ -10,8 +10,6 @@ import { testi } from './KyselyContent';
 
 
 
-
-
 export default function Questions(props : any) {
   const {data} = props;
   //jiisonnista sisältö tännekki
@@ -37,7 +35,6 @@ export default function Questions(props : any) {
       ques[i].push(qlist.alaotsikko[i].kysymykset[j])
     }
   }
-console.log(ans)
   return (
     <>
     {ques[testi-1].map((x, index) => 

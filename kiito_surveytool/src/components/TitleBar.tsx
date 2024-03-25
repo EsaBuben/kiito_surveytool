@@ -5,7 +5,6 @@ import Typography from '@mui/material/Typography';
 
 export function TitleBar(props : any){
   const {data} = props;
-  console.log(props.sivu)
   //sit vaa kattelee jiisonnista mikä on tää title ja subtitteli
 
   let title : string[] = ['sivu0']
