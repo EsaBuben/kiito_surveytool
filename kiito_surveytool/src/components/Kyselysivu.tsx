@@ -2,7 +2,6 @@ import { Stack } from '@mui/material'
 import KyselyContent from './KyselyContent'
 
 const Kyselysivu = (props : any) => {
-
   const { data } = props;
 
   return (
