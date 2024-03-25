@@ -28,7 +28,6 @@ const KyselyContent = (props : any) => {
   }
 
   props.valittu
-  console.log(props.sivu)
   const { data } = props;
   return (
     <Stack sx={{
