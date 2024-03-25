@@ -4,7 +4,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { useState } from 'react';
-import vittusaatana from './vittusaatana.json'
+import qlist from './Qlist.json'
 import { testi } from './KyselyContent';
 
 
@@ -27,14 +27,14 @@ export default function Questions(props : any) {
 
 
   var ques : any[][]
-  let [ans, setAns] = useState<number[][]>(() => {return Array.from({length: vittusaatana.alaotsikko.length}, () => Array.from({length: 3}, () => 0))})
+  let [ans, setAns] = useState<number[][]>(() => {return Array.from({length: qlist.alaotsikko.length}, () => Array.from({length: 3}, () => 0))})
   ques = []
-  for(var i = 0; i < vittusaatana.alaotsikko.length; i++)
+  for(var i = 0; i < qlist.alaotsikko.length; i++)
   {
     ques[i] = []
-    for(var j = 0; j < vittusaatana.alaotsikko[i].kysymykset.length; j++)
+    for(var j = 0; j < qlist.alaotsikko[i].kysymykset.length; j++)
     {
-      ques[i].push(vittusaatana.alaotsikko[i].kysymykset[j])
+      ques[i].push(qlist.alaotsikko[i].kysymykset[j])
     }
   }
 console.log(ans)
