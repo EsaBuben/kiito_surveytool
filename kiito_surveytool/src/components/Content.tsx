@@ -1,13 +1,28 @@
-import {   SetStateAction, useState } from 'react'
+import {   Dispatch, SetStateAction, useState } from 'react'
 import {  Stack } from '@mui/material'
 import { Qcategories, Kyselysivu } from '.'
 import {Tulokset} from '../tulokset/Tulokset'
+import qlist from './Qlist.json'
+
+
+let retAns :number[][]
+let ansSetter : Dispatch<SetStateAction<any>>;
+
 
 const Content = (props:any) => {
   const { data } = props;
   const [valittu, setValittu] = useState(-1)
   const [name, setName] = useState('');
   
+
+  
+  let [ans, setAns] = useState<number[][]>(() => {return Array.from({length: qlist.alaotsikko.length}, () => Array.from({length: 3}, () => 0))})
+  ansSetter = setAns
+
+  retAns = ans
+
+
+
   return (
     <Stack sx={{
       alignItems: 'center',
@@ -27,3 +42,4 @@ const Content = (props:any) => {
 }
 
 export default Content
+export {retAns, ansSetter}
