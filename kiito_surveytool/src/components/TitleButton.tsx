@@ -1,10 +1,12 @@
 import {Button} from '@mui/base/Button';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
+import {setTesti} from './KyselyContent';
 
 function handleClick(e:any, props : any) 
 {
   e.preventDefault();
+  setTesti(1);
   props.setValittu(-1)
 }
 
