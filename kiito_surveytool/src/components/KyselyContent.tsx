@@ -5,7 +5,11 @@ import { TitleBar } from './TitleBar';
 import { useState } from 'react';
 
 
-let testi : number = 1
+let testi : number = 1;
+
+export function setTesti(value : number) {
+  testi = value
+}
 
 const KyselyContent = (props : any) => {
 
@@ -14,9 +18,9 @@ const KyselyContent = (props : any) => {
 
 
 
-  for(let i = 0; i < props.data.sivut[0].kategoriat.length; i++)
+  for(let i = 0; i < props.data.sivut[props.sivu].kategoriat.length; i++)
   {
-    for(let j = 0; j < props.data.sivut[0].kategoriat[i].tasot.length; j++)
+    for(let j = 0; j < props.data.sivut[props.sivu].kategoriat[i].tasot.length; j++)
     {
         max = max + 1
     }
