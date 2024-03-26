@@ -16,8 +16,8 @@ return (
         }}>
     <Button
       style={{
-        background:'#039BE5',
-        opacity:.5,
+        backgroundColor:'#40B7D7',
+        //opacity:.5,
         border:"none",
         padding: "10px",
         color: "white",
@@ -38,8 +38,8 @@ return (
 
 
   <Button disabled style={{
-    background:'#039BE5',
-    opacity:.5,
+    backgroundColor:'#40B7D7',
+    //opacity:.5,
     border:"none",
     padding: "10px",
     color: "white",

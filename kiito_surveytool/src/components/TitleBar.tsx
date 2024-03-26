@@ -31,7 +31,7 @@ export function TitleBar(props : any){
 
   return(<Paper
     sx={{
-      background:"#039BE5",
+      background:"#40B7D7",
       color:"white",
       padding: "10px 5px",
       borderRadius: 6,

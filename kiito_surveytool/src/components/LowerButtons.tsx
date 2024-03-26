@@ -30,7 +30,7 @@ return (
     visibility: page !== 1
     ? "visible"
     : "hidden",
-    background:'#039BE5',
+    background:'#40B7D7',
     opacity:.5,
     border:"none",
     padding: "10px",
@@ -48,7 +48,7 @@ return (
 
 
   <Button onClick={()=>{if(page !== max)setPage(page+1)}} style={{
-    background:'#039BE5',
+    background:'#40B7D7',
     opacity:.5,
     border:"none",
     padding: "10px",

@@ -8,7 +8,7 @@ export function PaluuButton(props:any){
 
 return (
   <Button style={{
-    background:COLORS.primary,
+    background: COLORS.primary,
     border:"none",
     padding: "10px",
     color: 'white',

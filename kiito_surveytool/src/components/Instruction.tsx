@@ -31,7 +31,7 @@ export default function TypographyTheme(props : any) {
       <HelpRoundedIcon 
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        style={{ cursor: "pointer", color: '#039BE5' }}
+        style={{ cursor: "pointer", color: '#40B7D7' }}
       />
       <Popper id={id} open={open} anchorEl={anchorEl} placement="bottom-end">
         <Box sx={{

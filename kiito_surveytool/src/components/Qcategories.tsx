@@ -53,7 +53,8 @@ function Qcategories(props : any) {
         color:'white', 
         textTransform:'none', 
         fontWeight:'bold', 
-        padding:1
+        padding:1,
+        backgroundColor:'#40B7D7'
         }}
         onClick={(e) => handleClick(e, props, data, sivu)}
           key={data.sivut.indexOf(sivu)}
@@ -70,7 +71,7 @@ function Qcategories(props : any) {
       className="tulos-btn"
       sx={{
         fontSize:14, 
-        color:'blue', 
+        color:'#40B7D7', 
         textTransform:'none', 
         fontWeight:'bold', 
         padding:1, 

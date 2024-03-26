@@ -11,7 +11,7 @@ return (
         width:"80%",
         }}>
     <Button style={{
-    background:'#039BE5',
+    backgroundColor:'#40B7D7',
     opacity:.5,
     border:"none",
     padding: "10px",
@@ -29,7 +29,7 @@ return (
 
 
   <Button disabled style={{
-    background:'#039BE5',
+    backgroundColor:'#40B7D7',
     opacity:.5,
     border:"none",
     padding: "10px",

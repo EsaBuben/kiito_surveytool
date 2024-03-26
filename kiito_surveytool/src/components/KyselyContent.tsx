@@ -44,8 +44,8 @@ const KyselyContent = (props : any) => {
         visibility: testi !== 1
         ? "visible"
         : "hidden",
-        background:'#039BE5',
-        opacity:.5,
+        backgroundColor:'#40B7D7',
+        //opacity:.5,
         border:"none",
         padding: "10px",
         color: "white",
@@ -60,8 +60,8 @@ const KyselyContent = (props : any) => {
         </Stack>
       </Button>
       <Button onClick={()=>{if(page !== max)handleChangePlus()}} style={{
-        background:'#039BE5',
-        opacity:.5,
+        backgroundColor:'#40B7D7',
+        //opacity:.5,
         border:"none",
         padding: "10px",
         color: "white",
@@ -76,8 +76,8 @@ const KyselyContent = (props : any) => {
         </Stack>
       </Button>
       <Button onClick={()=>{props.setValittu((props.sivu + 2)*-1)}} style={{
-        background:'#039BE5',
-        opacity:.5,
+        backgroundColor:'#40B7D7',
+        //opacity:.5,
         border:"none",
         padding: "10px",
         color: "white",
