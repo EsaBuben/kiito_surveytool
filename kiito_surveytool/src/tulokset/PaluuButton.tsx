@@ -7,14 +7,15 @@ import {COLORS} from '../utils/style_constants';
 export function PaluuButton(props:any){
 
 return (
-  <Button style={{
+  <Button  style={{
     background: COLORS.primary,
     border:"none",
     padding: "10px",
     color: 'white',
     borderRadius: 10,
     marginLeft: "10%",
-    marginBottom: "10px"
+    marginBottom: "10px",
+    cursor: "pointer",
 
     }}
     onClick={() => props.setValittu(-1)}

@@ -81,7 +81,7 @@ function Qcategories(props : any) {
         justifyContent:'space-between'
       }}
       onClick={() => props.setValittu
-      (-1*(index + 2), console.log("Tulokset"))}
+      (-1*(index + 2))}
       key={-1*(index + 2)}
       >
       {"Tulokset" } <ArrowRightAltIcon />
