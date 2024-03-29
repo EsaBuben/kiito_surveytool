@@ -7,13 +7,13 @@ let brancher : Dispatch<SetStateAction<any>>;
 
 function showError(e : any)
 {
-	brancher("error"); 
+	brancher("error");
 	console.log(e);
 }
 
 function configureApp(c : any)
 {
-	data = c;
+	data = c[0];
 	brancher("etusivu");
 }
 
@@ -21,14 +21,44 @@ function configureApp(c : any)
 function FetchJSON() {
 	if (data == null)
 	{
-		data = {};
-		fetch("src/test.json", { method : "GET", mode : "cors", credentials : "include" }).
-			then( r => r.json() ).then( j => configureApp(j) ).catch( e => showError(e));
+		const jsonpath :string = "test_header.json";
+		data={}
+		fetch(jsonpath,
+			{ method : "GET", mode : "cors", credentials : "include" }).
+			then( r => r.json()
+			).then(
+				 pathjson => {
+					 	let jsonPromises = pathjson.jsonfiles.map((file:any) =>{
+							return fetch(file.file,
+								{ method : "GET", mode : "cors", credentials : "include" }).then(
+								r => r.json()
+							);
+						})
+						return Promise.all(jsonPromises)
+				 }
+			).then(testArray => configureApp(testArray)).catch(e => showError(e))
 	}
 	return (<Spinner state="init"/>);
 }
 
-
+// fetch(API_URL_DIARY)
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log("old", data);
+//         return data;
+//     })
+//     .then(async data => {
+//         await Promise.all(data.map((e, index, array) => {
+//             return fetch(API_URL_FOOD_DETAILS + e.foodid)
+//                 .then(response => response.json())
+//                 .then(data => {
+//                     array[index] = {...e, ...data};
+//                     console.log("update");
+//                 })
+//         }));
+//
+//         console.log("new", data)
+//     });
 
 
 function Spinner( props : any )
