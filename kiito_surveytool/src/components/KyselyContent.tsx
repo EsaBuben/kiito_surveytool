@@ -36,14 +36,19 @@ const KyselyContent = (props : any) => {
   props.valittu
   const { data } = props;
   return (
+    
     <Stack sx={{
       alignItems: 'center',
     }}>
-        <TitleButton setValittu = {props.setValittu}/>
+        <TitleButton setValittu = {props.setValittu} sivu = {props.sivu}/>
         <TitleBar data = {data} sivu = {props.sivu} />
         <Instruction data = {data} />
         <Questions sivu = {props.sivu} data = {data}/>
-        <Stack direction={'row'}>
+        
+        <Stack direction={'row'} style={{
+          position: 'fixed',
+          bottom: '10%'
+        }}>
         <Button onClick={()=>handleChangeMinus()} style={{
         visibility: testi !== 1
         ? "visible"
@@ -79,24 +84,9 @@ const KyselyContent = (props : any) => {
           </Typography>
         </Stack>
       </Button>
-      <Button onClick={()=>{props.setValittu((props.sivu + 2)*-1)}} style={{
-        backgroundColor:'#40B7D7',
-        //opacity:.5,
-        border:"none",
-        padding: "10px",
-        color: "white",
-        borderRadius: 10,
-        cursor: "pointer",
-        margin: "0.5em"
-      }}>
-        <Stack direction="row" spacing={1}>
-          <Typography>
-            Tulokset
-          </Typography>
-        </Stack>
-      </Button>
       </Stack>
       </Stack>
+      
   )
 }
 

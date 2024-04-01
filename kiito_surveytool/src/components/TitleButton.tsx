@@ -12,6 +12,8 @@ function handleClick(e:any, props : any)
 
 export function TitleButton(props:any){
 
+props.valittu
+props.sivu
 return (
     <div style={{
         width:"80%",
@@ -56,6 +58,23 @@ return (
       </Typography>
     </Stack>
   </Button>
+
+  <Button onClick={()=>{props.setValittu((props.sivu + 2)*-1)}} style={{
+        backgroundColor:'#40B7D7',
+        //opacity:.5,
+        border:"none",
+        padding: "10px",
+        color: "white",
+        borderRadius: 10,
+        cursor: "pointer",
+        margin: "0.5em"
+      }}>
+        <Stack direction="row" spacing={1}>
+          <Typography>
+            Tulokset
+          </Typography>
+        </Stack>
+      </Button>
 
   </div>
 );
