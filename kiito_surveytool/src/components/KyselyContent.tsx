@@ -3,6 +3,7 @@ import { Instruction, Questions, } from '.'
 import { TitleButton } from './TitleButton';
 import { TitleBar } from './TitleBar';
 import { useState } from 'react';
+import smallarrow from '../tulokset/smallarrow.svg'
 
 
 let testi : number = 1;
@@ -63,6 +64,7 @@ const KyselyContent = (props : any) => {
         margin: "0.5em"
       }}>
         <Stack direction="row" spacing={1}>
+        <img src={smallarrow}/>
           <Typography>
             Palaa
           </Typography>
@@ -85,6 +87,7 @@ const KyselyContent = (props : any) => {
           <Typography>
             Jatka
           </Typography>
+          <img style={{transform: 'rotate(180deg)'}} src={smallarrow}/>
         </Stack>
       </Button>
       </Stack>

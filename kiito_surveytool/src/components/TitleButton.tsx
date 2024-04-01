@@ -2,6 +2,7 @@ import {Button} from '@mui/base/Button';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import {setTesti} from './KyselyContent';
+import smallarrow from '../tulokset/smallarrow.svg'
 
 function handleClick(e:any, props : any) 
 {
@@ -17,6 +18,8 @@ props.sivu
 return (
     <div style={{
         width:"80%",
+        display: 'flex',
+        flexWrap: "nowrap"
         }}>
     <Button
       style={{
@@ -34,6 +37,7 @@ return (
         key={-1}
       >
     <Stack direction="row" spacing={1}>
+    <img src={smallarrow}/>
       <Typography>
         Palaa etusivulle
       </Typography>
@@ -47,10 +51,10 @@ return (
     border:"none",
     padding: "10px",
     color: "white",
-    marginBottom: "10px",
+    marginBottom: "60px",
+    marginTop: '30px',
     borderRadius: 10,
-    marginLeft: "50%",
-    transform: "translateX(-125%)"
+    marginLeft: 'auto'
   }}>
     <Stack direction="row" spacing={1}>
       <Typography>
@@ -66,13 +70,16 @@ return (
         padding: "10px",
         color: "white",
         borderRadius: 10,
-        cursor: "pointer",
-        margin: "0.5em"
+        cursor: "pointer", 
+        marginTop: '30px',
+        marginBottom: '60px',
+        marginLeft: 'auto'
       }}>
         <Stack direction="row" spacing={1}>
           <Typography>
-            Tulokset
+            Tuloksiin
           </Typography>
+          <img style={{transform: 'rotate(180deg)'}} src={smallarrow}/>
         </Stack>
       </Button>
 
