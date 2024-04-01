@@ -2,7 +2,7 @@ import { Stack } from '@mui/material'
 import { Header, Content } from '.'
 
 const Etusivu = (props : any) => {
-  const { data } = props;
+  const { data, setupArr } = props;
   return (
     <Stack
     spacing={5}
@@ -12,7 +12,7 @@ const Etusivu = (props : any) => {
     }}
     >
       <Header data = {data}/>
-      <Content data = {data}/>
+      <Content data = {data} setupArr={setupArr}/>
     </Stack>
   )
 }

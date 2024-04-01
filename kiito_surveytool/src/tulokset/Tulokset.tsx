@@ -17,7 +17,7 @@ export function Tulokset(props:any){
   <div style={{width:"100%", marginTop:'30px'}}>
     <PaluuButton setValittu={props.setValittu}/>
     <TitleBar otsikko={otsikko} alaOtsikko={alaotsikko} createPDF={createPDF}/>
-    <TabChoiceBar sivuData={props.data.sivut[props.sivu]} />
+    <TabChoiceBar sivuData={props.data.sivut[props.sivu]} answers={props.answers[props.sivu]}/>
   </div>);
 
 }
