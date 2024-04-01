@@ -41,7 +41,7 @@ const KyselyContent = (props : any) => {
     <Stack sx={{
       alignItems: 'center',
     }}>
-        <TitleButton setValittu = {props.setValittu} sivu = {props.sivu}/>
+        <TitleButton setValittu = {props.setValittu} sivu = {props.sivu} data={data}/>
         <TitleBar data = {data} sivu = {props.sivu} />
         <Instruction data = {data} />
         <Questions sivu = {props.sivu} data = {data}/>

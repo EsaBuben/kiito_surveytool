@@ -15,6 +15,7 @@ export function TitleButton(props:any){
 
 props.valittu
 props.sivu
+const { data } = props
 return (
     <div style={{
         width:"80%",
@@ -58,7 +59,7 @@ return (
   }}>
     <Stack direction="row" spacing={1}>
       <Typography>
-        Kiertävät raaka-aineet
+        {data.sivut[props.sivu].sivu}
       </Typography>
     </Stack>
   </Button>
