@@ -69,6 +69,9 @@ const KyselyContent = (props : any) => {
         </Stack>
       </Button>
       <Button onClick={()=>{if(page !== max)handleChangePlus()}} style={{
+        visibility: testi !== max
+        ? "visible"
+        : "hidden",
         backgroundColor:'#40B7D7',
         //opacity:.5,
         border:"none",
