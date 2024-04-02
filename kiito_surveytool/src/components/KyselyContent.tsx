@@ -14,14 +14,15 @@ export function setTesti(value : number) {
 
 const KyselyContent = (props : any) => {
 
+  const { data, sivu } = props;
   let [page, setPage] = useState(testi)
   let max = 0
 
 
 
-  for(let i = 0; i < props.data.sivut[props.sivu].kategoriat.length; i++)
+  for(let i = 0; i < data[sivu].kategoriat.length; i++)
   {
-    for(let j = 0; j < props.data.sivut[props.sivu].kategoriat[i].tasot.length; j++)
+    for(let j = 0; j < data[sivu].kategoriat[i].tasot.length; j++)
     {
         max = max + 1
     }
@@ -34,18 +35,17 @@ const KyselyContent = (props : any) => {
     setPage(page-1)
     testi = page-1
   }
-  props.valittu
-  const { data } = props;
+
   return (
-    
+
     <Stack sx={{
       alignItems: 'center',
     }}>
-        <TitleButton setValittu = {props.setValittu} sivu = {props.sivu} data={data}/>
-        <TitleBar data = {data} sivu = {props.sivu} />
+        <TitleButton setValittu = {props.setValittu} sivu = {sivu} data={data}/>
+        <TitleBar data = {data} sivu = {sivu} />
         <Instruction data = {data} />
-        <Questions sivu = {props.sivu} data = {data}/>
-        
+        <Questions sivu = {sivu} data = {data}/>
+
         <Stack direction={'row'} style={{
           position: 'fixed',
           bottom: '10%'
@@ -92,7 +92,7 @@ const KyselyContent = (props : any) => {
       </Button>
       </Stack>
       </Stack>
-      
+
   )
 }
 

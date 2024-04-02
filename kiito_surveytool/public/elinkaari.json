@@ -1,10 +1,5 @@
 {
-    "paaotsikko": "Nykytilakartoitus kiertotalouden potentiaalista ja kyvykkyyden kypsyystasosta osana uusien liiketoimintamallien suunnittelua\n",
-  "aiheotsikko": "Valitse kiertotalouden liiketoimintamalli\n",
-
-  "sivut": [
-    {
-        "sivu": "Elinkaaren pidentäminen\n",
+      "sivu": "Elinkaaren pidentäminen\n",
       "kategoriat": [
         {
           "otsikko": "Materiaalien kestävä käyttö\n",
@@ -23,7 +18,7 @@
               ]
             }
           ]
-            
+
         },
         {
           "otsikko": "Kapasiteetin ja resurssien tehokas hyödyntäminen\n",
@@ -43,7 +38,7 @@
               ]
             }
           ]
-            
+
         },
         {
           "otsikko": "Koneiden ja laitteiden elinkaaren pidentäminen\n",
@@ -81,7 +76,7 @@
                 "Arvo- ja toimitusketjujen kehittäminen kiertotalouden periaatteiden mukaisiksi ja parhaan mahdollisen arvon tuottamiseksi asiakkaille.\n",
                 "Arviointi toimittajien ja muiden sidosryhmien sitoutumista kestävän ja vastuullisen liiketoiminnan perusarvoihin ja periaatteisiin.\n"
               ]
-                
+
             }
           ]
         },
@@ -102,11 +97,9 @@
                 "Erottuminen kilpailijoista kehittämällä kiertotalouden, kestävyyden ja vastuullisuuden edelläkävijäbrändiä sekä viestimällä siitä kaikille sidosryhmille.\n",
                 "Ympäristöjalanjäljen arviointi: mm. energian kulutus, tuotteiden/palveluiden hankinta, toimitusketjut, kuljetukset, jätehuolto.\n"
               ]
-                
+
             }
           ]
         }
       ]
     }
-  ]
-}

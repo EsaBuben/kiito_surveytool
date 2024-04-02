@@ -32,7 +32,7 @@ function TabPage(props: TabProps) {
 
 export function TabChoiceBar(props:any){
   const [value, setValue] = useState<number>(0)
-  console.log(props.answers)
+  
   const radio_values:number[] = props.answers.map((values:any)=>{
       let sum:number = 0
       values.forEach((num:number)=>{

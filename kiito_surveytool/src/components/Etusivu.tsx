@@ -11,8 +11,8 @@ const Etusivu = (props : any) => {
       position: 'relative',
     }}
     >
-      <Header data = {data}/>
-      <Content data = {data} setupArr={setupArr}/>
+      <Header data = {props.localData}/>
+      <Content data = {data} localData={props.localData} setupArr={setupArr}/>
     </Stack>
   )
 }

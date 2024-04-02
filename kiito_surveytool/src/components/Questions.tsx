@@ -12,14 +12,13 @@ import { retAns, ansSetter } from './Content';
 
 
 export default function Questions(props : any) {
-  const {data} = props;
+  const {data, sivu} = props;
   //jiisonnista sisältö tännekki
-  const sivu:number = props.sivu
 
-  let [qsivut, setQsivut] = useState<any[][]>(() => {return Array.from({length: data.sivut.length}, () => Array.from({length: 1}, () => 0))})
+  let [qsivut, setQsivut] = useState<any[][]>(() => {return Array.from({length: data.length}, () => Array.from({length: 1}, () => 0))})
   for(var i = 0; i < qsivut.length; i++)
   {
-    qsivut[i] = data.sivut[i].kategoriat
+    qsivut[i] = data[i].kategoriat
   }
 
   function handleChange(e: any, index: number) {
@@ -44,7 +43,7 @@ export default function Questions(props : any) {
   }
 */
 
-  qsivut[props.sivu].forEach((otsikko) => {
+  qsivut[sivu].forEach((otsikko) => {
     otsikko.tasot.forEach((alaotsikko: any) => {
       ques.push(alaotsikko.kysymykset)
     })

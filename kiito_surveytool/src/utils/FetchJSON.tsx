@@ -2,7 +2,8 @@ import { CircularProgress } from '@mui/material';
 import React, { Dispatch, SetStateAction } from 'react'
 import { Etusivu } from '../components';
 
-let data : any;
+let data : any; // new sivut taulukko
+let localData: any; //etusivun otsikot
 let setup_array:any[];
 let brancher : Dispatch<SetStateAction<any>>;
 
@@ -12,24 +13,25 @@ function showError(e : any)
 	console.log(e);
 }
 
-function configureApp(datalist : any)
+function configureApp(datalist : any, localdata:any)
 {
 	//first 2 list positions for localization data, tasot
 	//const datalistdepth:number = 4
 	setup_array = []
 	// value state management
 	datalist.map((o:any) =>{
-		setup_array = o.sivut.map( (o:any)=>{
-					return o.kategoriat.flatMap((o:any)=>{
+		setup_array.push(o.kategoriat.flatMap((o:any)=>{
 						return o.tasot.map((o:any)=>{
 								return o.kysymykset.map(() =>{
 									return 0
 								})
 							})
-				})
+				}))
 		})
-	})
-	data = datalist[0];
+
+	console.log(localdata)
+	data = datalist;
+	localData = localdata
 	brancher("etusivu");
 }
 
@@ -37,22 +39,26 @@ function configureApp(datalist : any)
 function FetchJSON() {
 	if (data == null)
 	{
-		const jsonpath :string = "test_header.json";
-		//data={}
-		fetch(jsonpath,
+		const config :string = "sisallys.json";
+		let localdata:any={}
+		fetch(config,
 			{ method : "GET", mode : "cors", credentials : "include" }).
 			then( r => r.json()
 			).then(
-				 pathjson => {
-					 	let jsonPromises = pathjson.jsonfiles.map((file:any) => fetch(file.file,
+				 config => {
+					 localdata.paaotsikko = config.paaotsikko
+					 localdata.aiheotsikko = config.aiheotsikko
+					 localdata.tulosotsikko = config.tulosotsikko
+					 	let jsonPromises =  config.kyselyt.map((path:any) => fetch(path,
 								{ method : "GET", mode : "cors", credentials : "include" }).then(
 								r => r.json()
 							)
 						)
 						return Promise.all(jsonPromises)
 				 }
-			).then(data => configureApp(data)).catch(e => showError(e))
+			).then(data => configureApp(data, localdata)).catch(e => showError(e))
 	}
+
 	return (<Spinner state="init"/>);
 }
 
@@ -84,7 +90,7 @@ function Spinner( props : any )
 	switch (branch)
 	{
 		case "init": ret = <CircularProgress key="spin" />; break;
-		case "etusivu": ret = <Etusivu data={data} setupArr={setup_array}/>; break;
+		case "etusivu": ret = <Etusivu data={data} localData={localData} setupArr={setup_array}/>; break;
 		default: ret = <div key="err">Ei saatu konffista ny... kato konsolia...</div>;
 	}
 	return ret;

@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack';
 import {setTesti} from './KyselyContent';
 import smallarrow from '../tulokset/smallarrow.svg'
 
-function handleClick(e:any, props : any) 
+function handleClick(e:any, props : any)
 {
   e.preventDefault();
   setTesti(1);
@@ -13,8 +13,6 @@ function handleClick(e:any, props : any)
 
 export function TitleButton(props:any){
 
-props.valittu
-props.sivu
 const { data } = props
 return (
     <div style={{
@@ -59,7 +57,7 @@ return (
   }}>
     <Stack direction="row" spacing={1}>
       <Typography>
-        {data.sivut[props.sivu].sivu}
+        {data[props.sivu].sivu}
       </Typography>
     </Stack>
   </Button>
@@ -71,7 +69,7 @@ return (
         padding: "10px",
         color: "white",
         borderRadius: 10,
-        cursor: "pointer", 
+        cursor: "pointer",
         marginTop: '30px',
         marginBottom: '60px',
         marginLeft: 'auto'

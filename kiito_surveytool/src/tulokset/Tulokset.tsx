@@ -6,8 +6,8 @@ import {PaluuButton} from './PaluuButton';
 
 export function Tulokset(props:any){
 
-  let otsikko:string = "Nykytilakartoitus kiertotalouden potentiaalista";
-  let alaotsikko:string = props.data.sivut[props.sivu].sivu;
+  let otsikko:string = props.localData.tulosotsikko;
+  let alaotsikko:string = props.data[props.sivu].sivu;
 
   const createPDF = () => {
     //something something imported functions open new tab something something
@@ -17,7 +17,7 @@ export function Tulokset(props:any){
   <div style={{width:"100%", marginTop:'30px'}}>
     <PaluuButton setValittu={props.setValittu}/>
     <TitleBar otsikko={otsikko} alaOtsikko={alaotsikko} createPDF={createPDF}/>
-    <TabChoiceBar sivuData={props.data.sivut[props.sivu]} answers={props.answers[props.sivu]}/>
+    <TabChoiceBar sivuData={props.data[props.sivu]} answers={props.answers[props.sivu]}/>
   </div>);
 
 }
