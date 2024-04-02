@@ -1,0 +1,9 @@
+{
+   "nykytila":"/nykytila.json",
+    "kiertävät":"/kiertävät.json",
+    "tuote":"/tuote.json",
+    "jakamis":"/jakamis.json",
+    "elinkaari":"/elinkaari.json",
+    "resurssi":"/resurssi.json"
+
+}

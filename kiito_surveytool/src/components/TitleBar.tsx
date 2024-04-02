@@ -47,9 +47,6 @@ export function TitleBar(props : any){
           <Typography sx={{textAlign:"center", fontWeight:"bold"}} variant="subtitle1">{subTitle}</Typography>
         </Grid>
       </Grid>
-      <Grid item >
-        <img style={{width:"50px", height:"50px",paddingRight:"30px"}} />
-      </Grid>
     </Grid>
   </Paper>)
 }
