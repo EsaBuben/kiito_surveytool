@@ -39,6 +39,7 @@ function Qcategories(props : any) {
         '& > *': {
           m: 1,
         },
+        marginLeft: '120px'
       }}
     >
   
@@ -54,7 +55,8 @@ function Qcategories(props : any) {
         textTransform:'none', 
         fontWeight:'bold', 
         padding:1,
-        backgroundColor:'#40B7D7'
+        backgroundColor:'#40B7D7',
+        
         }}
         onClick={(e) => handleClick(e, props, data, sivu)}
           key={data.sivut.indexOf(sivu)}
