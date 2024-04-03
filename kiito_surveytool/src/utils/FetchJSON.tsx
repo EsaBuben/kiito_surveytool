@@ -29,7 +29,7 @@ function configureApp(datalist : any, localdata:any)
 				}))
 		})
 
-	console.log(localdata)
+	//console.log(localdata)
 	data = datalist;
 	localData = localdata
 	brancher("etusivu");

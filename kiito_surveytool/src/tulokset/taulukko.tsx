@@ -21,8 +21,8 @@ export function Taulukko(props :any){
               return<Grid spacing={0.5}
                 sx={{ justifyContent: 'center'}}
                     key={index} container item>
-                <Cell key={categoryKey}  Text={category} isCategory={true} />
-                <Cell key={averageKey}  Text={answerAverages[index]} isCategory={false} />
+                <Cell key={categoryKey}  Text={category} isCategory={true} isClickable={true} sivu={props.sivu} page={index} setValittu={props.setValittu}/>
+                <Cell key={averageKey}  Text={answerAverages[index]} isCategory={false} isClickable={false}/>
               </Grid>
             })
           }
