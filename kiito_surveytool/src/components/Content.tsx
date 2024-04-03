@@ -2,21 +2,18 @@ import {   Dispatch, SetStateAction, useState } from 'react'
 import {  Stack } from '@mui/material'
 import { Qcategories, Kyselysivu } from '.'
 import {Tulokset} from '../tulokset/Tulokset'
-import qlist from './Qlist.json'
 
 
-let retAns :number[][]
+let retAns :number[][][]
 let ansSetter : Dispatch<SetStateAction<any>>;
 
 
 const Content = (props:any) => {
-  const { data } = props;
+  const { data, setupArr } = props;
   const [valittu, setValittu] = useState(-1)
   const [name, setName] = useState('');
-  
 
-  
-  let [ans, setAns] = useState<number[][]>(() => {return Array.from({length: qlist.alaotsikko.length}, () => Array.from({length: 3}, () => 0))})
+  let [ans, setAns] = useState<number[][][]>(setupArr)
   ansSetter = setAns
 
   retAns = ans
@@ -32,9 +29,9 @@ const Content = (props:any) => {
       height: { sx: 'auto', md: '100vh'}
     }}>
     {valittu === -1 && <Qcategories setValittu={ (data: SetStateAction<number>) => setValittu(data) }
-     data = {data} setName={setName} name = {name}/>}
+     data = {data} setName={setName} name = {name} localData={props.localData}/>}
     {valittu > -1 && <Kyselysivu sivu = {valittu} setValittu = {setValittu} data = {data} />}
-    {valittu < -1 && <Tulokset sivu={(valittu*-1) - 2} setValittu = {setValittu} data = {data}/>}
+    {valittu < -1 && <Tulokset sivu={(valittu*-1) - 2} setValittu = {setValittu} data = {data} localData={props.localData} answers={ans}/>}
 
     </Stack>
 

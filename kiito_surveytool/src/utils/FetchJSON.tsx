@@ -2,18 +2,36 @@ import { CircularProgress } from '@mui/material';
 import React, { Dispatch, SetStateAction } from 'react'
 import { Etusivu } from '../components';
 
-let data : any;
+let data : any; // new sivut taulukko
+let localData: any; //etusivun otsikot
+let setup_array:any[];
 let brancher : Dispatch<SetStateAction<any>>;
 
 function showError(e : any)
 {
-	brancher("error"); 
+	brancher("error");
 	console.log(e);
 }
 
-function configureApp(c : any)
+function configureApp(datalist : any, localdata:any)
 {
-	data = c;
+	//first 2 list positions for localization data, tasot
+	//const datalistdepth:number = 4
+	setup_array = []
+	// value state management
+	datalist.map((o:any) =>{
+		setup_array.push(o.kategoriat.flatMap((o:any)=>{
+						return o.tasot.map((o:any)=>{
+								return o.kysymykset.map(() =>{
+									return 0
+								})
+							})
+				}))
+		})
+
+	console.log(localdata)
+	data = datalist;
+	localData = localdata
 	brancher("etusivu");
 }
 
@@ -21,14 +39,47 @@ function configureApp(c : any)
 function FetchJSON() {
 	if (data == null)
 	{
-		data = {};
-		fetch("src/test.json", { method : "GET", mode : "cors", credentials : "include" }).
-			then( r => r.json() ).then( j => configureApp(j) ).catch( e => showError(e));
+		const config :string = "sisallys.json";
+		let localdata:any={}
+		fetch(config,
+			{ method : "GET", mode : "cors", credentials : "include" }).
+			then( r => r.json()
+			).then(
+				 config => {
+					 localdata.paaotsikko = config.paaotsikko
+					 localdata.aiheotsikko = config.aiheotsikko
+					 localdata.tulosotsikko = config.tulosotsikko
+					 	let jsonPromises =  config.kyselyt.map((path:any) => fetch(path,
+								{ method : "GET", mode : "cors", credentials : "include" }).then(
+								r => r.json()
+							)
+						)
+						return Promise.all(jsonPromises)
+				 }
+			).then(data => configureApp(data, localdata)).catch(e => showError(e))
 	}
+
 	return (<Spinner state="init"/>);
 }
 
-
+// fetch(API_URL_DIARY)
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log("old", data);
+//         return data;
+//     })
+//     .then(async data => {
+//         await Promise.all(data.map((e, index, array) => {
+//             return fetch(API_URL_FOOD_DETAILS + e.foodid)
+//                 .then(response => response.json())
+//                 .then(data => {
+//                     array[index] = {...e, ...data};
+//                     console.log("update");
+//                 })
+//         }));
+//
+//         console.log("new", data)
+//     });
 
 
 function Spinner( props : any )
@@ -39,7 +90,7 @@ function Spinner( props : any )
 	switch (branch)
 	{
 		case "init": ret = <CircularProgress key="spin" />; break;
-		case "etusivu": ret = <Etusivu data={data}/>; break;
+		case "etusivu": ret = <Etusivu data={data} localData={localData} setupArr={setup_array}/>; break;
 		default: ret = <div key="err">Ei saatu konffista ny... kato konsolia...</div>;
 	}
 	return ret;

@@ -1,9 +1,4 @@
 {
-    "paaotsikko": "Nykytilakartoitus kiertotalouden potentiaalista ja kyvykkyyden kypsyystasosta osana uusien liiketoimintamallien suunnittelua\n",
-  "aiheotsikko": "Valitse kiertotalouden liiketoimintamalli\n",
-
-  "sivut": [
-    {
         "sivu": "Jakamisalustat\n",
       "kategoriat": [
         {
@@ -15,7 +10,7 @@
                 "Käytettyjen ja ylijäämämateriaalien hyödyntäminen tuotteiden tai palveluiden suunnittelussa ja valmistuksessa käyttämällä esimerkiksi Materiaalitori.fi -palvelua.\n",
                 "Tuotannon sivuvirroista syntyvän materiaalidatan avaaminen uusiokäyttäjille.\n"
               ]
-            }           
+            }
           ]
         },
         {
@@ -35,7 +30,7 @@
               ]
             }
           ]
-                    
+
         },
         {
           "otsikko": "Koneiden ja laitteiden elinkaaren pidentäminen\n",
@@ -79,5 +74,3 @@
         }
       ]
     }
-  ]
-}

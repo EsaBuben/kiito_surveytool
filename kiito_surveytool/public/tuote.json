@@ -1,10 +1,5 @@
 {
-    "paaotsikko": "Nykytilakartoitus kiertotalouden potentiaalista ja kyvykkyyden kypsyystasosta osana uusien liiketoimintamallien suunnittelua\n",
-  "aiheotsikko": "Valitse kiertotalouden liiketoimintamalli\n",
 
-  "sivut": [
-    {
-        
             "sivu": "Tuote palveluna\n",
             "kategoriat": [
               {
@@ -94,6 +89,3 @@
               }
             ]
           }
-    
-  ]
-}

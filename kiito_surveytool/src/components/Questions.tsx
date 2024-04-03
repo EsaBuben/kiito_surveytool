@@ -12,26 +12,25 @@ import { retAns, ansSetter } from './Content';
 
 
 export default function Questions(props : any) {
-  const {data} = props;
+  const {data, sivu} = props;
   //jiisonnista sisältö tännekki
-  props.sivu
 
-  let [qsivut, setQsivut] = useState<any[][]>(() => {return Array.from({length: data.sivut.length}, () => Array.from({length: 1}, () => 0))})
+  let [qsivut, setQsivut] = useState<any[][]>(() => {return Array.from({length: data.length}, () => Array.from({length: 1}, () => 0))})
   for(var i = 0; i < qsivut.length; i++)
   {
-    qsivut[i] = data.sivut[i].kategoriat
+    qsivut[i] = data[i].kategoriat
   }
 
   function handleChange(e: any, index: number) {
     const newVal = parseInt(e.target.value)
     const updatedAns = [...retAns]
-    updatedAns[testi - 1][index] = newVal
+    updatedAns[sivu][testi - 1][index] = newVal
     ansSetter(updatedAns)
  }
 
 
   var ques : any[][]
-  
+
   ques = []
   /*
   for(var i = 0; i < qlist.alaotsikko.length; i++)
@@ -43,13 +42,13 @@ export default function Questions(props : any) {
     }
   }
 */
-  
-  qsivut[props.sivu].forEach((otsikko) => {
+
+  qsivut[sivu].forEach((otsikko) => {
     otsikko.tasot.forEach((alaotsikko: any) => {
       ques.push(alaotsikko.kysymykset)
     })
     })
-  
+
 /*
   for(var i = 0; i < qsivut[props.sivu][i].tasot.length; i++)
   {
@@ -63,7 +62,7 @@ export default function Questions(props : any) {
 
   return (
     <>
-    {ques[testi-1].map((x, index) => 
+    {ques[testi-1].map((x, index) =>
     <div key={index} style={{display: "flex", width: "80%",  fontFamily: "arial", marginBottom: '30px'}}>
     <FormControl sx={{flexDirection: 'row'}}>
       <FormLabel sx={{width:'50%'}} >{x}</FormLabel>
@@ -71,7 +70,7 @@ export default function Questions(props : any) {
         row
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group"
-        value={retAns[testi-1][index]}
+        value={retAns[sivu][testi-1][index]}
         onChange={(e) => handleChange(e, index)}
       >
         <FormControlLabel value="1" control={<Radio />} label="1" labelPlacement='bottom' />

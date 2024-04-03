@@ -32,7 +32,14 @@ function TabPage(props: TabProps) {
 
 export function TabChoiceBar(props:any){
   const [value, setValue] = useState<number>(0)
-  const radio_values:number[] = [2.5,3,4,1,5,3,4];
+  
+  const radio_values:number[] = props.answers.map((values:any)=>{
+      let sum:number = 0
+      values.forEach((num:number)=>{
+        sum += num
+      })
+      return sum
+  });
 //possibly do one step above for less rerunning
   let data_array: string[] = props.sivuData.kategoriat.flatMap(
         (kategoria: Kategoria) => {

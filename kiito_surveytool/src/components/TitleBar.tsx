@@ -10,24 +10,24 @@ export function TitleBar(props : any){
   let title : string[] = ['sivu0']
   let sub : string[] = ['sub0']
 
-  for(let i = 0; i < data.sivut[0].kategoriat.length; i++)
+  for(let i = 0; i < data[0].kategoriat.length; i++)
   {
-    title.push(i+1 + ". " + data.sivut[0].kategoriat[i].otsikko)
-    title.push(i+1 + ". " + data.sivut[0].kategoriat[i].otsikko)
+    title.push(i+1 + ". " + data[0].kategoriat[i].otsikko)
+    title.push(i+1 + ". " + data[0].kategoriat[i].otsikko)
   }
 
-  for(let i = 0; i < data.sivut[0].kategoriat.length; i++)
+  for(let i = 0; i < data[0].kategoriat.length; i++)
   {
-    for(let j = 0; j < data.sivut[0].kategoriat[i].tasot.length; j++)
+    for(let j = 0; j < data[0].kategoriat[i].tasot.length; j++)
     {
-      sub.push(data.sivut[0].kategoriat[i].tasot[j].alaotsikko) 
+      sub.push(data[0].kategoriat[i].tasot[j].alaotsikko)
     }
   }
 
 
   const Title : string = title[testi]
   const subTitle : string = sub[testi]
-  
+
 
   return(<Paper
     sx={{

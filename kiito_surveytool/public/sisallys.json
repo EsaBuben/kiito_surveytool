@@ -1,0 +1,13 @@
+{
+  "paaotsikko":"Nykytilakartoitus kiertotalouden potentiaalista ja kyvykkyyden kypsyystasosta osana uusien liiketoimintamallien suunnittelua\n",
+  "aiheotsikko":"Valitse kiertotalouden liiketoimintamalli\n",
+  "tulosotsikko":"Nykytilakartoitus kiertotalouden potentiaalista",
+  "kyselyt":[
+    "nykytila.json",
+    "kiertävät.json",
+    "tuote.json",
+    "jakamis.json",
+    "elinkaari.json",
+    "resurssi.json"
+  ]
+}

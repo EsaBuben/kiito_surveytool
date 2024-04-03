@@ -2,17 +2,17 @@ import { Box, Button, ButtonGroup, Stack, Typography } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { Tietokentta } from './';
 
-export function handleClick(e:any, props : any, data : any, sivu : any) 
+export function handleClick(e:any, props : any, data : any, sivu : any)
 {
   e.preventDefault();
-  props.setValittu(data.sivut.indexOf(sivu))
+  props.setValittu(data.indexOf(sivu))
 }
 
 
 
 function Qcategories(props : any) {
   //get data from props
-  const { data } = props;
+  const { data, localData } = props;
 
   return (
   <Stack sx={{
@@ -31,7 +31,7 @@ function Qcategories(props : any) {
   <Tietokentta setName = {props.setName} name = {props.name} />
 
   <Typography variant="h5" align="center" fontWeight='bold' width='300px' paddingBottom='50px'>
-  {data.aiheotsikko}
+  {localData.aiheotsikko}
   </Typography >
   <Box
       sx={{
@@ -42,25 +42,25 @@ function Qcategories(props : any) {
         marginLeft: '120px'
       }}
     >
-  
+
   <ButtonGroup orientation="vertical" sx={{gap:3}}>
-    {data.sivut.map((sivu : any) =>(
+    {data.map((sivu : any) =>(
       <Button variant="contained"
       className="question-btn"
       sx={{
-        boxShadow:15, 
+        boxShadow:15,
         borderRadius:2,
-        fontSize:14, 
-        color:'white', 
-        textTransform:'none', 
-        fontWeight:'bold', 
+        fontSize:14,
+        color:'white',
+        textTransform:'none',
+        fontWeight:'bold',
         padding:1,
         backgroundColor:'#40B7D7',
         
         }}
         onClick={(e) => handleClick(e, props, data, sivu)}
-          key={data.sivut.indexOf(sivu)}
-          
+          key={data.indexOf(sivu)}
+
       >
       {sivu.sivu}
       </Button>
@@ -68,23 +68,22 @@ function Qcategories(props : any) {
     </ButtonGroup>
 
     <ButtonGroup orientation="vertical" sx={{gap:3}}>
-    {data.sivut.map((sivu : any, index: number) =>(
-      <Button variant="text"
+    {data.map((sivu : any, index: number) =>(
+      <Button key={sivu} variant="text"
       className="tulos-btn"
       sx={{
-        fontSize:14, 
-        color:'#40B7D7', 
-        textTransform:'none', 
-        fontWeight:'bold', 
-        padding:1, 
-        width:100, 
-        height:40, 
-        display:'flex', 
+        fontSize:14,
+        color:'#40B7D7',
+        textTransform:'none',
+        fontWeight:'bold',
+        padding:1,
+        width:100,
+        height:40,
+        display:'flex',
         justifyContent:'space-between'
       }}
       onClick={() => props.setValittu
       (-1*(index + 2))}
-      key={-1*(index + 2)}
       >
       {"Tulokset" } <ArrowRightAltIcon />
       </Button>
