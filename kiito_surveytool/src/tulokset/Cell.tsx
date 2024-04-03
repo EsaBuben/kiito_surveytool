@@ -8,7 +8,7 @@ export function Cell(props:any){
   const Text : string = props.Text
   const isCategory: boolean = props.isCategory;
   const isClickable: boolean = props.isClickable;
-  let setValittu = props.setValittu
+  const setValittu = props.setValittu
 
   return(
     <Grid item
