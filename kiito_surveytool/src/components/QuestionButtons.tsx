@@ -1,6 +1,6 @@
 import { Box, Button, ButtonGroup, Stack, Typography } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import { Tietokentta } from './';
+import { Tietokentta } from '.';
 
 export function handleClick(e:any, props : any, data : any, sivu : any)
 {
