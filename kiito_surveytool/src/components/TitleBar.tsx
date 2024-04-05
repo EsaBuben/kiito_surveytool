@@ -4,23 +4,18 @@ import { testi } from './KyselyContent';
 import Typography from '@mui/material/Typography';
 
 export function TitleBar(props : any){
-  const {data} = props;
+  const {data, sivu} = props;
   //sit vaa kattelee jiisonnista mikä on tää title ja subtitteli
 
   let title : string[] = ['sivu0']
   let sub : string[] = ['sub0']
 
-  for(let i = 0; i < data[0].kategoriat.length; i++)
+  for(let i = 0; i < data[sivu].kategoriat.length; i++)
   {
-    title.push(i+1 + ". " + data[0].kategoriat[i].otsikko)
-    title.push(i+1 + ". " + data[0].kategoriat[i].otsikko)
-  }
-
-  for(let i = 0; i < data[0].kategoriat.length; i++)
-  {
-    for(let j = 0; j < data[0].kategoriat[i].tasot.length; j++)
+    for(let j = 0; j < data[sivu].kategoriat[i].tasot.length; j++)
     {
-      sub.push(data[0].kategoriat[i].tasot[j].alaotsikko)
+      title.push(i+1 + ". " + data[sivu].kategoriat[i].otsikko)
+      sub.push(data[sivu].kategoriat[i].tasot[j].alaotsikko)
     }
   }
 
