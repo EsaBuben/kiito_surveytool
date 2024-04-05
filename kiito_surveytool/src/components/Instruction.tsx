@@ -20,8 +20,8 @@ export default function Instruction(props : any) {
     <Box justifyContent='center' alignItems='center' textAlign='center' sx={{ display: 'flex', alignItems: 'center' }}>
       <h3>Kuinka arvioisit seuraavien toimintojen/kyvykkyyksien kypsyysTason?</h3>
       <HelpRoundedIcon 
-        onMouseEnter={handleMouseLeave}
-        onMouseLeave={handleMouseEnter}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         style={{ cursor: "pointer", color: '#40B7D7' }}
       />
       <Popper
