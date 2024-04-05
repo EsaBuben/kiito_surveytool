@@ -13,11 +13,12 @@ export function Tulokset(props:any){
     //something something imported functions open new tab something something
   }
 
+
   return(
   <div style={{width:"100%", marginTop:'30px'}}>
     <PaluuButton setValittu={props.setValittu}/>
     <TitleBar otsikko={otsikko} alaOtsikko={alaotsikko} createPDF={createPDF}/>
-    <TabChoiceBar sivuData={props.data[props.sivu]} answers={props.answers[props.sivu]}/>
+    <TabChoiceBar sivuData={props.data[props.sivu]} answers={props.answers[props.sivu]} sivu={props.sivu} setValittu={props.setValittu}/>
   </div>);
 
 }

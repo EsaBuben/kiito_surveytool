@@ -7,8 +7,10 @@ import {
   RadialLinearScale
 } from 'chart.js/auto';
 
-import {Radar} from 'react-chartjs-2';
+import {Radar, getElementsAtEvent} from 'react-chartjs-2';
 import './kaavio.css'
+import { useRef } from 'react';
+import { setTesti } from '../components/KyselyContent';
 ChartJS.register(
   LineElement,
   PointElement,
@@ -16,6 +18,7 @@ ChartJS.register(
   Legend,
   RadialLinearScale
 )
+
 
 export function Kaavio(props:any){
   let data_array = props.data_array;
@@ -68,13 +71,25 @@ export function Kaavio(props:any){
 
   }
 
+  const chartRef = useRef()
+  const setValittu = props.setValittu
+  const onClick = (event:any) => {
+    if(chartRef.current)
+    {
+      if(getElementsAtEvent(chartRef.current, event).length > 0)
+      {
+        setValittu(props.sivu); setTesti(getElementsAtEvent(chartRef.current, event)[0].index+1)
+      }
+  }
+  }
 
   return(
     <div className="radar_canvas">
       <Radar
       data={data}
       options={options}
-
+      ref={chartRef}
+      onClick={onClick}
       >
 
       </Radar>

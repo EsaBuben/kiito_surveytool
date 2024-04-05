@@ -50,7 +50,6 @@ export function TabChoiceBar(props:any){
           )
   })
 
-
   return (<Box >
     <Tabs
       centered
@@ -65,10 +64,10 @@ export function TabChoiceBar(props:any){
         <Tab style={{color: value == 1 ? COLORS.primary : 'black'}}label="Taulukko" />
       </Tabs>
       <TabPage value={value} index={0}>
-        <Kaavio data_array={data_array} radio_values={radio_values}/>
+        <Kaavio data_array={data_array} radio_values={radio_values} sivu={props.sivu} setValittu={props.setValittu}/>
       </TabPage>
       <TabPage value={value} index={1}>
-        <Taulukko data_array={data_array} radio_values={radio_values}/>
+        <Taulukko data_array={data_array} radio_values={radio_values} sivu={props.sivu} setValittu={props.setValittu}/>
       </TabPage>
   </Box>)
 }

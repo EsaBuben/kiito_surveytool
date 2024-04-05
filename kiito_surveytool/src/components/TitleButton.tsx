@@ -18,7 +18,8 @@ return (
     <div style={{
         width:"80%",
         display: 'flex',
-        flexWrap: "nowrap"
+        flexWrap: "nowrap",
+        textAlign: 'center'
         }}>
     <Button
       style={{
@@ -38,13 +39,12 @@ return (
     <Stack direction="row" spacing={1}>
     <img src={smallarrow}/>
       <Typography>
-        Palaa etusivulle
+        Etusivulle
       </Typography>
     </Stack>
   </Button>
 
-
-  <Button disabled style={{
+  <div style={{margin: 'auto',
     backgroundColor:'#40B7D7',
     //opacity:.5,
     border:"none",
@@ -53,14 +53,16 @@ return (
     marginBottom: "60px",
     marginTop: '30px',
     borderRadius: 10,
-    marginLeft: 'auto'
+    width: '190px',
+    
   }}>
-    <Stack direction="row" spacing={1}>
+    
       <Typography>
         {data[props.sivu].sivu}
       </Typography>
-    </Stack>
-  </Button>
+    
+  
+  </div>
 
   <Button onClick={()=>{props.setValittu((props.sivu + 2)*-1)}} style={{
         backgroundColor:'#40B7D7',
@@ -72,7 +74,6 @@ return (
         cursor: "pointer",
         marginTop: '30px',
         marginBottom: '60px',
-        marginLeft: 'auto'
       }}>
         <Stack direction="row" spacing={1}>
           <Typography>
