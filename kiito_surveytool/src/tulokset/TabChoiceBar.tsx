@@ -5,6 +5,7 @@ import Tab from '@mui/material/Tab';
 import {Taulukko} from './taulukko';
 import {Kaavio} from './Kaavio';
 import {COLORS} from '../utils/style_constants'
+
 interface TabProps {
   children?: React.ReactNode;
   index: number;
@@ -49,7 +50,12 @@ export function TabChoiceBar(props:any){
             }
           )
   })
- const handleChange = (event: React.SyntheticEvent, newValue :number) => setValue(newValue)
+ const handleChange = (event: React.SyntheticEvent, newValue:number) =>{
+   if(event != null){
+     setValue(newValue)
+   }
+ }
+
   return (<Box >
     <Tabs
       centered

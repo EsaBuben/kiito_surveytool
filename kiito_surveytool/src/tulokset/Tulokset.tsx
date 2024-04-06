@@ -1,10 +1,23 @@
-
+import React from 'react';
 import {TabChoiceBar} from './TabChoiceBar';
 import {TitleBar} from './TitleBar';
 import {PaluuButton} from './PaluuButton';
 
+type TulosProbs = {
+  sivu:number;
+  setValittu:React.Dispatch<React.SetStateAction<number>>;
+  data:any[];
+  localData:{
+    tulosotsikko:string
+    napit:{
+      tulosPalaa:string,
+      tulosKaavioTab:string,
+      tulosTaulukkoTab:string}
+  };
+  answers:number[][][];
+}
 
-export function Tulokset(props:any){
+export function Tulokset(props:TulosProbs){
 
   let otsikko:string = props.localData.tulosotsikko;
   let alaotsikko:string = props.data[props.sivu].sivu;
