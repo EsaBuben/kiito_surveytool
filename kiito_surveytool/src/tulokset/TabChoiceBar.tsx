@@ -17,7 +17,7 @@ interface Kategoria {
 
 
 function TabPage(props: TabProps) {
-  const { children, value, index, ...other } = props;
+  const { children, value, index} = props;
 
   return (
     <Box>
@@ -32,7 +32,7 @@ function TabPage(props: TabProps) {
 
 export function TabChoiceBar(props:any){
   const [value, setValue] = useState<number>(0)
-  
+
   const radio_values:number[] = props.answers.map((values:any)=>{
       let sum:number = 0
       values.forEach((num:number)=>{
@@ -49,7 +49,7 @@ export function TabChoiceBar(props:any){
             }
           )
   })
-
+ const handleChange = (event: React.SyntheticEvent, newValue :number) => setValue(newValue)
   return (<Box >
     <Tabs
       centered
@@ -59,15 +59,23 @@ export function TabChoiceBar(props:any){
         }
       }}
       value={value}
-      onChange={(event: React.SyntheticEvent, newValue :number) => setValue(newValue)}>
-        <Tab style={{color: value == 0 ? COLORS.primary : 'black'}} label="Kaavio" />
-        <Tab style={{color: value == 1 ? COLORS.primary : 'black'}}label="Taulukko" />
+      onChange={handleChange}>
+        <Tab style={{color: value == 0 ? COLORS.primary : 'black'}} label={props.tabTekstit[0]} />
+        <Tab style={{color: value == 1 ? COLORS.primary : 'black'}} label={props.tabTekstit[1]} />
       </Tabs>
       <TabPage value={value} index={0}>
-        <Kaavio data_array={data_array} radio_values={radio_values} sivu={props.sivu} setValittu={props.setValittu}/>
+        <Kaavio
+        data_array={data_array}
+        radio_values={radio_values}
+        sivu={props.sivu}
+        setValittu={props.setValittu}/>
       </TabPage>
       <TabPage value={value} index={1}>
-        <Taulukko data_array={data_array} radio_values={radio_values} sivu={props.sivu} setValittu={props.setValittu}/>
+        <Taulukko
+        data_array={data_array}
+        radio_values={radio_values}
+        sivu={props.sivu}
+        setValittu={props.setValittu}/>
       </TabPage>
   </Box>)
 }

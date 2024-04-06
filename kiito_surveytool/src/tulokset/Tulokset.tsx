@@ -8,6 +8,8 @@ export function Tulokset(props:any){
 
   let otsikko:string = props.localData.tulosotsikko;
   let alaotsikko:string = props.data[props.sivu].sivu;
+  let PaluuButtonTeksti:string = props.localData.napit.tulosPalaa;
+  let tabTekstit:string[] = [props.localData.napit.tulosKaavioTab, props.localData.napit.tulosTaulukkoTab]
 
   const createPDF = () => {
     //something something imported functions open new tab something something
@@ -16,9 +18,9 @@ export function Tulokset(props:any){
 
   return(
   <div style={{width:"100%", marginTop:'30px'}}>
-    <PaluuButton setValittu={props.setValittu}/>
+    <PaluuButton teksti={PaluuButtonTeksti} setValittu={props.setValittu}/>
     <TitleBar otsikko={otsikko} alaOtsikko={alaotsikko} createPDF={createPDF}/>
-    <TabChoiceBar sivuData={props.data[props.sivu]} answers={props.answers[props.sivu]} sivu={props.sivu} setValittu={props.setValittu}/>
+    <TabChoiceBar tabTekstit={tabTekstit} sivuData={props.data[props.sivu]} answers={props.answers[props.sivu]} sivu={props.sivu} setValittu={props.setValittu}/>
   </div>);
 
 }
