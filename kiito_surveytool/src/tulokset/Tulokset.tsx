@@ -6,7 +6,7 @@ import {PaluuButton} from './PaluuButton';
 type TulosProbs = {
   sivu:number;
   setValittu:React.Dispatch<React.SetStateAction<number>>;
-  data:any[];
+  data:{sivu:string, kategoriat:[]}[];
   localData:{
     tulosotsikko:string
     napit:{
