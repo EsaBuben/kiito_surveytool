@@ -4,7 +4,6 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { useState } from 'react';
-import qlist from './Qlist.json'
 import { testi } from './KyselyContent';
 import { retAns, ansSetter } from './Content';
 
@@ -30,48 +29,28 @@ export default function Questions(props : any) {
 
 
   var ques : any[][]
-
   ques = []
-  /*
-  for(var i = 0; i < qlist.alaotsikko.length; i++)
-  {
-    ques[i] = []
-    for(var j = 0; j < qlist.alaotsikko[i].kysymykset.length; j++)
-    {
-      ques[i].push(qlist.alaotsikko[i].kysymykset[j])
-    }
-  }
-*/
-
   qsivut[sivu].forEach((otsikko) => {
     otsikko.tasot.forEach((alaotsikko: any) => {
       ques.push(alaotsikko.kysymykset)
     })
     })
 
-/*
-  for(var i = 0; i < qsivut[props.sivu][i].tasot.length; i++)
-  {
-    ques[i] = []
-    for(var j = 0; j < qsivut[props.sivu][i].tasot[i].kysymykset.length; j++)
-    {
-      ques[i].push(qsivut[props.sivu][i].tasot[i].kysymykset[j])
-    }
-  }
-*/
+
 
   return (
     <>
     {ques[testi-1].map((x, index) =>
-    <div key={index} style={{display: "flex", width: "80%",  fontFamily: "arial", marginBottom: '30px'}}>
-    <FormControl sx={{flexDirection: 'row'}}>
-      <FormLabel sx={{width:'50%'}} >{x}</FormLabel>
+    <div key={index} style={{display: "flex", width: "80%",  fontFamily: "arial"}}>
+    <FormControl sx={{flexDirection: 'row', margin: 7, marginBottom: 3, marginTop: 2, }}>
+      <FormLabel sx={{width:'50%', minWidth: 250}} >{x}</FormLabel>
       <RadioGroup
         row
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group"
         value={retAns[sivu][testi-1][index]}
         onChange={(e) => handleChange(e, index)}
+        sx={{marginLeft: 4, flex: 'none'}}
       >
         <FormControlLabel value="1" control={<Radio />} label="1" labelPlacement='bottom' />
         <FormControlLabel value="2" control={<Radio />} label="2" labelPlacement='bottom' />

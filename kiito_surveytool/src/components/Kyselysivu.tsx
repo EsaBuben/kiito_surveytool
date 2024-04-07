@@ -5,9 +5,9 @@ const Kyselysivu = (props : any) => {
   const { data } = props;
 
   return (
-    <Stack>
+    
       <KyselyContent sivu = {props.sivu} setValittu = {props.setValittu} data = {data}/>
-    </Stack>
+    
   )
 }
 

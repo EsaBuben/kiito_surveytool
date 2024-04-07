@@ -7,7 +7,7 @@ const Etusivu = (props : any) => {
     <Stack
     spacing={5}
     sx={{
-      height: { sx: 'auto', md: '100vh'},
+      height: { xs: 'auto', md: '100vh'},
       position: 'relative',
     }}
     >

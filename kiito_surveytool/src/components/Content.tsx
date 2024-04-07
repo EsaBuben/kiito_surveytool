@@ -26,7 +26,7 @@ const Content = (props:any) => {
       backgroundColor: 'rgba(255,255,255,1)',
       borderRadius: '100px 100px 0px 0px',
       color: 'black',
-      height: { sx: 'auto', md: '100vh'}
+      height: { xs: '100vh', sm: '100vh', md: '150vh'}
     }}>
     {valittu === -1 && <Qcategories setValittu={ (data: SetStateAction<number>) => setValittu(data) }
      data = {data} setName={setName} name = {name} localData={props.localData}/>}
