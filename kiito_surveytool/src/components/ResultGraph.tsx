@@ -8,9 +8,9 @@ import {
 } from 'chart.js/auto';
 
 import {Radar, getElementsAtEvent} from 'react-chartjs-2';
-import './kaavio.css'
+import './ResultGraph.css'
 import { useRef } from 'react';
-import { setTesti } from '../components/KyselyContent';
+import { setTesti } from './QueryContent';
 ChartJS.register(
   LineElement,
   PointElement,
@@ -20,7 +20,7 @@ ChartJS.register(
 )
 
 
-export function Kaavio(props:any){
+export function ResultGraph(props:any){
   let data_array = props.data_array;
   const data = {
     labels: data_array, //tasot alaotsikkot

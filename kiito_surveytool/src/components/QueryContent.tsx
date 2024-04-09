@@ -1,9 +1,9 @@
 import { Button, Stack, Typography } from '@mui/material'
-import { Instruction, Questions, } from '.'
-import { TitleButton } from './TitleButton';
-import { TitleBar } from './TitleBar';
+import { QueryInstruction, QueryQuestions, } from '.'
+import { QueryTitleButton } from './QueryTitleButton';
+import { QueryTitle } from './QueryTitle';
 import { useState } from 'react';
-import smallarrow from '../tulokset/smallarrow.svg'
+import smallarrow from './smallarrow.svg'
 
 
 let testi : number = 1;
@@ -12,7 +12,7 @@ export function setTesti(value : number) {
   testi = value
 }
 
-const KyselyContent = (props : any) => {
+const QueryContent = (props : any) => {
 
   const { data, sivu } = props;
   let [page, setPage] = useState(testi)
@@ -45,10 +45,10 @@ const KyselyContent = (props : any) => {
       color: 'black',
       height: '100%'
     }}>
-        <TitleButton setValittu = {props.setValittu} sivu = {sivu} data={data}/>
-        <TitleBar data = {data} sivu = {sivu} />
-        <Instruction data = {data} />
-        <Questions sivu = {sivu} data = {data}/>
+        <QueryTitleButton setValittu = {props.setValittu} sivu = {sivu} data={data}/>
+        <QueryTitle data = {data} sivu = {sivu} />
+        <QueryInstruction data = {data} />
+        <QueryQuestions sivu = {sivu} data = {data}/>
         </Stack>
 
         <Stack direction={'row'} style={{
@@ -100,5 +100,5 @@ const KyselyContent = (props : any) => {
   )
 }
 
-export default KyselyContent
+export default QueryContent
 export {testi}

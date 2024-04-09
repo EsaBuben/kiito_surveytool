@@ -1,22 +1,36 @@
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import { testi } from './QueryContent';
 import Typography from '@mui/material/Typography';
-import BigArrow from './BigArrow.svg';
-import {COLORS} from '../utils/style_constants'
 
-export function TitleBar(props:any){
+export function QueryTitle(props : any){
+  const {data, sivu} = props;
+  //sit vaa kattelee jiisonnista mikä on tää title ja subtitteli
 
-  const Title : string = props.otsikko
-  const subTitle : string = props.alaOtsikko
+  let title : string[] = ['sivu0']
+  let sub : string[] = ['sub0']
+
+  for(let i = 0; i < data[sivu].kategoriat.length; i++)
+  {
+    for(let j = 0; j < data[sivu].kategoriat[i].tasot.length; j++)
+    {
+      title.push(i+1 + ". " + data[sivu].kategoriat[i].otsikko)
+      sub.push(data[sivu].kategoriat[i].tasot[j].alaotsikko)
+    }
+  }
+
+
+  const Title : string = title[testi]
+  const subTitle : string = sub[testi]
+
 
   return(<Paper
     sx={{
-      background:COLORS.primary,
+      background:"#40B7D7",
       color:"white",
       padding: "10px 5px",
       borderRadius: 6,
       width:"80%",
-      margin:"auto"
     }}
     >
     <Grid container justifyContent="flex-end" >
@@ -27,9 +41,6 @@ export function TitleBar(props:any){
         <Grid item>
           <Typography sx={{textAlign:"center", fontWeight:"bold"}} variant="subtitle1">{subTitle}</Typography>
         </Grid>
-      </Grid>
-      <Grid item >
-        <img style={{width:"50px", height:"50px",paddingRight:"30px"}} src={BigArrow} />
       </Grid>
     </Grid>
   </Paper>)

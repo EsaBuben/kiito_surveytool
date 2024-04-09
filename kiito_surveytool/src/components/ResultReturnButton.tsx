@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import {COLORS} from '../utils/style_constants';
 
-export function PaluuButton(props:any){
+export function ResultReturnButton(props:any){
 
 return (
   <Button  style={{
@@ -23,7 +23,7 @@ return (
     <Stack direction="row" spacing={1}>
       <img src={smallarrow}/>
       <Typography>
-        Palaa etusivulle
+        Etusivu
       </Typography>
     </Stack>
   </Button>

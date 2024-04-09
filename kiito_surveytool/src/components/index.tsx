@@ -1,9 +1,9 @@
 export {default as Content} from './Content';
 export {default as Header} from './Header';
-export {default as Qcategories} from './QuestionButtons';
-export {default as Etusivu} from './Etusivu';
-export {default as Tietokentta} from './Tietokentta';
-export {default as Instruction} from './Instruction';
-export {default as Questions} from './Questions';
-export {default as KyselyContent} from './KyselyContent';
-export {default as Kyselysivu} from './Kyselysivu';
+export {default as FrontButtons} from './FrontButtons';
+export {default as Frontpage} from './Frontpage';
+export {default as FrontInput} from './FrontInput';
+export {default as QueryInstruction} from './QueryInstruction';
+export {default as QueryQuestions} from './QueryQuestions';
+export {default as QueryContent} from './QueryContent';
+export {default as Querypage} from './Querypage';

@@ -1,8 +1,8 @@
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import {Cell} from './Cell';
+import {ResultCell} from './ResultCell';
 
-export function Taulukko(props :any){
+export function ResultTable(props :any){
   /*
    stack of rows ja row is 2-piece Stack
   */
@@ -21,8 +21,8 @@ export function Taulukko(props :any){
               return<Grid spacing={0.5}
                 sx={{ justifyContent: 'center'}}
                     key={index} container item>
-                <Cell key={categoryKey}  Text={category} isCategory={true} isClickable={true} sivu={props.sivu} page={index} setValittu={props.setValittu}/>
-                <Cell key={averageKey}  Text={answerAverages[index]} isCategory={false} isClickable={false}/>
+                <ResultCell key={categoryKey}  Text={category} isCategory={true} isClickable={true} sivu={props.sivu} page={index} setValittu={props.setValittu}/>
+                <ResultCell key={averageKey}  Text={answerAverages[index]} isCategory={false} isClickable={false}/>
               </Grid>
             })
           }
