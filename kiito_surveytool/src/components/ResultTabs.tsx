@@ -2,8 +2,8 @@ import {useState} from 'react';
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import {Taulukko} from './taulukko';
-import {Kaavio} from './Kaavio';
+import {ResultTable} from './ResultTable';
+import {ResultGraph} from './ResultGraph';
 import {COLORS} from '../utils/style_constants'
 
 interface TabProps {
@@ -31,7 +31,7 @@ function TabPage(props: TabProps) {
 }
 
 
-export function TabChoiceBar(props:any){
+export function ResultTabs(props:any){
   const [value, setValue] = useState<number>(0)
 
   const radio_values:number[] = props.answers.map((values:any)=>{
@@ -71,14 +71,14 @@ export function TabChoiceBar(props:any){
         <Tab style={{color: value == 1 ? COLORS.primary : 'black'}} label={props.tabTekstit[1]} />
       </Tabs>
       <TabPage value={value} index={0}>
-        <Kaavio
+        <ResultGraph
         data_array={data_array}
         radio_values={radio_values}
         sivu={props.sivu}
         setValittu={props.setValittu}/>
       </TabPage>
       <TabPage value={value} index={1}>
-        <Taulukko
+        <ResultTable
         data_array={data_array}
         radio_values={radio_values}
         sivu={props.sivu}

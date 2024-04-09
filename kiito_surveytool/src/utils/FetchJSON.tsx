@@ -1,6 +1,6 @@
 import { CircularProgress } from '@mui/material';
 import React, { Dispatch, SetStateAction } from 'react'
-import { Etusivu } from '../components';
+import { Frontpage } from '../components';
 
 let data : any; // new sivut taulukko
 let localData: any; //etusivun otsikot
@@ -65,26 +65,6 @@ function FetchJSON() {
 	return (<Spinner state="init"/>);
 }
 
-// fetch(API_URL_DIARY)
-//     .then(response => response.json())
-//     .then(data => {
-//         console.log("old", data);
-//         return data;
-//     })
-//     .then(async data => {
-//         await Promise.all(data.map((e, index, array) => {
-//             return fetch(API_URL_FOOD_DETAILS + e.foodid)
-//                 .then(response => response.json())
-//                 .then(data => {
-//                     array[index] = {...e, ...data};
-//                     console.log("update");
-//                 })
-//         }));
-//
-//         console.log("new", data)
-//     });
-
-
 function Spinner( props : any )
 {
 	let [ branch, setBranch ] = React.useState(props.state);
@@ -93,7 +73,7 @@ function Spinner( props : any )
 	switch (branch)
 	{
 		case "init": ret = <CircularProgress key="spin" />; break;
-		case "etusivu": ret = <Etusivu data={data} localData={localData} setupArr={setup_array}/>; break;
+		case "etusivu": ret = <Frontpage data={data} localData={localData} setupArr={setup_array}/>; break;
 		default: ret = <div key="err">Ei saatu konffista ny... kato konsolia...</div>;
 	}
 	return ret;

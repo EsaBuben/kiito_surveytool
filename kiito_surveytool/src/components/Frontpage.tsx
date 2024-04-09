@@ -1,7 +1,7 @@
 import { Stack } from '@mui/material'
 import { Header, Content } from '.'
 
-const Etusivu = (props : any) => {
+const Frontpage = (props : any) => {
   const { data, setupArr } = props;
   return (
     <Stack
@@ -17,4 +17,4 @@ const Etusivu = (props : any) => {
   )
 }
 
-export default Etusivu
+export default Frontpage

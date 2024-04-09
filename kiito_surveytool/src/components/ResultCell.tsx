@@ -1,9 +1,9 @@
 import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Grid'
 import {COLORS} from '../utils/style_constants'
-import { setTesti } from '../components/KyselyContent'
+import { setTesti } from './QueryContent'
 
-export function Cell(props:any){
+export function ResultCell(props:any){
 
   const Text : string = props.Text
   const isCategory: boolean = props.isCategory;

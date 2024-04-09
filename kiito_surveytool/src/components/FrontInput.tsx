@@ -1,6 +1,6 @@
 import { Stack, TextField } from '@mui/material'
 
-const Tietokentta = (props : any) => {
+const FrontInput = (props : any) => {
   const handleChange = (e: any) => {
     props.setName(e.target.value);
     e.preventDefault();
@@ -45,4 +45,4 @@ function date() {
   return today;
 }
 
-export default Tietokentta
+export default FrontInput

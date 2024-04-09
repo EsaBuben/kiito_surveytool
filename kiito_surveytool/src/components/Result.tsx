@@ -1,7 +1,7 @@
 import React from 'react';
-import {TabChoiceBar} from './TabChoiceBar';
-import {TitleBar} from './TitleBar';
-import {PaluuButton} from './PaluuButton';
+import {ResultTabs} from './ResultTabs';
+import {ResultTitle} from './ResultTitle';
+import {ResultReturnButton} from './ResultReturnButton';
 
 type TulosProbs = {
   sivu:number;
@@ -17,7 +17,7 @@ type TulosProbs = {
   answers:number[][][];
 }
 
-export function Tulokset(props:TulosProbs){
+export function Result(props:TulosProbs){
 
   let otsikko:string = props.localData.tulosotsikko;
   let alaotsikko:string = props.data[props.sivu].sivu;
@@ -31,9 +31,9 @@ export function Tulokset(props:TulosProbs){
 
   return(
   <div style={{width:"100%", marginTop:'30px'}}>
-    <PaluuButton teksti={PaluuButtonTeksti} setValittu={props.setValittu}/>
-    <TitleBar otsikko={otsikko} alaOtsikko={alaotsikko} createPDF={createPDF}/>
-    <TabChoiceBar tabTekstit={tabTekstit} sivuData={props.data[props.sivu]} answers={props.answers[props.sivu]} sivu={props.sivu} setValittu={props.setValittu}/>
+    <ResultReturnButton teksti={PaluuButtonTeksti} setValittu={props.setValittu}/>
+    <ResultTitle otsikko={otsikko} alaOtsikko={alaotsikko} createPDF={createPDF}/>
+    <ResultTabs tabTekstit={tabTekstit} sivuData={props.data[props.sivu]} answers={props.answers[props.sivu]} sivu={props.sivu} setValittu={props.setValittu}/>
   </div>);
 
 }

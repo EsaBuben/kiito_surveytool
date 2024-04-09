@@ -1,6 +1,6 @@
 import { Box, Button, ButtonGroup, Stack, Typography } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import { Tietokentta } from '.';
+import { FrontInput } from '.';
 
 export function handleClick(e:any, props : any, data : any, sivu : any)
 {
@@ -10,7 +10,7 @@ export function handleClick(e:any, props : any, data : any, sivu : any)
 
 
 
-function Qcategories(props : any) {
+function FrontButtons(props : any) {
   //get data from props
   const { data, localData } = props;
 
@@ -28,7 +28,7 @@ function Qcategories(props : any) {
     color: 'black'
   }}>
 
-  <Tietokentta setName = {props.setName} name = {props.name} />
+  <FrontInput setName = {props.setName} name = {props.name} />
 
   <Typography variant="h5" align="center" fontWeight='bold' width='300px' paddingBottom='50px'>
   {localData.aiheotsikko}
@@ -91,10 +91,10 @@ function Qcategories(props : any) {
     </ButtonGroup>
     </Box>
       <Box sx={{marginTop:'100px', display:'flex'}} >
-      <img src={'src/assets/logo.jpg'} alt="logo" />
+      <img src={'/public/logo.jpg'} alt="logo" />
       </Box>
   </Stack>
 )
       }
 
-export default Qcategories
+export default FrontButtons
