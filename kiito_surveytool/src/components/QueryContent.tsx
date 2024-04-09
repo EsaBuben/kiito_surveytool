@@ -43,7 +43,8 @@ const QueryContent = (props : any) => {
       backgroundColor: 'rgba(255,255,255,1)',
       borderRadius: '100px 100px 0px 0px',
       color: 'black',
-      height: '100%'
+      height: '100%',
+      marginBottom: 5
     }}>
         <QueryTitleButton setValittu = {props.setValittu} sivu = {sivu} data={data}/>
         <QueryTitle data = {data} sivu = {sivu} />
