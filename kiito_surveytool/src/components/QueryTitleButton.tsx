@@ -4,6 +4,7 @@ import Stack from '@mui/material/Stack';
 import {setTesti} from './QueryContent';
 import smallarrow from './smallarrow.svg'
 
+let ttt = 2
 function handleClick(e:any, props : any)
 {
   e.preventDefault();
@@ -14,6 +15,7 @@ function handleClick(e:any, props : any)
 export function QueryTitleButton(props:any){
 
 const { data } = props
+ttt = props.setValittu
 return (
     <div style={{
         width:"80%",
@@ -55,7 +57,7 @@ return (
     borderRadius: 10,
     width: '190px',
     
-  }}>
+  }} className='asd'>
     
       <Typography>
         {data[props.sivu].sivu}
@@ -86,3 +88,4 @@ return (
   </div>
 );
 }
+export {ttt}

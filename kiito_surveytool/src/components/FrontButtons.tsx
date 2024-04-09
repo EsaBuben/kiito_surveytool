@@ -1,14 +1,22 @@
-import { Box, Button, ButtonGroup, Stack, Typography } from '@mui/material';
+import { Box, Button, ButtonGroup, Slide, Stack, Typography, getContainerUtilityClass } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { FrontInput } from '.';
+import { ttt } from './QueryTitleButton';
 
 export function handleClick(e:any, props : any, data : any, sivu : any)
 {
   e.preventDefault();
   props.setValittu(data.indexOf(sivu))
+  console.log(e)
 }
 
 
+function funktio(perkele:any, index:any){
+  if(index === perkele){
+    return true
+  }
+  else return false
+}
 
 function FrontButtons(props : any) {
   //get data from props
@@ -42,9 +50,11 @@ function FrontButtons(props : any) {
         marginLeft: '120px'
       }}
     >
-
+  
   <ButtonGroup orientation="vertical" sx={{gap:3}}>
     {data.map((sivu : any) =>(
+      
+      <Slide in appear={funktio(ttt, data.indexOf(sivu))} timeout={400} key={data.indexOf(sivu)}>
       <Button variant="contained"
       className="question-btn"
       sx={{
@@ -64,9 +74,10 @@ function FrontButtons(props : any) {
       >
       {sivu.sivu}
       </Button>
+      </Slide>
     ))}
     </ButtonGroup>
-
+    
     <ButtonGroup orientation="vertical" sx={{gap:3}}>
     {data.map((sivu : any, index: number) =>(
       <Button key={sivu} variant="text"
