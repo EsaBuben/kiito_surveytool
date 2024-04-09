@@ -1,29 +1,28 @@
-import {Button} from '@mui/base/Button';
-import smallarrow from './smallarrow.svg';
-import Typography from '@mui/material/Typography';
+import {Button, Typography} from '@mui/material';
 import Stack from '@mui/material/Stack';
 import {COLORS} from '../utils/style_constants';
+import { setTesti } from './QueryContent';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 export function ResultReturnButton(props:any){
 
 return (
-  <Button  style={{
+  <Button variant='contained' sx={{
     background: COLORS.primary,
     border:"none",
     padding: "10px",
     color: 'white',
-    borderRadius: 10,
     marginLeft: "10%",
     marginBottom: "10px",
-    cursor: "pointer",
-
+    boxShadow:5,
+    borderRadius:2
     }}
-    onClick={() => props.setValittu(-1)}
+    onClick={() => {props.setValittu(-1); setTesti(1)}}
     >
     <Stack direction="row" spacing={1}>
-      <img src={smallarrow}/>
+      <ArrowBackIcon/>
       <Typography>
-        Etusivu
+        Etusivulle
       </Typography>
     </Stack>
   </Button>

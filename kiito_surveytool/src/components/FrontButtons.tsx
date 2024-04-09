@@ -1,13 +1,12 @@
-import { Box, Button, ButtonGroup, Slide, Stack, Typography, getContainerUtilityClass } from '@mui/material';
+import { Box, Button, ButtonGroup, Slide, Stack, Typography} from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { FrontInput } from '.';
-import { ttt } from './QueryTitleButton';
+import { anime } from './QueryTitleButton';
 
 export function handleClick(e:any, props : any, data : any, sivu : any)
 {
   e.preventDefault();
   props.setValittu(data.indexOf(sivu))
-  console.log(e)
 }
 
 
@@ -54,7 +53,7 @@ function FrontButtons(props : any) {
   <ButtonGroup orientation="vertical" sx={{gap:3}}>
     {data.map((sivu : any) =>(
       
-      <Slide in appear={funktio(ttt, data.indexOf(sivu))} timeout={400} key={data.indexOf(sivu)}>
+      <Slide in appear={funktio(anime, data.indexOf(sivu))} timeout={400} key={data.indexOf(sivu)}>
       <Button variant="contained"
       className="question-btn"
       sx={{

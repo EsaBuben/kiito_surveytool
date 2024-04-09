@@ -1,10 +1,10 @@
-import {Button} from '@mui/base/Button';
-import Typography from '@mui/material/Typography';
+import {Button, Typography} from '@mui/material';
 import Stack from '@mui/material/Stack';
 import {setTesti} from './QueryContent';
-import smallarrow from './smallarrow.svg'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-let ttt = 2
+let anime = -1
 function handleClick(e:any, props : any)
 {
   e.preventDefault();
@@ -15,7 +15,7 @@ function handleClick(e:any, props : any)
 export function QueryTitleButton(props:any){
 
 const { data } = props
-ttt = props.setValittu
+anime = props.valittu
 return (
     <div style={{
         width:"80%",
@@ -23,23 +23,24 @@ return (
         flexWrap: "nowrap",
         textAlign: 'center'
         }}>
-    <Button
-      style={{
+    <Button variant='contained'
+      sx={{
         backgroundColor:'#40B7D7',
         //opacity:.5,
         border:"none",
         padding: "10px",
         color: "white",
-        borderRadius: 10,
         marginBottom: "60px",
         cursor: "pointer",
-        marginTop: '30px'
+        marginTop: '30px',
+        boxShadow:5,
+        borderRadius:2
       }}
       onClick={(e) => handleClick(e, props)}
         key={-1}
       >
     <Stack direction="row" spacing={1}>
-    <img src={smallarrow}/>
+    <ArrowBackIcon/>
       <Typography>
         Etusivulle
       </Typography>
@@ -54,8 +55,9 @@ return (
     color: "white",
     marginBottom: "60px",
     marginTop: '30px',
-    borderRadius: 10,
+    borderRadius: 2,
     width: '190px',
+    boxShadow: '0px 2px 10px grey'
     
   }} className='asd'>
     
@@ -66,26 +68,27 @@ return (
   
   </div>
 
-  <Button onClick={()=>{props.setValittu((props.sivu + 2)*-1)}} style={{
+  <Button variant='contained' onClick={()=>{props.setValittu((props.sivu + 2)*-1)}} sx={{
         backgroundColor:'#40B7D7',
         //opacity:.5,
         border:"none",
         padding: "10px",
         color: "white",
-        borderRadius: 10,
         cursor: "pointer",
         marginTop: '30px',
         marginBottom: '60px',
+        boxShadow:5,
+        borderRadius:2
       }}>
         <Stack direction="row" spacing={1}>
           <Typography>
             Tuloksiin
           </Typography>
-          <img style={{transform: 'rotate(180deg)'}} src={smallarrow}/>
+          <ArrowForwardIcon/>
         </Stack>
       </Button>
 
   </div>
 );
 }
-export {ttt}
+export {anime}

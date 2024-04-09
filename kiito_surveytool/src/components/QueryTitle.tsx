@@ -31,6 +31,7 @@ export function QueryTitle(props : any){
       padding: "10px 5px",
       borderRadius: 6,
       width:"80%",
+      boxShadow:5
     }}
     >
     <Grid container justifyContent="flex-end" >
