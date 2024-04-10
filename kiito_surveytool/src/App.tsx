@@ -5,12 +5,11 @@ import ReactDOM from 'react-dom';
 import BasicDocument from './components/BasicDocument';
 
 function App() {
-  <PDFViewer>
-    <BasicDocument />
-  </PDFViewer>
-  return (
-    FetchJSON()
 
+  return (
+    <div className="App">
+      <BasicDocument />
+    </div>
   )
 }
 
