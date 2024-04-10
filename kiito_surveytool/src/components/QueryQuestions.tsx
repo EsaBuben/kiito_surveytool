@@ -3,14 +3,13 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
-import { useState } from 'react';
 import { testi } from './QueryContent';
 import { retAns, ansSetter } from './Content';
 
 export default function QueryQuestions(props : any) {
   const {data, sivu} = props;
   
-  let [qsivut, setQsivut] = useState<any[][]>(() => {return Array.from({length: data.length}, () => Array.from({length: 1}, () => 0))})
+  let qsivut : any = new Array(data.length).fill(0).map(() => new Array(1).fill(0));
   for(var i = 0; i < qsivut.length; i++)
   {
     qsivut[i] = data[i].kategoriat
@@ -26,7 +25,7 @@ export default function QueryQuestions(props : any) {
 
   var ques : any[][]
   ques = []
-  qsivut[sivu].forEach((otsikko) => {
+  qsivut[sivu].forEach((otsikko:any) => {
     otsikko.tasot.forEach((alaotsikko: any) => {
       ques.push(alaotsikko.kysymykset)
     })

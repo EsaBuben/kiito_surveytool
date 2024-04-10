@@ -3,7 +3,8 @@ import { QueryInstruction, QueryQuestions, } from '.'
 import { QueryTitleButton } from './QueryTitleButton';
 import { QueryTitle } from './QueryTitle';
 import { useState } from 'react';
-import smallarrow from './smallarrow.svg'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 
 let testi : number = 1;
@@ -46,7 +47,7 @@ const QueryContent = (props : any) => {
       height: '100%',
       marginBottom: 5
     }}>
-        <QueryTitleButton setValittu = {props.setValittu} sivu = {sivu} data={data}/>
+        <QueryTitleButton valittu = {props.valittu} setValittu = {props.setValittu} sivu = {sivu} data={data}/>
         <QueryTitle data = {data} sivu = {sivu} />
         <QueryInstruction data = {data} />
         <QueryQuestions sivu = {sivu} data = {data}/>
@@ -65,12 +66,13 @@ const QueryContent = (props : any) => {
         border:"none",
         padding: "10px",
         color: "white",
-        borderRadius: 10,
+        borderRadius: 2,
         cursor: "pointer",
-        margin: "0.5em"
+        margin: "0.5em",
+        boxShadow: '0px 2px 10px grey'
       }}>
         <Stack direction="row" spacing={1}>
-        <img src={smallarrow}/>
+        <ArrowBackIcon/>
           <Typography>
             Palaa
           </Typography>
@@ -85,15 +87,16 @@ const QueryContent = (props : any) => {
         border:"none",
         padding: "10px",
         color: "white",
-        borderRadius: 10,
+        borderRadius: 2,
         cursor: "pointer",
-        margin: "0.5em"
+        margin: "0.5em",
+        boxShadow: '0px 2px 10px grey'
       }}>
         <Stack direction="row" spacing={1}>
           <Typography>
             Jatka
           </Typography>
-          <img style={{transform: 'rotate(180deg)'}} src={smallarrow}/>
+          <ArrowForwardIcon/>
         </Stack>
       </Button>
       </Stack>

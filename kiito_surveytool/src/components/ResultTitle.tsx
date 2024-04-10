@@ -1,7 +1,7 @@
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import BigArrow from './BigArrow.svg';
+import DownloadIcon from '@mui/icons-material/Download';
 import {COLORS} from '../utils/style_constants'
 
 export function ResultTitle(props:any){
@@ -20,7 +20,7 @@ export function ResultTitle(props:any){
     }}
     >
     <Grid container justifyContent="flex-end" >
-      <Grid item sx={{margin:"auto"}} >
+      <Grid item sx={{margin:"auto", marginRight: 22}} >
         <Grid item>
           <Typography sx={{textAlign:"center", fontWeight:"bold"}} variant="h5">{Title}</Typography>
         </Grid>
@@ -29,7 +29,7 @@ export function ResultTitle(props:any){
         </Grid>
       </Grid>
       <Grid item >
-        <img style={{width:"50px", height:"50px",paddingRight:"30px"}} src={BigArrow} />
+        <DownloadIcon sx={{width:"50px", height:"50px",paddingRight:"30px"}}/>
       </Grid>
     </Grid>
   </Paper>)
