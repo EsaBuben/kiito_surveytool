@@ -26,6 +26,7 @@ export function Result(props:TulosProbs){
 
   const createPDF = () => {
     //something something imported functions open new tab something something
+    //<DummyPage vastaukset, kysymykset, kuva taulukosta, kuva graafista/>
   }
 
 

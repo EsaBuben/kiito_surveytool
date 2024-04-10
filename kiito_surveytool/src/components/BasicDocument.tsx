@@ -24,6 +24,20 @@ import {
   
   // Create Document Component
   function BasicDocument() {
+
+    //Rakennetaan pdf dokumentti() {
+    //return {
+    ////<Document>
+    //<Image src={kuvaTaulukosta}/>
+    //<Image break src={kuvaGraafista}/>
+    //for looppi per kategoria
+    //<Text break>Kategorian nimi</Text>
+    //käydään kysymykset läpi kategorian mukaan
+    //for looppi per kysymys
+    //<Text>{kysymys}{vastaus}</Text>
+    //<Document>
+    //}
+
     return (
       <PDFViewer style={styles.viewer}>
         {/* Start of the document*/}

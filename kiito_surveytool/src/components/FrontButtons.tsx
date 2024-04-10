@@ -101,7 +101,7 @@ function FrontButtons(props : any) {
     </ButtonGroup>
     </Box>
       <Box sx={{marginTop:'100px', display:'flex'}} >
-      <img src={'/public/logo.jpg'} alt="logo" />
+      <img src={'/logo.jpg'} alt="logo" />
       </Box>
   </Stack>
 )
