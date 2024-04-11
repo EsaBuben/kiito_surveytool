@@ -35,7 +35,7 @@ function FrontButtons(props : any) {
     color: 'black'
   }}>
 
-  <FrontInput setName = {props.setName} name = {props.name} />
+  <FrontInput setName = {props.setName} name = {props.name} setDate={props.setDate} date={props.date}/>
 
   <Typography variant="h5" align="center" fontWeight='bold' width='300px' paddingBottom='50px'>
   {localData.aiheotsikko}

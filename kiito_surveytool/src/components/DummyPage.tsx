@@ -6,10 +6,6 @@ const DummyPage = () => {
     //<Document>
     //<Image src={kuvaTaulukosta}/>
     //<Image break src={kuvaGraafista}/>
-    //for looppi
-    //käydään kysymykset läpi kategorian mukaan
-    //<Text>{kysymys}{vastaus}</Text>
-    //<Document>
     //}
 
   return (
