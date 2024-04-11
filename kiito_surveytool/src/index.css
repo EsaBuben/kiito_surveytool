@@ -33,4 +33,7 @@ body {
   padding: 0;
 }
 
-
+#hidden_content {
+  z-index: -1;
+  display: inline;
+}

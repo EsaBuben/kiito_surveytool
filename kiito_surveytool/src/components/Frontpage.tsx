@@ -13,6 +13,7 @@ const Frontpage = (props : any) => {
     >
       <Header data = {props.localData}/>
       <Content data = {data} localData={props.localData} setupArr={setupArr}/>
+      
     </Stack>
   )
 }

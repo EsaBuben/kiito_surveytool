@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {createPortal} from 'react-dom';
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -56,6 +57,34 @@ export function ResultTabs(props:any){
    }
  }
 
+const ResultGraph_element = <ResultGraph
+  graphRef={props.graphRef}
+  data_array={data_array}
+  radio_values={radio_values}
+  sivu={props.sivu}
+  setValittu={props.setValittu}/>
+
+const ResultTable_element = <ResultTable
+    tableRef={props.tableRef}
+    data_array={data_array}
+    radio_values={radio_values}
+    sivu={props.sivu}
+    setValittu={props.setValittu}/>
+
+
+const makePortal = (jsxelement:any) =>{
+
+  let content:React.ReactPortal | null = null;
+  let parent = document.getElementById('hidden_content')
+  if(parent != null){
+  content= createPortal(
+    jsxelement,parent
+  )}
+
+  return content
+}
+
+
   return (<Box >
     <Tabs
       centered
@@ -70,18 +99,11 @@ export function ResultTabs(props:any){
         <Tab style={{color: value == 1 ? COLORS.primary : 'black'}} label={props.tabTekstit[1]} />
       </Tabs>
       <TabPage value={value} index={0}>
-        <ResultGraph
-        data_array={data_array}
-        radio_values={radio_values}
-        sivu={props.sivu}
-        setValittu={props.setValittu}/>
+        {ResultGraph_element}
       </TabPage>
       <TabPage value={value} index={1}>
-        <ResultTable
-        data_array={data_array}
-        radio_values={radio_values}
-        sivu={props.sivu}
-        setValittu={props.setValittu}/>
+        {ResultTable_element}
       </TabPage>
+      {value== 0 ? makePortal(ResultTable_element):makePortal(ResultGraph_element)}
   </Box>)
 }
