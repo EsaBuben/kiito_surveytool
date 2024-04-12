@@ -36,39 +36,54 @@ export function Result(props:TulosProbs){
   const resultGraphRef = useRef()
 
   const createPDF = () => {
-    //something something imported functions open new tab something something
     //<DummyPage vastaukset, kysymykset, kuva taulukosta, kuva graafista/>
-    // const downloadImage = (blob:any, fileName:any) => {
-    //   const fakeLink = window.document.createElement("a");
-    //   fakeLink.download = fileName;
-    //
-    //   fakeLink.href = blob;
-    //
-    //   document.body.appendChild(fakeLink);
-    //   fakeLink.click();
-    //   document.body.removeChild(fakeLink);
-    //
-    //   fakeLink.remove();
-    // };
+
+    // elements for getting img with  html-to-image toPng function
     console.log(resultTableRef.current)
-    console.log(resultGraphRef.current )
-      if(resultGraphRef.current  != null){
-        toPng(resultGraphRef.current["canvas"], { cacheBust: false })
-        .then((dataUrl) => {
-          const link = document.createElement("a");
-          link.download = "my-image-name.png";
-          link.href = dataUrl;
-          link.click();
-        })
-          .catch((err) => {
+    console.log(resultGraphRef.current)
+
+    let imagePromises:Promise<string | void>[] = []
+    if(resultGraphRef.current  != null && resultTableRef.current != null){
+
+      imagePromises[0] = toPng(resultGraphRef.current["canvas"], { cacheBust: false })
+      .then((dataUrl) => {
+      return dataUrl
+          //testing image quality and functionality:
+          // const link = document.createElement("a");
+          // link.download = "my-image-name.png";
+          // link.href = dataUrl;
+          // link.click();
+      })
+      .catch((err) => {
         console.log(err);
       });
-        // html2canvas(primaryRef.current).then((canvas:any) =>{
-        // const imgData = canvas.toDataURL('img/png');
-        //
-        // downloadImage(imgData, "test");
+
+      imagePromises[1] = toPng(resultTableRef.current, { cacheBust: false })
+      .then((dataUrl) => {
+        return dataUrl
+      })
+      .catch((err) => {
+          console.log(err);
+      });
+
+      //trying to make sure that previous promises execute
+      Promise.all(imagePromises).then((values:any) => {
+
+        //add PDF document creation here
+
+
+        console.log(values)
+        //test for getting rigth images
+        // values.map((value:any)=>{
+        //   const link = document.createElement("a");
+        //   link.download = "my-image-name.png";
+        //   link.href = value;
+        //   link.click();
         // })
-      }
+      })
+    }
+
+
       /* <BasicDocument sivu = {props.sivu} data = {props.data} localData={props.localData}
       answers={props.answers[props.sivu]} yname={props.yname} date={props.date}/> */
 
