@@ -38,7 +38,7 @@ export function Result(props:TulosProbs){
   const createPDF = () => {
     //<DummyPage vastaukset, kysymykset, kuva taulukosta, kuva graafista/>
 
-    // elements for getting img with  html-to-image toPng function
+    // refs for getting img with  html-to-image toPng function
     console.log(resultTableRef.current)
     console.log(resultGraphRef.current)
 
@@ -46,22 +46,11 @@ export function Result(props:TulosProbs){
     if(resultGraphRef.current  != null && resultTableRef.current != null){
 
       imagePromises[0] = toPng(resultGraphRef.current["canvas"], { cacheBust: false })
-      .then((dataUrl) => {
-      return dataUrl
-          //testing image quality and functionality:
-          // const link = document.createElement("a");
-          // link.download = "my-image-name.png";
-          // link.href = dataUrl;
-          // link.click();
-      })
       .catch((err) => {
         console.log(err);
       });
 
       imagePromises[1] = toPng(resultTableRef.current, { cacheBust: false })
-      .then((dataUrl) => {
-        return dataUrl
-      })
       .catch((err) => {
           console.log(err);
       });
