@@ -90,7 +90,6 @@ export function ResultGraph(props:any){
       ref={chartRef}
       onClick={onClick}
       >
-
       </Radar>
     </div>
   )

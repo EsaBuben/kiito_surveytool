@@ -6,6 +6,8 @@ import {
     StyleSheet,
     PDFViewer,
   } from "@react-pdf/renderer";
+
+
   // Create styles
   const styles = StyleSheet.create({
     page: {
@@ -21,23 +23,37 @@ import {
       height: window.innerHeight,
     },
   });
+      
+  function BasicDocument(props:any) {
+    let yname = props.yname;
+    let paivamaara = props.date;
+    let data = props.data;
+    let answers = props.answers;
+    let localData = props.localData;
+    let sivu = props.sivu;
+    let vastaukset : string[] = []
   
-  // Create Document Component
-  function BasicDocument() {
 
-    //Rakennetaan pdf dokumentti() {
-    //return {
-    ////<Document>
-    //<Image src={kuvaTaulukosta}/>
-    //<Image break src={kuvaGraafista}/>
-    //for looppi per kategoria
-    //<Text break>Kategorian nimi</Text>
-    //käydään kysymykset läpi kategorian mukaan
-    //for looppi per kysymys
-    //<Text>{kysymys}{vastaus}</Text>
-    //<Document>
-    //}
+    function QuesAnsw(data:any, answers:any, sivu:number) {
 
+    return data[sivu].kategoriat.map((kategoria: { tasot: any[]; otsikko: string; }) => {
+      let temp : any[] = [];
+       temp.push(<Text>{kategoria.otsikko}</Text>)
+    temp.concat(kategoria.tasot.map((taso: { kysymykset:any[]; alaotsikko: string; }) => {
+      temp.push(<Text>{taso.alaotsikko}</Text>)
+      taso.kysymykset.map((kysymys: string ) => {
+      temp.push(<Text>{kysymys}</Text>)
+      })
+      answers.map((vastaus: number[]) => {
+      temp.push(<Text>{vastaus}</Text>)
+      })
+    }))
+    return temp;
+    })
+  
+  }
+
+    
     return (
       <PDFViewer style={styles.viewer}>
         {/* Start of the document*/}
@@ -45,10 +61,8 @@ import {
           {/*render a single page*/}
           <Page size="A4" style={styles.page}>
             <View style={styles.section}>
-              <Text>Hello</Text>
-            </View>
-            <View style={styles.section}>
-              <Text>World</Text>
+              {QuesAnsw(data, answers, sivu)}
+              <Text>{yname}</Text>
             </View>
           </Page>
         </Document>
