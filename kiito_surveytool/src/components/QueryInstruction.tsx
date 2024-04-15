@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 export default function QueryInstruction(props : any) {
     const [anchorEl, setAnchorEl] = useState(null);
+    let kysymysotsikko = props.localData.kysymysotsikko;
 
   const handleMouseEnter = (event : any) => {
     setAnchorEl(event.currentTarget);
@@ -12,36 +13,54 @@ export default function QueryInstruction(props : any) {
   const handleMouseLeave = () => {
     setAnchorEl(null);
   };
-  const {data} = props
+
+
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popper' : undefined;
-
   return (
-    <Box justifyContent='center' alignItems='center' textAlign='center' sx={{ display: 'flex', alignItems: 'center' }}>
-      <h3>Kuinka arvioisit seuraavien toimintojen/kyvykkyyksien kypsyysTason?</h3>
+    
+    <Box justifyContent='center'
+     alignItems='center' 
+     textAlign='center' 
+     
+     sx={{
+       display: 'flex', 
+       alignItems: 'center' 
+       }}
+       >
+      <h3>{kysymysotsikko}</h3>
       <HelpRoundedIcon 
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        style={{ cursor: "pointer", color: '#40B7D7' }}
+        style={{ cursor: "pointer", color: '#40B7D7', paddingLeft: '30px'}}
       />
-      <Popper
-      sx={{
-        display:'flex',
-        width: '50%',
-        height: 'auto',
-        backgroundColor: 'white',
-        boxSizing: 'border-box',
-        padding: '10px',
-        flexWrap: 'wrap',
-        borderRadius: '10px',
-        alignItems:'baseline',
-        boxShadow: '3px 3px 3px 3px rgba(0,0,0,0.3)',
-      }}
-      id={id}
-      open={open}
-      anchorEl={anchorEl}
-      placement="right-start"
-      >
+<Popper 
+  sx={{
+    display:'flex',
+    width: {sx:'100%', md: '90%', lg: '70%', xl: '60%'},
+    height: 'auto',
+    backgroundColor: 'white',
+    padding: '15px',
+    flexWrap: 'wrap',
+    flexDirection: 'column',
+    borderRadius: '10px',
+    alignItems:'baseline',
+    boxShadow: '3px 3px 3px 3px rgba(0,0,0,0.3)',
+  }}
+  id={id}
+  open={open}
+  anchorEl={anchorEl}
+  placement="bottom-end"
+  modifiers={[
+    {
+      name: 'offset',
+      options: {
+        offset: [165, 5],
+      },
+      enabled: true,
+    },
+  ]}
+>
       <Grid 
        sx={{
         display:'grid',
@@ -55,17 +74,7 @@ export default function QueryInstruction(props : any) {
         flexDirection: 'column',
         alignItems:'stretch',
       }}>
-      {['Taso 5',
-       'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-        'Taso 4',
-        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-        'Taso 3',
-        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-        'Taso 2',
-        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-        'Taso 1',
-        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
-      ].map((text, index) => (
+      {props.localData.tasot.map((text:string, index:number) => (
       OddOneOut(index, text)
       ))}
       </Grid>

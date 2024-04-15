@@ -42,7 +42,7 @@ return (
     <Stack direction="row" spacing={1}>
     <ArrowBackIcon/>
       <Typography>
-        Etusivulle
+        {props.localData.napit.kyselyEtusivu}
       </Typography>
     </Stack>
   </Button>
@@ -82,7 +82,7 @@ return (
       }}>
         <Stack direction="row" spacing={1}>
           <Typography>
-            Tuloksiin
+            {props.localData.napit.kyselyTulos}
           </Typography>
           <ArrowForwardIcon/>
         </Stack>

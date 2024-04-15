@@ -47,9 +47,9 @@ const QueryContent = (props : any) => {
       height: '100%',
       marginBottom: 5
     }}>
-        <QueryTitleButton valittu = {props.valittu} setValittu = {props.setValittu} sivu = {sivu} data={data}/>
+        <QueryTitleButton valittu = {props.valittu} setValittu = {props.setValittu} sivu = {sivu} data={data} localData={props.localData}/>
         <QueryTitle data = {data} sivu = {sivu} />
-        <QueryInstruction data = {data} />
+        <QueryInstruction localData={props.localData} />
         <QueryQuestions sivu = {sivu} data = {data}/>
         </Stack>
 
@@ -74,7 +74,7 @@ const QueryContent = (props : any) => {
         <Stack direction="row" spacing={1}>
         <ArrowBackIcon/>
           <Typography>
-            Palaa
+            {props.localData.napit.kyselyTakas}
           </Typography>
         </Stack>
       </Button>
@@ -94,7 +94,7 @@ const QueryContent = (props : any) => {
       }}>
         <Stack direction="row" spacing={1}>
           <Typography>
-            Jatka
+          {props.localData.napit.kyselyJatka}
           </Typography>
           <ArrowForwardIcon/>
         </Stack>
