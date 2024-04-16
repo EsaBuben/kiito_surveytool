@@ -11,16 +11,16 @@ import {
   // Create styles
   const styles = StyleSheet.create({
     page: {
-      backgroundColor: "#d11fb6",
-      color: "white",
+      backgroundColor: "white",
+      color: "black",
     },
     section: {
       margin: 10,
       padding: 10,
     },
     viewer: {
-      width: window.innerWidth, //the pdf viewer will take up all of the width and height
-      height: window.innerHeight,
+      width: '92vh', //the pdf viewer will take up all of the width and height
+      height: '92vh',
     },
   });
       
@@ -38,15 +38,20 @@ import {
 
     return data[sivu].kategoriat.map((kategoria: { tasot: any[]; otsikko: string; }) => {
       let temp : any[] = [];
-       temp.push(<Text>{kategoria.otsikko}</Text>)
-    temp.concat(kategoria.tasot.map((taso: { kysymykset:any[]; alaotsikko: string; }) => {
+      temp.push(<Text>{kategoria.otsikko}</Text>)
+      temp.concat(kategoria.tasot.map(( taso: { kysymykset:any[]; alaotsikko: string; }, index:number) => {
       temp.push(<Text>{taso.alaotsikko}</Text>)
-      taso.kysymykset.map((kysymys: string ) => {
-      temp.push(<Text>{kysymys}</Text>)
-      })
-      answers.map((vastaus: number[]) => {
-      temp.push(<Text>{vastaus}</Text>)
-      })
+      for(let i =0 ; i < taso.kysymykset.length; i++) {
+        temp.push(<Text>{taso.kysymykset[i]}</Text>)
+        temp.push(<Text>{answers[index][i].toString()}</Text>)
+    
+       } 
+      // taso.kysymykset.map((kysymys: string ) => {
+      // temp.push(<Text>{kysymys}</Text>)
+      // })
+      // answers[sivu][i][].map((vastaus: number[]) => {
+      // temp.push(<Text>{vastaus}</Text>)
+      // })
     }))
     return temp;
     })

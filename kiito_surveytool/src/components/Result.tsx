@@ -6,7 +6,7 @@ import {ResultTabs} from './ResultTabs';
 import {ResultTitle} from './ResultTitle';
 import {ResultReturnButton} from './ResultReturnButton';
 
-// import BasicDocument from './BasicDocument';
+import BasicDocument from './BasicDocument';
 // import { createPortal } from 'react-dom';
 
 type TulosProbs = {
@@ -73,8 +73,8 @@ export function Result(props:TulosProbs){
     }
 
 
-      /* <BasicDocument sivu = {props.sivu} data = {props.data} localData={props.localData}
-      answers={props.answers[props.sivu]} yname={props.yname} date={props.date}/> */
+      <BasicDocument sivu = {props.sivu} data = {props.data} localData={props.localData}
+      answers={props.answers[props.sivu]} yname={props.yname} date={props.date}/>
 
   }
 
@@ -85,8 +85,8 @@ export function Result(props:TulosProbs){
     <ResultReturnButton teksti={PaluuButtonTeksti} setValittu={props.setValittu}/>
     <ResultTitle otsikko={otsikko} alaOtsikko={alaotsikko} createPDF={createPDF}/>
     <ResultTabs tabTekstit={tabTekstit} sivuData={props.data[props.sivu]} answers={props.answers[props.sivu]} sivu={props.sivu} tableRef={resultTableRef} graphRef={resultGraphRef} setValittu={props.setValittu}/>
-    {/* <BasicDocument sivu = {props.sivu} data = {props.data} localData={props.localData}
-    answers={props.answers[props.sivu]} yname={props.yname} date={props.date}/> */}
+    <BasicDocument sivu = {props.sivu} data = {props.data} localData={props.localData}
+    answers={props.answers[props.sivu]} yname={props.yname} date={props.date}/>
   </div>);
 
 }
