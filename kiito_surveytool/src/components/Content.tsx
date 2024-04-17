@@ -37,7 +37,6 @@ const Content = (props:any) => {
     {valittu > -1 && <Querypage valittu = {valittu} sivu = {valittu} setValittu = {setValittu} data = {data} />}
     {valittu < -1 && <Result sivu={(valittu*-1) - 2} setValittu = {setValittu} data = {data}
      localData={props.localData} answers={ans} yname = {name} date = {date} />}
-     <div id="hidden_content"></div>
     </Stack>
 
   )

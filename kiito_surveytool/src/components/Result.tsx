@@ -1,4 +1,4 @@
-import React,{useRef} from 'react';
+import React,{useRef, useEffect, useState} from 'react';
 // import html2canvas from 'html2canvas'
 import { toPng } from 'html-to-image';
 
@@ -35,6 +35,8 @@ export function Result(props:TulosProbs){
   const resultTableRef = useRef()
   const resultGraphRef = useRef()
 
+  const [PDFContent,setPDFContent] = useState(<span></span>)
+
   const createPDF = () => {
     //<DummyPage vastaukset, kysymykset, kuva taulukosta, kuva graafista/>
 
@@ -59,9 +61,17 @@ export function Result(props:TulosProbs){
       Promise.all(imagePromises).then((values:any) => {
 
         //add PDF document creation here
-
-
-        console.log(values)
+        setPDFContent(
+          <BasicDocument
+            sivu = {props.sivu}
+            data = {props.data}
+            localData={props.localData}
+            answers={props.answers[props.sivu]}
+            yname={props.yname}
+            kuvat= {values}
+            date={props.date}/
+          >
+          )
         //test for getting rigth images
         // values.map((value:any)=>{
         //   const link = document.createElement("a");
@@ -73,11 +83,10 @@ export function Result(props:TulosProbs){
     }
 
 
-      <BasicDocument sivu = {props.sivu} data = {props.data} localData={props.localData}
-      answers={props.answers[props.sivu]} yname={props.yname} date={props.date}/>
+      /* <BasicDocument sivu = {props.sivu} data = {props.data} localData={props.localData}
+      answers={props.answers[props.sivu]} yname={props.yname} date={props.date}/> */
 
   }
-
 
 
   return(
@@ -85,8 +94,7 @@ export function Result(props:TulosProbs){
     <ResultReturnButton teksti={PaluuButtonTeksti} setValittu={props.setValittu}/>
     <ResultTitle otsikko={otsikko} alaOtsikko={alaotsikko} createPDF={createPDF}/>
     <ResultTabs tabTekstit={tabTekstit} sivuData={props.data[props.sivu]} answers={props.answers[props.sivu]} sivu={props.sivu} tableRef={resultTableRef} graphRef={resultGraphRef} setValittu={props.setValittu}/>
-    <BasicDocument sivu = {props.sivu} data = {props.data} localData={props.localData}
-    answers={props.answers[props.sivu]} yname={props.yname} date={props.date}/>
+    {PDFContent}
   </div>);
 
 }

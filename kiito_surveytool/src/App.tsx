@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <FetchJSON />
+      <div id="hidden_content"></div>
     </div>
   )
 }

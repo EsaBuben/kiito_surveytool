@@ -72,8 +72,7 @@ const ResultTable_element = <ResultTable
     setValittu={props.setValittu}/>
 
 
-const makePortal = (jsxelement:any) =>{
-
+const makePortal = (jsxelement:JSX.Element) =>{
   let content:React.ReactPortal | null = null;
   let parent = document.getElementById('hidden_content')
   if(parent != null){

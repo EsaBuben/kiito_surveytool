@@ -3,6 +3,7 @@ import {
     Page,
     Text,
     View,
+    Image,
     StyleSheet,
     PDFViewer,
   } from "@react-pdf/renderer";
@@ -23,7 +24,7 @@ import {
       height: '92vh',
     },
   });
-      
+
   function BasicDocument(props:any) {
     let yname = props.yname;
     let paivamaara = props.date;
@@ -31,8 +32,9 @@ import {
     let answers = props.answers;
     let localData = props.localData;
     let sivu = props.sivu;
+    let kuvat = props.kuvat
     let vastaukset : string[] = []
-  
+
 
     function QuesAnsw(data:any, answers:any, sivu:number) {
 
@@ -44,8 +46,8 @@ import {
       for(let i =0 ; i < taso.kysymykset.length; i++) {
         temp.push(<Text>{taso.kysymykset[i]}</Text>)
         temp.push(<Text>{answers[index][i].toString()}</Text>)
-    
-       } 
+
+       }
       // taso.kysymykset.map((kysymys: string ) => {
       // temp.push(<Text>{kysymys}</Text>)
       // })
@@ -55,10 +57,10 @@ import {
     }))
     return temp;
     })
-  
+
   }
 
-    
+
     return (
       <PDFViewer style={styles.viewer}>
         {/* Start of the document*/}
@@ -66,6 +68,8 @@ import {
           {/*render a single page*/}
           <Page size="A4" style={styles.page}>
             <View style={styles.section}>
+              <Image src={kuvat[0]}> </Image>
+              <Image src={kuvat[1]}> </Image>
               {QuesAnsw(data, answers, sivu)}
               <Text>{yname}</Text>
             </View>
