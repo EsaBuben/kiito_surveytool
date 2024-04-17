@@ -35,19 +35,19 @@ import {
     let kuvat = props.kuvat
     let vastaukset : string[] = []
 
-
+    console.log(answers)
     function QuesAnsw(data:any, answers:any, sivu:number) {
-
-    return data[sivu].kategoriat.map((kategoria: { tasot: any[]; otsikko: string; }) => {
+    let answerCounter:number = 0;
+    return data[sivu].kategoriat.map((kategoria: { tasot: any[]; otsikko: string; }, kat_index: number) => {
       let temp : any[] = [];
       temp.push(<Text>{kategoria.otsikko}</Text>)
       temp.concat(kategoria.tasot.map(( taso: { kysymykset:any[]; alaotsikko: string; }, index:number) => {
-      temp.push(<Text>{taso.alaotsikko}</Text>)
-      for(let i =0 ; i < taso.kysymykset.length; i++) {
-        temp.push(<Text>{taso.kysymykset[i]}</Text>)
-        temp.push(<Text>{answers[index][i].toString()}</Text>)
-
+        temp.push(<Text>{taso.alaotsikko}</Text>)
+        for(let i =0 ; i < taso.kysymykset.length; i++) {
+          temp.push(<Text>{taso.kysymykset[i]}</Text>)
+          temp.push(<Text>{answers[answerCounter][i].toString()}</Text>)
        }
+       answerCounter +=1
       // taso.kysymykset.map((kysymys: string ) => {
       // temp.push(<Text>{kysymys}</Text>)
       // })
