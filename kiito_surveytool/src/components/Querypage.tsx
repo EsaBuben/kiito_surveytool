@@ -5,7 +5,7 @@ const Querypage = (props : any) => {
 
   return (
     
-      <QueryContent valittu = {props.valittu} sivu = {props.sivu} setValittu = {props.setValittu} data = {data}/>
+      <QueryContent valittu = {props.valittu} sivu = {props.sivu} setValittu = {props.setValittu} data = {data} localData={props.localData}/>
     
   )
 }

@@ -22,7 +22,9 @@
       "tulosPalaa":"Palaa etusivulle",
       "tulosPDF":"tulosta PDF",
       "tulosKaavioTab":"kaavio",
-      "tulosTaulukkoTab":"taulukko"
+      "tulosTaulukkoTab":"taulukko",
+      "yrityksenNimi":"Yrityksen nimi",
+      "paivamaara":"Päivämäärä"
     },
   "kyselyt":[
     "nykytila.json",

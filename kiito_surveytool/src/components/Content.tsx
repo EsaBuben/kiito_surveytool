@@ -33,8 +33,8 @@ const Content = (props:any) => {
 
   >
     {valittu === -1 && <FrontButtons setValittu={ (data: SetStateAction<number>) => setValittu(data) }
-     data = {data} setName={setName} name = {name} localData={props.localData} setDate={setDate} date={date}/>}
-    {valittu > -1 && <Querypage valittu = {valittu} sivu = {valittu} setValittu = {setValittu} data = {data} />}
+     data = {data} setName={setName} setDate={setDate} date={date} name = {name} localData={props.localData}/>}
+    {valittu > -1 && <Querypage valittu = {valittu} sivu = {valittu} setValittu = {setValittu} data = {data} localData={props.localData} />}
     {valittu < -1 && <Result sivu={(valittu*-1) - 2} setValittu = {setValittu} data = {data}
      localData={props.localData} answers={ans} yname = {name} date = {date} />}
     </Stack>

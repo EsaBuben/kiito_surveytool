@@ -17,15 +17,13 @@ import {
     let paivamaara = props.date;
     let data = props.data;
     let answers = props.answers;
-    let localData = props.localData;
     let sivu = props.sivu;
     let kuvat = props.kuvat
-    let vastaukset : string[] = []
 
     console.log(answers)
     function QuesAnsw(data:any, answers:any, sivu:number) {
     let answerCounter:number = 0;
-   
+
     return data[sivu].kategoriat.map((kategoria: { tasot: any[]; otsikko: string;}, index:number) => {
       let temp : any[] = [];
       if(index === 0){
@@ -36,7 +34,7 @@ import {
       temp.concat(kategoria.tasot.map(( taso: { kysymykset:any[]; alaotsikko: string; }) => {
         temp.push(<Text style={styles.alaOtsikko}>{taso.alaotsikko}</Text>)
         for(let i =0 ; i < taso.kysymykset.length; i++) {
-          temp.push(<View style={styles.sectionC}>) 
+          temp.push(<View style={styles.sectionC}>)
           temp.push(<Text style={styles.kysymykset}>{taso.kysymykset[i]}</Text>)
           temp.push(<Text style={styles.vastaukset}>{answers[answerCounter][i].toString()}</Text>)
           temp.push(</View>)
@@ -71,7 +69,7 @@ import {
               <Image style={styles.imageTable} src={kuvat[1]} />
             </View>
             </Page>
-            
+
             <Page size="A4" style={styles.page} >
               {/*render header*/}
             <View fixed style={styles.header}>
@@ -81,13 +79,13 @@ import {
             </View>
 
             {/*render the questions and answers*/}
-            
+
             <Text style={styles.otsikkoB}>{otsikko[1]}</Text>
             <View style={styles.sectionB}>
             {QuesAnsw(data,answers,sivu)}
             </View>
             </Page>
-          
+
         </Document>
       </PDFViewer>
     );
@@ -207,7 +205,7 @@ import {
         backgroundColor: COLORS.primary,
         borderRadius:5,
 
-        
+
       },
     });
   export default BasicDocument;

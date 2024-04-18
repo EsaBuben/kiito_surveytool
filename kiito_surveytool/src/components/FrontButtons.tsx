@@ -35,7 +35,7 @@ function FrontButtons(props : any) {
     color: 'black'
   }}>
 
-  <FrontInput setName = {props.setName} name = {props.name} setDate={props.setDate} date={props.date}/>
+  <FrontInput setName = {props.setName} name = {props.name} setDate={props.setDate} date={props.date} localData = {props.localData}/>
 
   <Typography variant="h5" align="center" fontWeight='bold' width='300px' paddingBottom='50px'>
   {localData.aiheotsikko}
@@ -49,10 +49,10 @@ function FrontButtons(props : any) {
         marginLeft: '120px'
       }}
     >
-  
+
   <ButtonGroup orientation="vertical" sx={{gap:3}}>
     {data.map((sivu : any) =>(
-      
+
       <Slide in appear={funktio(anime, data.indexOf(sivu))} timeout={400} key={data.indexOf(sivu)}>
       <Button variant="contained"
       className="question-btn"
@@ -65,7 +65,7 @@ function FrontButtons(props : any) {
         fontWeight:'bold',
         padding:1,
         backgroundColor:'#40B7D7',
-        
+
         }}
         onClick={(e) => handleClick(e, props, data, sivu)}
           key={data.indexOf(sivu)}
@@ -76,7 +76,7 @@ function FrontButtons(props : any) {
       </Slide>
     ))}
     </ButtonGroup>
-    
+
     <ButtonGroup orientation="vertical" sx={{gap:3}}>
     {data.map((sivu : any, index: number) =>(
       <Button key={sivu} variant="text"
@@ -95,7 +95,7 @@ function FrontButtons(props : any) {
       onClick={() => props.setValittu
       (-1*(index + 2))}
       >
-      {"Tulokset" } <ArrowRightAltIcon />
+      {props.localData.napit.etusivuTulos} <ArrowRightAltIcon />
       </Button>
     ))}
     </ButtonGroup>

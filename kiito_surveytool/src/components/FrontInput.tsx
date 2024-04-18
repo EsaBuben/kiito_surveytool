@@ -15,7 +15,7 @@ const FrontInput = (props : any) => {
     <Stack component="form" direction="row" display="flex" gap={70} marginTop="10px" noValidate autoComplete="off">
         <TextField
             fullWidth
-            label="Yrityksen nimi"
+            label={props.localData.napit.yrityksenNimi}
             variant="outlined"
             defaultValue={props.name}
             //save the value to the state
@@ -26,7 +26,7 @@ const FrontInput = (props : any) => {
     
         <TextField 
             sx={{ width: '50%' }}
-            label="Päivämäärä"
+            label={props.localData.napit.paivamaara}
             variant="outlined"
             defaultValue={props.date}
             onChange={(e) => (dateHandleChange(e))}
