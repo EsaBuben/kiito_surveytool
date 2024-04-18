@@ -21,8 +21,29 @@ ChartJS.register(
 
 export function ResultGraph(props:any){
   let data_array = props.data_array;
+
+  let labels:string[] = data_array.map(
+    (text:string) => {
+    const arr = text.split(" ")
+    const output = []
+    let chunkSize = 3;
+
+    if(arr.length == 3){
+      if(arr[arr.length - 1].length > 7){
+        chunkSize = 2
+      }
+    }
+
+    for (let i = 0, length = arr.length; i < length; i += chunkSize) {
+      output.push(arr.slice(i, i + chunkSize).join(" "))
+
+    }
+
+    return output
+  })
+
   const data = {
-    labels: data_array, //tasot alaotsikkot
+    labels: labels, //tasot alaotsikkot
     datasets:[{
       label:"keskiarvo",  //keskiarvo
       data: props.radio_values, //arvot
@@ -54,6 +75,7 @@ export function ResultGraph(props:any){
               lineWidth: 1,
             },
             pointLabels: { //text outside of the radar
+             padding: 20,
              font: {
                //family
                size: 15,
