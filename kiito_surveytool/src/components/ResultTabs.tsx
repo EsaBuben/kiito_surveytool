@@ -56,7 +56,7 @@ export function ResultTabs(props:any){
    }
  }
 
-  return (<Box >
+  return (<Box sx={{marginBottom: 5}}>
     <Tabs
       centered
       TabIndicatorProps={{
