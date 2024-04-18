@@ -57,7 +57,7 @@ import {
             {/*render header*/}
             <View fixed style={styles.header}>
               <Text>{paivamaara}</Text>
-              <Text>{yname} testinimi</Text>
+              <Text>{yname}</Text>
               <Image style={styles.headerLogo} src={'/KiitoLogo.png'}/>
             </View>
 
@@ -74,7 +74,7 @@ import {
               {/*render header*/}
             <View fixed style={styles.header}>
               <Text>{paivamaara}</Text>
-              <Text>{yname} testinimi</Text>
+              <Text>{yname}</Text>
               <Image style={styles.headerLogo} src={'/KiitoLogo.png'}/>
             </View>
 
