@@ -37,10 +37,11 @@ export function ResultTabs(props:any){
 
   const radio_values:number[] = props.answers.map((values:any)=>{
       let sum:number = 0
+      let amount:number = values.length
       values.forEach((num:number)=>{
         sum += num
       })
-      return sum
+      return sum/amount
   });
 //possibly do one step above for less rerunning
   let data_array: string[] = props.sivuData.kategoriat.flatMap(
