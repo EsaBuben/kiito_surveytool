@@ -35,7 +35,7 @@ function FrontButtons(props : any) {
     color: 'black'
   }}>
 
-  <FrontInput setName = {props.setName} name = {props.name} />
+  <FrontInput setName = {props.setName} name = {props.name} localData = {props.localData} />
 
   <Typography variant="h5" align="center" fontWeight='bold' width='300px' paddingBottom='50px'>
   {localData.aiheotsikko}
@@ -95,13 +95,13 @@ function FrontButtons(props : any) {
       onClick={() => props.setValittu
       (-1*(index + 2))}
       >
-      {"Tulokset" } <ArrowRightAltIcon />
+      {props.localData.napit.etusivuTulos} <ArrowRightAltIcon />
       </Button>
     ))}
     </ButtonGroup>
     </Box>
       <Box sx={{marginTop:'100px', display:'flex'}} >
-      <img src={'/public/logo.jpg'} alt="logo" />
+      <img src={'/logo.jpg'} alt="logo" />
       </Box>
   </Stack>
 )
