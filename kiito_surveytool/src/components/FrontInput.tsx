@@ -7,7 +7,7 @@ const FrontInput = (props : any) => {
   }
 
   return (
-    <Stack component="form" direction="row" display="flex" gap={70} marginTop="10px" noValidate autoComplete="off">
+    <Stack component="form" direction="row" display="flex" sx={{gap: {xs: 1, sm: 15, md: 45, lg: 70}}} marginTop="10px" noValidate autoComplete="off">
         <TextField
             fullWidth
             label={props.localData.napit.yrityksenNimi}

@@ -44,9 +44,9 @@ const QueryContent = (props : any) => {
       backgroundColor: 'rgba(255,255,255,1)',
       borderRadius: '100px 100px 0px 0px',
       color: 'black',
-      marginBottom: 10,
-      width: {xs: '800px', sm: '800px', md: 'auto', lg: 'auto'},
-      height: { xs: '700px', sm: '700px', md: '680px', lg: '600px'},
+      marginBottom: 15,
+      width: {xs: '820px', sm: '820px', md: 'auto', lg: 'auto'},
+      height: { xs: '800px', sm: '800px', md: '680px', lg: '600px'},
     }}>
         <QueryTitleButton valittu = {props.valittu} setValittu = {props.setValittu} sivu = {sivu} data={data} localData={props.localData}/>
         <QueryTitle data = {data} sivu = {sivu} />
@@ -57,6 +57,7 @@ const QueryContent = (props : any) => {
         <Stack direction={'row'} style={{
           position: 'relative',
           bottom: '2%',
+          marginBottom: 15
         }}>
         <Button onClick={()=>handleChangeMinus()} style={{
         visibility: testi !== 1

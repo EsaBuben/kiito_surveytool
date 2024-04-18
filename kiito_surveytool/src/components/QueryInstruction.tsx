@@ -25,7 +25,8 @@ export default function QueryInstruction(props : any) {
      
      sx={{
        display: 'flex', 
-       alignItems: 'center' 
+       alignItems: 'center',
+       width: '60%' 
        }}
        >
       <h3>{kysymysotsikko}</h3>

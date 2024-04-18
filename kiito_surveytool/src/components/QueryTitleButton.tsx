@@ -18,7 +18,7 @@ const { data } = props
 anime = props.valittu
 return (
     <div style={{
-        width:"80%",
+        width:"70%",
         display: 'flex',
         flexWrap: "nowrap",
         textAlign: 'center'
