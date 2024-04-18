@@ -1,5 +1,4 @@
-import {useState} from 'react';
-import {createPortal} from 'react-dom';
+import {useState, useEffect} from 'react';
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -34,6 +33,7 @@ function TabPage(props: TabProps) {
 
 export function ResultTabs(props:any){
   const [value, setValue] = useState<number>(0)
+  const [hiddenContent, setHiddenContent] = useState(<span></span>)
 
   const radio_values:number[] = props.answers.map((values:any)=>{
       let sum:number = 0
@@ -57,31 +57,29 @@ export function ResultTabs(props:any){
    }
  }
 
-const ResultGraph_element = <ResultGraph
+let ResultGraph_element = <ResultGraph
   graphRef={props.graphRef}
   data_array={data_array}
   radio_values={radio_values}
   sivu={props.sivu}
   setValittu={props.setValittu}/>
 
-const ResultTable_element = <ResultTable
+let ResultTable_element = <ResultTable
     tableRef={props.tableRef}
     data_array={data_array}
     radio_values={radio_values}
     sivu={props.sivu}
     setValittu={props.setValittu}/>
 
+useEffect(()=>{
+  if(value == 0){
+      setHiddenContent(ResultTable_element)
+  }
+  if(value == 1){
+      setHiddenContent(ResultGraph_element)
+  }
+},[value])
 
-const makePortal = (jsxelement:JSX.Element) =>{
-  let content:React.ReactPortal | null = null;
-  let parent = document.getElementById('hidden_content')
-  if(parent != null){
-  content= createPortal(
-    jsxelement,parent
-  )}
-
-  return content
-}
 
 
   return (<Box >
@@ -103,6 +101,10 @@ const makePortal = (jsxelement:JSX.Element) =>{
       <TabPage value={value} index={1}>
         {ResultTable_element}
       </TabPage>
-      {value== 0 ? makePortal(ResultTable_element):makePortal(ResultGraph_element)}
+      <div style={{backgroundColor:"white", zIndex:2, display:'flex'}}>
+        <div style={{zIndex:-10}}>
+          {hiddenContent}
+        </div>
+      </div>
   </Box>)
 }
