@@ -69,8 +69,8 @@ export function Result(props:TulosProbs){
             answers={props.answers[props.sivu]}
             yname={props.yname}
             kuvat= {values}
-            date={props.date}/
-          >
+            date={props.date}
+          />
           )
         //test for getting rigth images
         // values.map((value:any)=>{
