@@ -46,7 +46,8 @@ function FrontButtons(props : any) {
         '& > *': {
           m: 1,
         },
-        marginLeft: '120px'
+        marginLeft: '120px',
+        marginBottom: 10
       }}
     >
   
@@ -100,9 +101,7 @@ function FrontButtons(props : any) {
     ))}
     </ButtonGroup>
     </Box>
-      <Box sx={{marginTop:'100px', display:'flex'}} >
-      <img src={'/logo.jpg'} alt="logo" />
-      </Box>
+      
   </Stack>
 )
       }

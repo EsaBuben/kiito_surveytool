@@ -38,7 +38,7 @@ export default function QueryQuestions(props : any) {
     {ques[testi-1].map((x, index) =>
     <div key={index} style={{display: "flex", width: "80%",  fontFamily: "arial"}}>
     <FormControl sx={{flexDirection: 'row', margin: 7, marginBottom: 3, marginTop: 2, }}>
-      <FormLabel sx={{width:'50%', minWidth: 250}} >{x}</FormLabel>
+      <FormLabel sx={{width:'60%', minWidth: 250}} >{x}</FormLabel>
       <RadioGroup
         row
         aria-labelledby="demo-row-radio-buttons-group-label"

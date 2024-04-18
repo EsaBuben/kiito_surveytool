@@ -7,12 +7,13 @@ const Frontpage = (props : any) => {
     <Stack
     spacing={5}
     sx={{
-      height: { xs: 'auto', md: '100vh'},
+      height: { xs: '100vh', sm: '100vh', md: '100vh', lg: '70dvh'},
       position: 'relative',
     }}
     >
       <Header data = {props.localData}/>
       <Content data = {data} localData={props.localData} setupArr={setupArr}/>
+      
     </Stack>
   )
 }

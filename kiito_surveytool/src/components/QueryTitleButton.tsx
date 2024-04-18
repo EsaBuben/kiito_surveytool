@@ -34,7 +34,8 @@ return (
         cursor: "pointer",
         marginTop: '30px',
         boxShadow:5,
-        borderRadius:2
+        borderRadius:2,
+        marginLeft: 5
       }}
       onClick={(e) => handleClick(e, props)}
         key={-1}
@@ -78,7 +79,8 @@ return (
         marginTop: '30px',
         marginBottom: '60px',
         boxShadow:5,
-        borderRadius:2
+        borderRadius:2,
+        marginRight: 5
       }}>
         <Stack direction="row" spacing={1}>
           <Typography>
