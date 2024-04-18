@@ -7,6 +7,7 @@ import {
     StyleSheet,
     PDFViewer,
   } from "@react-pdf/renderer";
+  import {COLORS} from "../utils/style_constants";
 
 
 
@@ -35,8 +36,10 @@ import {
       temp.concat(kategoria.tasot.map(( taso: { kysymykset:any[]; alaotsikko: string; }) => {
         temp.push(<Text style={styles.alaOtsikko}>{taso.alaotsikko}</Text>)
         for(let i =0 ; i < taso.kysymykset.length; i++) {
+          temp.push(<View style={styles.sectionC}>) 
           temp.push(<Text style={styles.kysymykset}>{taso.kysymykset[i]}</Text>)
           temp.push(<Text style={styles.vastaukset}>{answers[answerCounter][i].toString()}</Text>)
+          temp.push(</View>)
        }
        answerCounter +=1
     }))
@@ -51,7 +54,7 @@ import {
         {/* Start of the document*/}
         <Document>
           {/*render a single page*/}
-          <Page size="A4" style={styles.page}>
+          <Page wrap = {false} size="A4" style={styles.page}>
 
             {/*render header*/}
             <View fixed style={styles.header}>
@@ -60,19 +63,31 @@ import {
               <Image style={styles.headerLogo} src={'/KiitoLogo.png'}/>
             </View>
 
-
             {/*render the images*/}
-
-            <Text style={styles.otsikko}>{otsikko[0]}</Text>
-            <Text style={styles.alaOtsikko}>{data[sivu].sivu}</Text>
+            <View style={styles.section}>
+            <Text style={styles.otsikkoA}>{otsikko[0]}</Text>
+            <Text style={styles.otsikkoB}>{data[sivu].sivu}</Text>
               <Image style={styles.imageGraph} src={kuvat[0]} />
               <Image style={styles.imageTable} src={kuvat[1]} />
+            </View>
+            </Page>
+            
+            <Page size="A4" style={styles.page} >
+              {/*render header*/}
+            <View fixed style={styles.header}>
+              <Text>{paivamaara}</Text>
+              <Text>{yname} testinimi</Text>
+              <Image style={styles.headerLogo} src={'/KiitoLogo.png'}/>
+            </View>
 
             {/*render the questions and answers*/}
-            <Text break style={styles.otsikko}>{otsikko[1]}</Text>
+            
+            <Text style={styles.otsikkoB}>{otsikko[1]}</Text>
+            <View style={styles.sectionB}>
             {QuesAnsw(data,answers,sivu)}
-
-          </Page>
+            </View>
+            </Page>
+          
         </Document>
       </PDFViewer>
     );
@@ -106,22 +121,56 @@ import {
       section: {
         display: "flex",
         flexDirection: "column",
-        alignItems: "flex-start",
+        alignItems: "center",
         margin: 10,
       },
-      otsikko: {
+      sectionB: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        margin: 10,
+        textAlign: "left",
+      },
+      sectionC:{
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "flex-start",
+        alignContent: "space-between",
+        margin: -1,
+        textAlign: "left",
+        border: "1px solid black",
+        backgroundColor: COLORS.primary,
+        borderRadius:5,
+
+      },
+      otsikkoA: {
         top:0,
-        paddingBottom: 10,
+        paddingBottom: 3,
+        fontSize: 24,
+        textAlign: "center",
+
+      },
+      otsikkoB: {
+        top:0,
+        paddingBottom: 3,
         fontSize: 24,
         textAlign: "center",
         textDecoration: "underline",
-
       },
-      alaOtsikko:{
-        paddingBottom: 25,
+      kategoriaOtsikko:{
+        position: "relative",
+        paddingBottom: 5,
         fontSize: 18,
         textAlign: "center",
-        width: 500,
+        width: "50%",
+      },
+      alaOtsikko:{
+        padding: 10,
+        fontSize: 18,
+        textAlign: "center",
+        borderLeft: "1px solid black",
+        borderRight: "1px solid black",
+        borderTop: "1px solid black",
       },
       imageGraph: {
         width: 600,
@@ -132,19 +181,33 @@ import {
         width: 600,
         height: 250,
       },
+
       kysymykset:{
-        fontSize: 12,
+        display: "flex",
+        flexDirection: "row",
+        width: "90%",
+        fontSize: 14,
+        letterSpacing: 1,
         textDecoration: "underline",
-        paddingBottom: 10,
-      },
-      kategoriaOtsikko:{
-        fontSize: 18,
-        textAlign: "center",
-        fontWeight: "bold",
+        margin:"auto",
+        padding: 20,
+        border: "1px solid black",
+        color:"white",
+        backgroundColor: COLORS.secondary,
+        borderRadius:5,
       },
       vastaukset:{
+        display: "flex",
+        flexDirection: "row",
+        textAlign: "center",
+        width: "10%",
         fontSize: 24,
-        paddingBottom: 10,
+        margin:"auto",
+        color:"white",
+        backgroundColor: COLORS.primary,
+        borderRadius:5,
+
+        
       },
     });
   export default BasicDocument;
