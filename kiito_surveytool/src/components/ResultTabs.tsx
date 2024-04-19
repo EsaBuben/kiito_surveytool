@@ -41,7 +41,7 @@ export function ResultTabs(props:any){
       values.forEach((num:number)=>{
         sum += num
       })
-      return sum/amount
+      return Math.round(sum/amount)
   });
 //possibly do one step above for less rerunning
   let data_array: string[] = props.sivuData.kategoriat.flatMap(
