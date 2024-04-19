@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -33,13 +33,15 @@ function TabPage(props: TabProps) {
 
 export function ResultTabs(props:any){
   const [value, setValue] = useState<number>(0)
+  const [hiddenContent, setHiddenContent] = useState(<span></span>)
 
   const radio_values:number[] = props.answers.map((values:any)=>{
       let sum:number = 0
+      let amount:number = values.length
       values.forEach((num:number)=>{
         sum += num
       })
-      return sum
+      return sum/amount
   });
 //possibly do one step above for less rerunning
   let data_array: string[] = props.sivuData.kategoriat.flatMap(
@@ -56,7 +58,32 @@ export function ResultTabs(props:any){
    }
  }
 
-  return (<Box sx={{marginBottom: 5}}>
+let ResultGraph_element = <ResultGraph
+  graphRef={props.graphRef}
+  data_array={data_array}
+  radio_values={radio_values}
+  sivu={props.sivu}
+  setValittu={props.setValittu}/>
+
+let ResultTable_element = <ResultTable
+    tableRef={props.tableRef}
+    data_array={data_array}
+    radio_values={radio_values}
+    sivu={props.sivu}
+    setValittu={props.setValittu}/>
+
+useEffect(()=>{
+  if(value == 0){
+      setHiddenContent(ResultTable_element)
+  }
+  if(value == 1){
+      setHiddenContent(ResultGraph_element)
+  }
+},[value])
+
+
+
+  return (<Box >
     <Tabs
       centered
       TabIndicatorProps={{
@@ -70,18 +97,15 @@ export function ResultTabs(props:any){
         <Tab style={{color: value == 1 ? COLORS.primary : 'black'}} label={props.tabTekstit[1]} />
       </Tabs>
       <TabPage value={value} index={0}>
-        <ResultGraph
-        data_array={data_array}
-        radio_values={radio_values}
-        sivu={props.sivu}
-        setValittu={props.setValittu}/>
+        {ResultGraph_element}
       </TabPage>
       <TabPage value={value} index={1}>
-        <ResultTable
-        data_array={data_array}
-        radio_values={radio_values}
-        sivu={props.sivu}
-        setValittu={props.setValittu}/>
+        {ResultTable_element}
       </TabPage>
+      <div style={{backgroundColor:"white", zIndex:2, display:'flex'}}>
+        <div style={{zIndex:-10}}>
+          {hiddenContent}
+        </div>
+      </div>
   </Box>)
 }

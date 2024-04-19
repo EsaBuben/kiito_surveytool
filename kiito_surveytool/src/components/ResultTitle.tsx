@@ -28,7 +28,7 @@ export function ResultTitle(props:any){
           <Typography sx={{textAlign:"center", fontWeight:"bold"}} variant="subtitle1">{subTitle}</Typography>
         </Grid>
       </Grid>
-      <Grid item >
+      <Grid item onClick={props.createPDF}>
         <DownloadIcon sx={{width:"50px", height:"50px",paddingRight:"30px"}}/>
       </Grid>
     </Grid>

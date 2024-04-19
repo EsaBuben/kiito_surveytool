@@ -6,6 +6,11 @@ const FrontInput = (props : any) => {
     e.preventDefault();
   }
 
+    const dateHandleChange = (e: any) => {
+      props.setDate(e.target.value);
+      e.preventDefault();
+    }
+
   return (
     <Stack component="form" direction="row" display="flex" sx={{gap: {xs: 1, sm: 15, md: 45, lg: 70}}} marginTop="10px" noValidate autoComplete="off">
         <TextField
@@ -23,14 +28,16 @@ const FrontInput = (props : any) => {
             sx={{ width: '50%' }}
             label={props.localData.napit.paivamaara}
             variant="outlined"
-            defaultValue={date()}
+            defaultValue={props.date}
+            onChange={(e) => (dateHandleChange(e))}
+            key = "date"
             />
     
     </Stack>
   )
 }
 
-function date() {
+export function dateCalc() {
   let today : any = new Date();
   let dd = today.getDate();
   let mm = today.getMonth() + 1;

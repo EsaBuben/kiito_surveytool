@@ -10,7 +10,7 @@ export function ResultTable(props :any){
   const answerAverages : number[] = props.radio_values;
 
   return(
-    <Box sx={{flexGrow:1}}>
+    <Box sx={{flexGrow:1}} ref={props.tableRef}>
       <Grid container spacing={0.5}>
           {
             subCategories.map((category, index) => {

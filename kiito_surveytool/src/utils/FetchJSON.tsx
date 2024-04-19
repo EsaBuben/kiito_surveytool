@@ -46,12 +46,7 @@ function FetchJSON() {
 			then( r => r.json()
 			).then(
 				 config => {
-					 localdata.paaotsikko = config.paaotsikko
-					 localdata.aiheotsikko = config.aiheotsikko
-					 localdata.tulosotsikko = config.tulosotsikko
-					 localdata.kysymysotsikko = config.kysymysotsikko
-					 localdata.tasot = config.tasot
-					 localdata.napit = config.napit
+					 localdata = config
 					 	let jsonPromises =  config.kyselyt.map((path:any) => fetch(path,
 								{ method : "GET", mode : "cors", credentials : "include" }).then(
 								r => r.json()

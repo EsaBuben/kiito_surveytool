@@ -9,7 +9,6 @@ import {
 
 import {Radar, getElementsAtEvent} from 'react-chartjs-2';
 import './ResultGraph.css'
-import { useRef } from 'react';
 import { setTesti } from './QueryContent';
 ChartJS.register(
   LineElement,
@@ -71,7 +70,7 @@ export function ResultGraph(props:any){
 
   }
 
-  const chartRef = useRef()
+  const chartRef = props.graphRef
   const setValittu = props.setValittu
   const onClick = (event:any) => {
     if(chartRef.current)
@@ -91,7 +90,6 @@ export function ResultGraph(props:any){
       ref={chartRef}
       onClick={onClick}
       >
-
       </Radar>
     </div>
   )
