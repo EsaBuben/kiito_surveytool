@@ -30,7 +30,7 @@ export function QueryTitle(props : any){
       color:"white",
       padding: "10px 5px",
       borderRadius: 6,
-      width:"80%",
+      width:"70%",
       boxShadow:5
     }}
     >
