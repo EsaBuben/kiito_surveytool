@@ -12,7 +12,10 @@ import BasicDocument from './BasicDocument';
 type TulosProbs = {
   sivu:number;
   setValittu:React.Dispatch<React.SetStateAction<number>>;
-  data:{sivu:string, kategoriat:[]}[];
+  data:{
+    sivu:string,
+    tulosotsikko:string,
+    kategoriat:[]}[];
   localData:{
     tulosotsikko:string
     napit:{
@@ -25,10 +28,11 @@ type TulosProbs = {
   date:string;
 }
 
-export function Result(props:TulosProbs){
+export function Result({sivu, data, ...props}:TulosProbs){
 
-  let otsikko:string = props.localData.tulosotsikko;
-  let alaotsikko:string = props.data[props.sivu].sivu;
+  let otsikko:string = data[sivu].tulosotsikko;
+  let alaotsikko:string = data[sivu].sivu;
+
   let PaluuButtonTeksti:string = props.localData.napit.tulosPalaa;
   let tabTekstit:string[] = [props.localData.napit.tulosKaavioTab, props.localData.napit.tulosTaulukkoTab]
 
@@ -63,10 +67,9 @@ export function Result(props:TulosProbs){
         //add PDF document creation here
         setPDFContent(
           <BasicDocument
-            sivu = {props.sivu}
-            data = {props.data}
-            localData={props.localData}
-            answers={props.answers[props.sivu]}
+            sivu = {sivu}
+            data = {data}
+            answers={props.answers[sivu]}
             yname={props.yname}
             kuvat= {values}
             date={props.date}
@@ -93,7 +96,7 @@ export function Result(props:TulosProbs){
   <div style={{width:"100%", marginTop:'30px'}}>
     <ResultReturnButton teksti={PaluuButtonTeksti} setValittu={props.setValittu}/>
     <ResultTitle otsikko={otsikko} alaOtsikko={alaotsikko} createPDF={createPDF}/>
-    <ResultTabs tabTekstit={tabTekstit} sivuData={props.data[props.sivu]} answers={props.answers[props.sivu]} sivu={props.sivu} tableRef={resultTableRef} graphRef={resultGraphRef} setValittu={props.setValittu}/>
+    <ResultTabs tabTekstit={tabTekstit} sivuData={data[sivu]} answers={props.answers[sivu]} sivu={sivu} tableRef={resultTableRef} graphRef={resultGraphRef} setValittu={props.setValittu}/>
     {PDFContent}
   </div>);
 
