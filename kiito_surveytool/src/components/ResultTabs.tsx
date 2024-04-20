@@ -58,26 +58,28 @@ export function ResultTabs(props:any){
    }
  }
 
-let ResultGraph_element = <ResultGraph
+function ResultGraph_element() {
+  return<ResultGraph
   graphRef={props.graphRef}
   data_array={data_array}
   radio_values={radio_values}
   sivu={props.sivu}
-  setValittu={props.setValittu}/>
+  setValittu={props.setValittu}/>}
 
-let ResultTable_element = <ResultTable
+function ResultTable_element(){
+return <ResultTable
     tableRef={props.tableRef}
     data_array={data_array}
     radio_values={radio_values}
     sivu={props.sivu}
     setValittu={props.setValittu}/>
-
+}
 useEffect(()=>{
   if(value == 0){
-      setHiddenContent(ResultTable_element)
+      setHiddenContent(ResultTable_element())
   }
   if(value == 1){
-      setHiddenContent(ResultGraph_element)
+      setHiddenContent(ResultGraph_element())
   }
 },[value])
 
@@ -97,10 +99,10 @@ useEffect(()=>{
         <Tab style={{color: value == 1 ? COLORS.primary : 'black'}} label={props.tabTekstit[1]} />
       </Tabs>
       <TabPage value={value} index={0}>
-        {ResultGraph_element}
+        {ResultGraph_element()}
       </TabPage>
       <TabPage value={value} index={1}>
-        {ResultTable_element}
+        {ResultTable_element()}
       </TabPage>
       <div style={{backgroundColor:"white", zIndex:2, display:'flex'}}>
         <div style={{zIndex:-10}}>
