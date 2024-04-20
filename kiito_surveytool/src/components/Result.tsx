@@ -7,7 +7,6 @@ import {ResultTitle} from './ResultTitle';
 import {ResultReturnButton} from './ResultReturnButton';
 
 import BasicDocument from './BasicDocument';
-// import { createPortal } from 'react-dom';
 
 type TulosProbs = {
   sivu:number;
@@ -42,7 +41,6 @@ export function Result({sivu, data, ...props}:TulosProbs){
   const [PDFContent,setPDFContent] = useState(<span></span>)
 
   const createPDF = () => {
-    //<DummyPage vastaukset, kysymykset, kuva taulukosta, kuva graafista/>
 
     // refs for getting img with  html-to-image toPng function
     console.log(resultTableRef.current)
@@ -85,10 +83,6 @@ export function Result({sivu, data, ...props}:TulosProbs){
       })
     }
 
-
-      /* <BasicDocument sivu = {props.sivu} data = {props.data} localData={props.localData}
-      answers={props.answers[props.sivu]} yname={props.yname} date={props.date}/> */
-
   }
 
 
@@ -96,7 +90,7 @@ export function Result({sivu, data, ...props}:TulosProbs){
   <div style={{width:"100%", marginTop:'30px'}}>
     <ResultReturnButton teksti={PaluuButtonTeksti} setValittu={props.setValittu}/>
     <ResultTitle otsikko={otsikko} alaOtsikko={alaotsikko} createPDF={createPDF}/>
-    <ResultTabs tabTekstit={tabTekstit} sivuData={data[sivu]} answers={props.answers[sivu]} sivu={sivu} tableRef={resultTableRef} graphRef={resultGraphRef} setValittu={props.setValittu}/>
+    <ResultTabs tabTekstit={tabTekstit} data={data[sivu]} answers={props.answers[sivu]} sivu={sivu} tableRef={resultTableRef} graphRef={resultGraphRef} setValittu={props.setValittu}/>
     {PDFContent}
   </div>);
 

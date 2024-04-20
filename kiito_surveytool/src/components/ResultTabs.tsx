@@ -30,12 +30,25 @@ function TabPage(props: TabProps) {
   );
 }
 
+type TabProbs = {
+  tabTekstit:string[];
+  sivu:number;
+  data:{
+    sivu:string,
+    tulosotsikko:string,
+    kategoriat:[]
+  };
+  answers:number[][];
+  tableRef:React.MutableRefObject<undefined>;
+  graphRef:React.MutableRefObject<undefined>;
+  setValittu:React.Dispatch<React.SetStateAction<number>>;
+}
 
-export function ResultTabs(props:any){
+export function ResultTabs({sivu, answers, ...props}:TabProbs){
   const [value, setValue] = useState<number>(0)
   const [hiddenContent, setHiddenContent] = useState(<span></span>)
 
-  const radio_values:number[] = props.answers.map((values:any)=>{
+  const radio_values:number[] = answers.map((values:any)=>{
       let sum:number = 0
       let amount:number = values.length
       values.forEach((num:number)=>{
@@ -43,8 +56,8 @@ export function ResultTabs(props:any){
       })
       return Math.round(sum/amount)
   });
-//possibly do one step above for less rerunning
-  let data_array: string[] = props.sivuData.kategoriat.flatMap(
+
+  let data_array: string[] = props.data.kategoriat.flatMap(
         (kategoria: Kategoria) => {
         return  kategoria.tasot.map(
             (taso: { alaotsikko: string }) => {
@@ -60,18 +73,18 @@ export function ResultTabs(props:any){
 
 function ResultGraph_element() {
   return<ResultGraph
-  graphRef={props.graphRef}
+  resultRef={props.graphRef}
   data_array={data_array}
   radio_values={radio_values}
-  sivu={props.sivu}
+  sivu={sivu}
   setValittu={props.setValittu}/>}
 
 function ResultTable_element(){
 return <ResultTable
-    tableRef={props.tableRef}
+    resultRef={props.tableRef}
     data_array={data_array}
     radio_values={radio_values}
-    sivu={props.sivu}
+    sivu={sivu}
     setValittu={props.setValittu}/>
 }
 useEffect(()=>{

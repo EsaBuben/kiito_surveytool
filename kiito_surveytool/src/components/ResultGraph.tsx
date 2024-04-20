@@ -18,11 +18,17 @@ ChartJS.register(
   RadialLinearScale
 )
 
+type GraphProps ={
+  resultRef:React.MutableRefObject<undefined>;
+  data_array :string[];
+  radio_values :number[];
+  sivu:number;
+  setValittu:React.Dispatch<React.SetStateAction<number>>;
+}
 
-export function ResultGraph(props:any){
-  let data_array = props.data_array;
+export function ResultGraph({data_array ,...props}:GraphProps){
 
-  let labels:string[] = data_array.map(
+  let labels:string[][] = data_array.map(
     (text:string) => {
     const arr = text.split(" ")
     const output = []
@@ -92,7 +98,7 @@ export function ResultGraph(props:any){
 
   }
 
-  const chartRef = props.graphRef
+  const chartRef = props.resultRef
   const setValittu = props.setValittu
   const onClick = (event:any) => {
     if(chartRef.current)
