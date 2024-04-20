@@ -7,7 +7,8 @@ const Frontpage = (props : any) => {
     <Stack
     spacing={5}
     sx={{
-      height: { xs: '100vh', sm: '100vh', md: '100vh', lg: '70dvh'},
+      height: {sm: '100vh', md: '100vh', lg: '70dvh'},
+      width: {sm: '820px', md: 'auto', lg: 'auto'},
       position: 'relative',
     }}
     >

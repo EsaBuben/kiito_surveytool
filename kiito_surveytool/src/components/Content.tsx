@@ -26,7 +26,7 @@ const Content = (props:any) => {
     <Stack sx={{
       alignItems: 'center',
       backgroundColor: 'rgba(255,255,255,1)',
-      borderRadius: '100px 100px 50px 50px',
+      borderRadius: '100px 100px 100px 100px',
       color: 'black',
     }}>
     {valittu === -1 && <FrontButtons setValittu={ (data: SetStateAction<number>) => setValittu(data) }
