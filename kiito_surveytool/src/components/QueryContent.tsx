@@ -7,16 +7,16 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 
-let testi : number = 1;
+let exportPage : number = 1;
 
 export function setTesti(value : number) {
-  testi = value
+  exportPage = value
 }
 
 const QueryContent = (props : any) => {
 
   const { data, sivu } = props;
-  let [page, setPage] = useState(testi)
+  let [page, setPage] = useState(exportPage)
   let max = 0
 
 
@@ -30,11 +30,11 @@ const QueryContent = (props : any) => {
   }
   function handleChangePlus()  {
     setPage(page+1)
-    testi = page+1
+    exportPage = page+1
   }
   function handleChangeMinus()  {
     setPage(page-1)
-    testi = page-1
+    exportPage = page-1
   }
 
   return (
@@ -44,9 +44,9 @@ const QueryContent = (props : any) => {
       backgroundColor: 'rgba(255,255,255,1)',
       borderRadius: '100px 100px 0px 0px',
       color: 'black',
-      marginBottom: 15,
-      width: {xs: '820px', sm: '820px', md: 'auto', lg: 'auto'},
-      height: { xs: '800px', sm: '800px', md: '680px', lg: '600px'},
+      marginBottom: 12,
+      width: {sm: '820px', md: 'auto', lg: 'auto'},
+      height: {sm: '750px', md: '650px', lg: '550px'},
     }}>
         <QueryTitleButton valittu = {props.valittu} setValittu = {props.setValittu} sivu = {sivu} data={data} localData={props.localData}/>
         <QueryTitle data = {data} sivu = {sivu} />
@@ -57,10 +57,9 @@ const QueryContent = (props : any) => {
         <Stack direction={'row'} style={{
           position: 'relative',
           bottom: '2%',
-          marginBottom: 15
         }}>
         <Button onClick={()=>handleChangeMinus()} style={{
-        visibility: testi !== 1
+        visibility: exportPage !== 1
         ? "visible"
         : "hidden",
         backgroundColor:'#40B7D7',
@@ -80,8 +79,9 @@ const QueryContent = (props : any) => {
           </Typography>
         </Stack>
       </Button>
+      
       <Button onClick={()=>{if(page !== max)handleChangePlus()}} style={{
-        visibility: testi !== max
+        visibility: exportPage !== max
         ? "visible"
         : "hidden",
         backgroundColor:'#40B7D7',
@@ -102,9 +102,10 @@ const QueryContent = (props : any) => {
         </Stack>
       </Button>
       </Stack>
+      <Typography sx={{marginBottom: 1}}>{page} / {max}</Typography>
       </>
   )
 }
 
 export default QueryContent
-export {testi}
+export {exportPage}

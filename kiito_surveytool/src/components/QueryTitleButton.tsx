@@ -4,7 +4,7 @@ import {setTesti} from './QueryContent';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-let anime = -1
+let animation = -1
 function handleClick(e:any, props : any)
 {
   e.preventDefault();
@@ -15,7 +15,7 @@ function handleClick(e:any, props : any)
 export function QueryTitleButton(props:any){
 
 const { data } = props
-anime = props.valittu
+animation = props.valittu
 return (
     <div style={{
         width:"70%",
@@ -60,7 +60,7 @@ return (
     width: '190px',
     boxShadow: '0px 2px 10px grey'
     
-  }} className='asd'>
+  }}>
     
       <Typography>
         {data[props.sivu].sivu}
@@ -93,4 +93,4 @@ return (
   </div>
 );
 }
-export {anime}
+export {animation}

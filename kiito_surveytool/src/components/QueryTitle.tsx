@@ -1,6 +1,6 @@
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import { testi } from './QueryContent';
+import { exportPage } from './QueryContent';
 import Typography from '@mui/material/Typography';
 
 export function QueryTitle(props : any){
@@ -20,8 +20,8 @@ export function QueryTitle(props : any){
   }
 
 
-  const Title : string = title[testi]
-  const subTitle : string = sub[testi]
+  const Title : string = title[exportPage]
+  const subTitle : string = sub[exportPage]
 
 
   return(<Paper

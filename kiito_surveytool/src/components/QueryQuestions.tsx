@@ -3,7 +3,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
-import { testi } from './QueryContent';
+import { exportPage } from './QueryContent';
 import { retAns, ansSetter } from './Content';
 
 export default function QueryQuestions(props : any) {
@@ -18,7 +18,7 @@ export default function QueryQuestions(props : any) {
   function handleChange(e: any, index: number) {
     const newVal = parseInt(e.target.value)
     const updatedAns = [...retAns]
-    updatedAns[sivu][testi - 1][index] = newVal
+    updatedAns[sivu][exportPage - 1][index] = newVal
     ansSetter(updatedAns)
  }
 
@@ -35,17 +35,17 @@ export default function QueryQuestions(props : any) {
 
   return (
     <>
-    {ques[testi-1].map((x, index) =>
-    <div key={index} style={{display: "flex", width: "70%",  fontFamily: "arial"}}>
+    {ques[exportPage-1].map((x, index) =>
+    <div key={index} style={{display: "flex", width: "90%",  fontFamily: "arial"}}>
     <FormControl sx={{flexDirection: 'row', margin: 7, marginBottom: 3, marginTop: 2, }}>
       <FormLabel sx={{width:'60%', minWidth: 250}} >{x}</FormLabel>
       <RadioGroup
         row
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group"
-        value={retAns[sivu][testi-1][index]}
+        value={retAns[sivu][exportPage-1][index]}
         onChange={(e) => handleChange(e, index)}
-        sx={{marginLeft: 4, flex: 'none'}}
+        sx={{marginLeft: 4, flex: 'none', gap: 0.1}}
       >
         <FormControlLabel value="1" control={<Radio />} label="1" labelPlacement='bottom' />
         <FormControlLabel value="2" control={<Radio />} label="2" labelPlacement='bottom' />

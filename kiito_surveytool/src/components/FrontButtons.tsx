@@ -1,7 +1,7 @@
 import { Box, Button, ButtonGroup, Slide, Stack, Typography} from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { FrontInput } from '.';
-import { anime } from './QueryTitleButton';
+import { animation } from './QueryTitleButton';
 
 export function handleClick(e:any, props : any, data : any, sivu : any)
 {
@@ -10,8 +10,8 @@ export function handleClick(e:any, props : any, data : any, sivu : any)
 }
 
 
-function funktio(perkele:any, index:any){
-  if(index === perkele){
+function funktio(j:any, index:any){
+  if(index === j){
     return true
   }
   else return false
@@ -54,7 +54,7 @@ function FrontButtons(props : any) {
   <ButtonGroup orientation="vertical" sx={{gap:3}}>
     {data.map((sivu : any) =>(
 
-      <Slide in appear={funktio(anime, data.indexOf(sivu))} timeout={400} key={data.indexOf(sivu)}>
+      <Slide in appear={funktio(animation, data.indexOf(sivu))} timeout={400} key={data.indexOf(sivu)}>
       <Button variant="contained"
       className="question-btn"
       sx={{
