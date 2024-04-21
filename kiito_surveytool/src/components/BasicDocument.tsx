@@ -50,7 +50,7 @@ import {
     return (
       <PDFViewer style={styles.viewer}>
         {/* Start of the document*/}
-        <Document>
+        <Document >
           {/*render a single page*/}
           <Page wrap = {false} size="A4" style={styles.page}>
 
@@ -114,7 +114,8 @@ import {
         height: window.innerHeight,
         position: "absolute",
         top: 0,
-        left: -230,
+        left: 0,
+        zIndex:1
       },
       section: {
         display: "flex",

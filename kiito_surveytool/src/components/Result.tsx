@@ -1,4 +1,5 @@
 import React,{useRef, useState} from 'react';
+import {createPortal} from 'react-dom';
 // import html2canvas from 'html2canvas'
 import { toPng } from 'html-to-image';
 
@@ -63,7 +64,7 @@ export function Result({sivu, data, ...props}:TulosProbs){
       Promise.all(imagePromises).then((values:any) => {
 
         //add PDF document creation here
-        setPDFContent(
+        setPDFContent(createPortal(
           <BasicDocument
             sivu = {sivu}
             data = {data}
@@ -71,7 +72,9 @@ export function Result({sivu, data, ...props}:TulosProbs){
             yname={props.yname}
             kuvat= {values}
             date={props.date}
-          />
+          />,
+          root
+        )
           )
         //test for getting rigth images
         // values.map((value:any)=>{
@@ -87,7 +90,7 @@ export function Result({sivu, data, ...props}:TulosProbs){
 
 
   return(
-  <div style={{width:"100%", marginTop:'30px'}}>
+  <div style={{width:"100%", marginTop:'30px', zIndex:1}}>
     <ResultReturnButton teksti={PaluuButtonTeksti} setValittu={props.setValittu}/>
     <ResultTitle otsikko={otsikko} alaOtsikko={alaotsikko} createPDF={createPDF}/>
     <ResultTabs tabTekstit={tabTekstit} data={data[sivu]} answers={props.answers[sivu]} sivu={sivu} tableRef={resultTableRef} graphRef={resultGraphRef} setValittu={props.setValittu}/>
