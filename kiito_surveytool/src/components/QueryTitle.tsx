@@ -34,7 +34,7 @@ export function QueryTitle(props : any){
       boxShadow:5
     }}
     >
-    <Grid container justifyContent="flex-end" >
+    <Grid container justifyContent="flex-end">
       <Grid item sx={{margin:"auto"}} >
         <Grid item>
           <Typography sx={{textAlign:"center", fontWeight:"bold"}} variant="h5">{Title}</Typography>
