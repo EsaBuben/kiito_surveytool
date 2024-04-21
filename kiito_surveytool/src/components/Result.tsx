@@ -38,24 +38,45 @@ export function Result({sivu, data, ...props}:TulosProbs){
 
   const resultTableRef = useRef()
   const resultGraphRef = useRef()
+  const resultHiddenTableRef = useRef()
+  const resultHiddenGraphRef = useRef()
 
+  const ResultRefs:React.MutableRefObject<any>[][] = [
+    [resultGraphRef,resultTableRef],
+    [resultHiddenGraphRef,resultHiddenTableRef]
+  ]
+
+  const [value, setValue] = useState<number>(0)
   const [PDFContent,setPDFContent] = useState(<span></span>)
 
   const createPDF = () => {
 
     // refs for getting img with  html-to-image toPng function
-    console.log(resultTableRef.current)
-    console.log(resultGraphRef.current)
+    console.log(ResultRefs[0][0].current)
+    console.log(ResultRefs[0][1].current)
+    console.log(ResultRefs[1][0].current)
+    console.log(ResultRefs[1][1].current)
+
+    let resultgraph:any;
+    let resulttable:any;
+
+    if(value == 0) {
+      resultgraph = ResultRefs[0][0].current
+      resulttable = ResultRefs[0][1].current
+    }else{
+      resultgraph = ResultRefs[1][0].current
+      resulttable = ResultRefs[1][1].current
+    }
 
     let imagePromises:Promise<string | void>[] = []
-    if(resultGraphRef.current  != null && resultTableRef.current != null){
+    if(resultgraph  != null && resulttable != null){
 
-      imagePromises[0] = toPng(resultGraphRef.current["canvas"], { cacheBust: false })
+      imagePromises[0] = toPng(resultgraph["canvas"], { cacheBust: false })
       .catch((err) => {
         console.log(err);
       });
 
-      imagePromises[1] = toPng(resultTableRef.current, { cacheBust: false })
+      imagePromises[1] = toPng(resulttable, { cacheBust: false })
       .catch((err) => {
           console.log(err);
       });
@@ -93,7 +114,12 @@ export function Result({sivu, data, ...props}:TulosProbs){
   <div style={{width:"100%", marginTop:'30px', zIndex:1}}>
     <ResultReturnButton teksti={PaluuButtonTeksti} setValittu={props.setValittu}/>
     <ResultTitle otsikko={otsikko} alaOtsikko={alaotsikko} createPDF={createPDF}/>
-    <ResultTabs tabTekstit={tabTekstit} data={data[sivu]} answers={props.answers[sivu]} sivu={sivu} tableRef={resultTableRef} graphRef={resultGraphRef} setValittu={props.setValittu}/>
+    <ResultTabs
+    setValue={setValue} value={value}
+    tabTekstit={tabTekstit} data={data[sivu]}
+    answers={props.answers[sivu]} sivu={sivu}
+    setValittu={props.setValittu}
+    ResultRefs={ResultRefs} />
     {PDFContent}
   </div>);
 

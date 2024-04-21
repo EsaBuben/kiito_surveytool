@@ -33,21 +33,25 @@ function TabPage(props: TabProps) {
 type TabProbs = {
   tabTekstit:string[];
   sivu:number;
+  value:number;
   data:{
     sivu:string,
     tulosotsikko:string,
     kategoriat:[]
   };
   answers:number[][];
-  tableRef:React.MutableRefObject<undefined>;
-  graphRef:React.MutableRefObject<undefined>;
+  ResultRefs:React.MutableRefObject<any>[][];
   setValittu:React.Dispatch<React.SetStateAction<number>>;
+  setValue:React.Dispatch<React.SetStateAction<number>>;
 }
 
 export function ResultTabs({sivu, answers, ...props}:TabProbs){
-  const [value, setValue] = useState<number>(0)
+  // const [value, setValue] = useState<number>(0)
+  let value = props.value
+  let setValue = props.setValue
   const [hiddenContent, setHiddenContent] = useState(<span></span>)
 
+  const ResultRefs = props.ResultRefs
   const radio_values:number[] = answers.map((values:any)=>{
       let sum:number = 0
       let amount:number = values.length
@@ -71,17 +75,17 @@ export function ResultTabs({sivu, answers, ...props}:TabProbs){
    }
  }
 
-function ResultGraph_element() {
+function ResultGraph_element(ref:React.MutableRefObject<any>) {
   return<ResultGraph
-  resultRef={props.graphRef}
+  resultRef={ref}
   data_array={data_array}
   radio_values={radio_values}
   sivu={sivu}
   setValittu={props.setValittu}/>}
 
-function ResultTable_element(){
+function ResultTable_element(ref:React.MutableRefObject<any>){
 return <ResultTable
-    resultRef={props.tableRef}
+    resultRef={ref}
     data_array={data_array}
     radio_values={radio_values}
     sivu={sivu}
@@ -89,10 +93,10 @@ return <ResultTable
 }
 useEffect(()=>{
   if(value == 0){
-      setHiddenContent(ResultTable_element())
+      setHiddenContent(ResultTable_element(ResultRefs[0][1]))
   }
   if(value == 1){
-      setHiddenContent(ResultGraph_element())
+      setHiddenContent(ResultGraph_element(ResultRefs[1][0]))
   }
 },[value])
 
@@ -112,10 +116,10 @@ useEffect(()=>{
         <Tab style={{color: value == 1 ? COLORS.primary : 'black'}} label={props.tabTekstit[1]} />
       </Tabs>
       <TabPage value={value} index={0}>
-        {ResultGraph_element()}
+        {ResultGraph_element(ResultRefs[0][0])}
       </TabPage>
       <TabPage value={value} index={1}>
-        {ResultTable_element()}
+        {ResultTable_element(ResultRefs[1][1])}
       </TabPage>
       <div style={{backgroundColor:"white", zIndex:2, display:'flex'}}>
         <div style={{zIndex:-10}}>
