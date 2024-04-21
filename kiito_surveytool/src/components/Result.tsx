@@ -35,7 +35,7 @@ export function Result({sivu, data, ...props}:TulosProbs){
 
   let PaluuButtonTeksti:string = props.localData.napit.tulosPalaa;
   let tabTekstit:string[] = [props.localData.napit.tulosKaavioTab, props.localData.napit.tulosTaulukkoTab]
-
+  let PDFbutton:string = props.localData.napit.tulosPDF;
   const resultTableRef = useRef()
   const resultGraphRef = useRef()
   const resultHiddenTableRef = useRef()
@@ -113,7 +113,7 @@ export function Result({sivu, data, ...props}:TulosProbs){
   return(
   <div style={{width:"100%", marginTop:'30px', zIndex:1}}>
     <ResultReturnButton teksti={PaluuButtonTeksti} setValittu={props.setValittu}/>
-    <ResultTitle otsikko={otsikko} alaOtsikko={alaotsikko} createPDF={createPDF}/>
+    <ResultTitle otsikko={otsikko} alaOtsikko={alaotsikko} PDFbutton={PDFbutton} createPDF={createPDF}/>
     <ResultTabs
     setValue={setValue} value={value}
     tabTekstit={tabTekstit} data={data[sivu]}
