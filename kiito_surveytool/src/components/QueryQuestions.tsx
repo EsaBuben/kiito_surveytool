@@ -37,7 +37,7 @@ export default function QueryQuestions(props : any) {
     <>
     {ques[exportPage-1].map((x, index) =>
     <div key={index} style={{display: "flex", width: "90%",  fontFamily: "arial"}}>
-    <FormControl sx={{flexDirection: 'row', margin: 7, marginBottom: 3, marginTop: 2, }}>
+    <FormControl fullWidth sx={{flexDirection: 'row', margin: 7, marginBottom: 3, marginTop: 2}}>
       <FormLabel sx={{width:'60%', minWidth: 250}} >{x}</FormLabel>
       <RadioGroup
         row
