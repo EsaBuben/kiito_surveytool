@@ -50,9 +50,8 @@ export function Result({sivu, data, ...props}:TulosProbs){
 
   const [value, setValue] = useState<number>(0)
   const [PDFContent,setPDFContent] = useState(<span></span>)
-
   const createPDF = () => {
-
+    const root = document.getElementById('root');
     // refs for getting img with  html-to-image toPng function
     console.log(ResultRefs[0][0].current)
     console.log(ResultRefs[0][1].current)
@@ -79,7 +78,7 @@ export function Result({sivu, data, ...props}:TulosProbs){
       Promise.all(imagePromises).then((values:any) => {
 
         //add PDF document creation here
-        //can change to document.body if this irratates
+        if(root != null){
         setPDFContent(createPortal(
           <BasicDocument
             sivu = {sivu}
@@ -90,8 +89,8 @@ export function Result({sivu, data, ...props}:TulosProbs){
             date={props.date}
           />,
           root
-        )
-          )
+        ))
+        }
         //test for getting rigth images
         // values.map((value:any)=>{
         //   const link = document.createElement("a");
