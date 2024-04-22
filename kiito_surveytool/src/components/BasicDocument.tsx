@@ -46,9 +46,11 @@ import {
 
   }
 
+
   let otsikko : string[] = ["Raportti", "Kysymykset ja vastaukset"]
     return (
-      <PDFViewer style={styles.viewer}>
+      
+      <PDFViewer style={styles.viewer} showToolbar = {true}>
         {/* Start of the document*/}
         <Document >
           {/*render a single page*/}
@@ -59,8 +61,13 @@ import {
               <Text>{paivamaara}</Text>
               <Text>{yname}</Text>
               <Image style={styles.headerLogo} src={'/KiitoLogo.png'}/>
+              </View>
+            <View fixed style={styles.footer}>
+              <Text style={styles.pagenum} render={({ pageNumber, totalPages }) => (
+              `${pageNumber} / ${totalPages}`
+              )} fixed />
             </View>
-
+    
             {/*render the images*/}
             <View style={styles.section}>
             <Text style={styles.otsikkoA}>{otsikko[0]}</Text>
@@ -77,6 +84,12 @@ import {
               <Text>{yname}</Text>
               <Image style={styles.headerLogo} src={'/KiitoLogo.png'}/>
             </View>
+            <View fixed style={styles.footer}>
+              <Text style={styles.pagenum} render={({ pageNumber, totalPages }) => (
+              `${pageNumber} / ${totalPages}`
+              )} fixed />
+            </View>
+
 
             {/*render the questions and answers*/}
 
@@ -88,6 +101,7 @@ import {
 
         </Document>
       </PDFViewer>
+      
     );
   }
     // Create styles
@@ -97,10 +111,19 @@ import {
         color: "black",
       },
       header: {
-        margin: 10,
-        padding: 10,
+        margin: 5,
+        padding: 5,
         fontSize: 12,
         paddingBottom: 10,
+      },
+      footer: {
+        position: "absolute",
+        bottom: 15,
+        right: 15,
+      },
+      pagenum: {
+        fontSize: 12,
+
       },
       headerLogo: {
         width: 135,
@@ -110,11 +133,11 @@ import {
         right: 20,
       },
       viewer: {
-        width: window.innerWidth, //the pdf viewer will take up all of the width and height
-        height: window.innerHeight,
+        width: "60%", //the pdf viewer will take up all of the width and height
+        height: "98%",
         position: "absolute",
-        top: 0,
-        left: 0,
+        top: 350,
+        left: 350,
         zIndex:1
       },
       section: {
@@ -144,7 +167,7 @@ import {
       },
       otsikkoA: {
         top:0,
-        paddingBottom: 3,
+        paddingBottom: 5,
         fontSize: 24,
         textAlign: "center",
 
@@ -155,13 +178,14 @@ import {
         fontSize: 24,
         textAlign: "center",
         textDecoration: "underline",
+        position: "relative",
       },
       kategoriaOtsikko:{
         position: "relative",
         paddingBottom: 5,
         fontSize: 18,
         textAlign: "center",
-        width: "50%",
+        width: "45%",
       },
       alaOtsikko:{
         padding: 10,
@@ -174,11 +198,12 @@ import {
       imageGraph: {
         width: 600,
         height: 250,
-        paddingBottom: 25,
+        margin:15,
       },
       imageTable:{
         width: 600,
         height: 250,
+        margin:25,
       },
 
       kysymykset:{
