@@ -1,6 +1,5 @@
 import React,{useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
-// import html2canvas from 'html2canvas'
 import { toPng } from 'html-to-image';
 
 import {ResultTabs} from './ResultTabs';
@@ -21,7 +20,9 @@ type TulosProbs = {
     napit:{
       tulosPalaa:string,
       tulosKaavioTab:string,
-      tulosTaulukkoTab:string}
+      tulosTaulukkoTab:string,
+      tulosPDF:string
+    }
   };
   answers:number[][][];
   yname:string;
@@ -36,6 +37,7 @@ export function Result({sivu, data, ...props}:TulosProbs){
   let PaluuButtonTeksti:string = props.localData.napit.tulosPalaa;
   let tabTekstit:string[] = [props.localData.napit.tulosKaavioTab, props.localData.napit.tulosTaulukkoTab]
   let PDFbutton:string = props.localData.napit.tulosPDF;
+
   const resultTableRef = useRef()
   const resultGraphRef = useRef()
   const resultHiddenTableRef = useRef()
@@ -57,16 +59,8 @@ export function Result({sivu, data, ...props}:TulosProbs){
     console.log(ResultRefs[1][0].current)
     console.log(ResultRefs[1][1].current)
 
-    let resultgraph:any;
-    let resulttable:any;
-
-    if(value == 0) {
-      resultgraph = ResultRefs[0][0].current
-      resulttable = ResultRefs[0][1].current
-    }else{
-      resultgraph = ResultRefs[1][0].current
-      resulttable = ResultRefs[1][1].current
-    }
+    let resultgraph:any = ResultRefs[value][0].current
+    let resulttable:any = ResultRefs[value][1].current
 
     let imagePromises:Promise<string | void>[] = []
     if(resultgraph  != null && resulttable != null){
@@ -85,6 +79,7 @@ export function Result({sivu, data, ...props}:TulosProbs){
       Promise.all(imagePromises).then((values:any) => {
 
         //add PDF document creation here
+        //can change to document.body if this irratates
         setPDFContent(createPortal(
           <BasicDocument
             sivu = {sivu}
@@ -114,6 +109,7 @@ export function Result({sivu, data, ...props}:TulosProbs){
   <div style={{width:"100%", marginTop:'30px', zIndex:1}}>
     <ResultReturnButton teksti={PaluuButtonTeksti} setValittu={props.setValittu}/>
     <ResultTitle otsikko={otsikko} alaOtsikko={alaotsikko} PDFbutton={PDFbutton} createPDF={createPDF}/>
+
     <ResultTabs
     setValue={setValue} value={value}
     tabTekstit={tabTekstit} data={data[sivu]}

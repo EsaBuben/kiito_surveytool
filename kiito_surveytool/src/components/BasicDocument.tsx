@@ -7,6 +7,7 @@ import {
     StyleSheet,
     PDFViewer,
   } from "@react-pdf/renderer";
+  // import { CircularProgress } from '@mui/material';
   import {COLORS} from "../utils/style_constants";
 
 
@@ -19,6 +20,15 @@ import {
     let answers = props.answers;
     let sivu = props.sivu;
     let kuvat = props.kuvat
+
+    // <CircularProgress sx={{
+    // position:'relative',
+    // zIndex:2,
+    // left:"50%",
+    // margin:'auto',
+    // display:"inline-block",
+    // isolation:"isolate"
+    // }}/>
 
     console.log(answers)
     function QuesAnsw(data:any, answers:any, sivu:number) {
