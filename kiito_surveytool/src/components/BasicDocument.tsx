@@ -7,7 +7,8 @@ import {
     StyleSheet,
     PDFViewer,
   } from "@react-pdf/renderer";
-  // import { CircularProgress } from '@mui/material';
+  import {useState} from 'react';
+  import { CircularProgress } from '@mui/material';
   import {COLORS} from "../utils/style_constants";
 
 
@@ -21,16 +22,16 @@ import {
     let sivu = props.sivu;
     let kuvat = props.kuvat
 
-    // <CircularProgress sx={{
-    // position:'relative',
-    // zIndex:2,
-    // left:"50%",
-    // margin:'auto',
-    // display:"inline-block",
-    // isolation:"isolate"
-    // }}/>
+    const [loading,setLoader] = useState<JSX.Element | null>(  <CircularProgress sx={{
+      position:'relative',
+      zIndex:2,
+      left:"50%",
+      margin:'auto',
+      display:"inline-block",
+      isolation:"isolate"
+      }}/>)
 
-    console.log(answers)
+
     function QuesAnsw(data:any, answers:any, sivu:number) {
     let answerCounter:number = 0;
 
@@ -59,10 +60,11 @@ import {
 
   let otsikko : string[] = ["Raportti", "Kysymykset ja vastaukset"]
     return (
-      
+      <>
+      {loading}
       <PDFViewer style={styles.viewer} showToolbar = {true}>
         {/* Start of the document*/}
-        <Document >
+        <Document onRender={() =>setLoader(null)} >
           {/*render a single page*/}
           <Page wrap = {false} size="A4" style={styles.page}>
 
@@ -77,7 +79,7 @@ import {
               `${pageNumber} / ${totalPages}`
               )} fixed />
             </View>
-    
+
             {/*render the images*/}
             <View style={styles.section}>
             <Text style={styles.otsikkoA}>{otsikko[0]}</Text>
@@ -111,7 +113,7 @@ import {
 
         </Document>
       </PDFViewer>
-      
+      </>
     );
   }
     // Create styles
@@ -119,6 +121,7 @@ import {
       page: {
         backgroundColor: "white",
         color: "black",
+
       },
       header: {
         margin: 5,
@@ -162,6 +165,7 @@ import {
         alignItems: "center",
         margin: 10,
         textAlign: "left",
+
       },
       sectionC:{
         display: "flex",

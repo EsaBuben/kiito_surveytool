@@ -50,7 +50,14 @@ export function Result({sivu, data, ...props}:TulosProbs){
 
   const [value, setValue] = useState<number>(0)
   const [PDFContent,setPDFContent] = useState(<span></span>)
+
+
   const createPDF = () => {
+    //example of closing PDF
+    if(PDFContent.type !== "span"){
+      setPDFContent(<span></span>)
+      return;
+    }
     const root = document.getElementById('root');
     // refs for getting img with  html-to-image toPng function
     console.log(ResultRefs[0][0].current)
