@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import DownloadIcon from '@mui/icons-material/Download';
 import Tooltip from '@mui/material/Tooltip';
 import {COLORS} from '../utils/style_constants'
+import { IconButton } from '@mui/material';
 
 export function ResultTitle(props:any){
 
@@ -21,18 +22,20 @@ export function ResultTitle(props:any){
       margin:"auto"
     }}
     >
-    <Grid container justifyContent="flex-end" >
-      <Grid item sx={{margin:"auto", marginRight: 22}} >
-        <Grid item>
+    <Grid container justifyContent="center" spacing={1} columns={3} p={1} ml={3}>
+      <Grid item xs={2} >
+        <Grid item xs={'auto'}>
           <Typography sx={{textAlign:"center", fontWeight:"bold"}} variant="h5">{Title}</Typography>
         </Grid>
-        <Grid item>
+        <Grid item xs={'auto'}>
           <Typography sx={{textAlign:"center", fontWeight:"bold"}} variant="subtitle1">{subTitle}</Typography>
         </Grid>
       </Grid>
-      <Grid item onClick={props.createPDF} style={{cursor:"pointer"}}>
+      <Grid item onClick={props.createPDF} style={{cursor:"pointer"}} xs={'auto'}>
         <Tooltip title={hoverText} placement="top" arrow>
-        <DownloadIcon sx={{width:"50px", height:"50px",paddingRight:"30px"}}/>
+        <IconButton >
+        <DownloadIcon sx={{ fontSize: 65, color:"white"}}/>
+        </IconButton>
       </Tooltip>
       </Grid>
     </Grid>
