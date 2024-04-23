@@ -63,7 +63,6 @@ const QueryContent = (props : any) => {
         ? "visible"
         : "hidden",
         backgroundColor:'#40B7D7',
-        //opacity:.5,
         border:"none",
         padding: "10px",
         color: "white",
@@ -85,7 +84,6 @@ const QueryContent = (props : any) => {
         ? "visible"
         : "hidden",
         backgroundColor:'#40B7D7',
-        //opacity:.5,
         border:"none",
         padding: "10px",
         color: "white",

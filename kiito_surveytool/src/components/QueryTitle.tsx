@@ -5,7 +5,6 @@ import Typography from '@mui/material/Typography';
 
 export function QueryTitle(props : any){
   const {data, sivu} = props;
-  //sit vaa kattelee jiisonnista mikä on tää title ja subtitteli
 
   let title : string[] = ['sivu0']
   let sub : string[] = ['sub0']

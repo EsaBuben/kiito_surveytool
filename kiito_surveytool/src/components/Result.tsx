@@ -60,11 +60,6 @@ export function Result({sivu, data, ...props}:TulosProbs){
     }
     const root = document.getElementById('root');
     // refs for getting img with  html-to-image toPng function
-    console.log(ResultRefs[0][0].current)
-    console.log(ResultRefs[0][1].current)
-    console.log(ResultRefs[1][0].current)
-    console.log(ResultRefs[1][1].current)
-
     let resultgraph:any = ResultRefs[value][0].current
     let resulttable:any = ResultRefs[value][1].current
 
@@ -98,13 +93,6 @@ export function Result({sivu, data, ...props}:TulosProbs){
           root
         ))
         }
-        //test for getting rigth images
-        // values.map((value:any)=>{
-        //   const link = document.createElement("a");
-        //   link.download = "my-image-name.png";
-        //   link.href = value;
-        //   link.click();
-        // })
       })
     }
 

@@ -46,7 +46,6 @@ type TabProbs = {
 }
 
 export function ResultTabs({sivu, answers, ...props}:TabProbs){
-  // const [value, setValue] = useState<number>(0)
   let value = props.value
   let setValue = props.setValue
   const [hiddenContent, setHiddenContent] = useState(<span></span>)

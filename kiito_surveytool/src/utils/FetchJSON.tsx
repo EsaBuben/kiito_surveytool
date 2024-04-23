@@ -69,7 +69,7 @@ function Spinner( props : any )
 	{
 		case "init": ret = <CircularProgress key="spin" />; break;
 		case "etusivu": ret = <Frontpage data={data} localData={localData} setupArr={setup_array}/>; break;
-		default: ret = <div key="err">Ei saatu konffista ny... kato konsolia...</div>;
+		default: ret = <div key="err">Error loading the page</div>;
 	}
 	return ret;
 }

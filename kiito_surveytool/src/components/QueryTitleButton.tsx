@@ -26,7 +26,6 @@ return (
     <Button variant='contained'
       sx={{
         backgroundColor:'#40B7D7',
-        //opacity:.5,
         border:"none",
         padding: "10px",
         color: "white",
@@ -50,7 +49,6 @@ return (
 
   <div style={{margin: 'auto',
     backgroundColor:'#40B7D7',
-    //opacity:.5,
     border:"none",
     padding: "10px",
     color: "white",
@@ -71,7 +69,6 @@ return (
 
   <Button variant='contained' onClick={()=>{props.setValittu((props.sivu + 2)*-1)}} sx={{
         backgroundColor:'#40B7D7',
-        //opacity:.5,
         border:"none",
         padding: "10px",
         color: "white",

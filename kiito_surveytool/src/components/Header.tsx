@@ -17,7 +17,6 @@ const Header = (props : any) => {
   sx={{
       position: 'relative',
       display: 'flex',
-      //width: '100%',
       padding: '30px 0px 30px 0px',
       backgroundColor: 'rgba(255,255,255,1)',
       borderRadius: '0 0 100px 100px',
