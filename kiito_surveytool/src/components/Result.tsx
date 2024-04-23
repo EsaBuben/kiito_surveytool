@@ -18,7 +18,7 @@ type TulosProbs = {
   localData:{
     tulosotsikko:string
     napit:{
-      tulosPalaa:string,
+      paluuEtusivulle:string,
       tulosKaavioTab:string,
       tulosTaulukkoTab:string,
       tulosPDF:string
@@ -34,7 +34,7 @@ export function Result({sivu, data, ...props}:TulosProbs){
   let otsikko:string = data[sivu].tulosotsikko;
   let alaotsikko:string = data[sivu].sivu;
 
-  let PaluuButtonTeksti:string = props.localData.napit.tulosPalaa;
+  let PaluuButtonTeksti:string = props.localData.napit.paluuEtusivulle;
   let tabTekstit:string[] = [props.localData.napit.tulosKaavioTab, props.localData.napit.tulosTaulukkoTab]
   let PDFbutton:string = props.localData.napit.tulosPDF;
 
@@ -89,6 +89,9 @@ export function Result({sivu, data, ...props}:TulosProbs){
             yname={props.yname}
             kuvat= {values}
             date={props.date}
+            localData={props.localData}
+            setValittu={props.setValittu}
+            setPDFContent={setPDFContent}
           />,
           root
         ))
@@ -101,7 +104,7 @@ export function Result({sivu, data, ...props}:TulosProbs){
 
   return(
   <div style={{width:"100%", marginTop:'30px', zIndex:1}}>
-    <ResultReturnButton teksti={PaluuButtonTeksti} setValittu={props.setValittu}/>
+    <ResultReturnButton innerText={PaluuButtonTeksti} setValittu={props.setValittu}/>
     <ResultTitle otsikko={otsikko} alaOtsikko={alaotsikko} PDFbutton={PDFbutton} createPDF={createPDF}/>
 
     <ResultTabs

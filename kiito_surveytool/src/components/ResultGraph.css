@@ -1,6 +1,7 @@
 .radar_canvas{
+  display:flex;
   margin-top: 20px;
-  width: 100dvw;
+  width: 100dvh;
   height: 100dvh;
   max-width: 1280px;
   max-height: 50dvh;

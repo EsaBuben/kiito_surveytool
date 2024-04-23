@@ -8,9 +8,10 @@ import {
     PDFViewer,
   } from "@react-pdf/renderer";
   import {useState} from 'react';
-  import { CircularProgress } from '@mui/material';
+  import { CircularProgress} from '@mui/material';
   import {COLORS} from "../utils/style_constants";
 
+  import {PDFTitle} from "./PDFTitle";
 
 
 
@@ -21,6 +22,8 @@ import {
     let answers = props.answers;
     let sivu = props.sivu;
     let kuvat = props.kuvat
+
+    let return_button_text:string = props.localData.napit.paluuEtusivulle;
 
     const [loading,setLoader] = useState<JSX.Element | null>(  <CircularProgress sx={{
       position:'relative',
@@ -62,6 +65,12 @@ import {
     return (
       <>
       {loading}
+      <PDFTitle
+        title={"Test"}
+        return_button_text={return_button_text}
+        setValittu={props.setValittu}
+        setPDFContent={props.setPDFContent}
+      />
       <PDFViewer style={styles.viewer} showToolbar = {true}>
         {/* Start of the document*/}
         <Document onRender={() =>setLoader(null)} >
@@ -146,11 +155,11 @@ import {
         right: 20,
       },
       viewer: {
-        width: "98%", //the pdf viewer will take up all of the width and height
+        width: "99.9%", //the pdf viewer will take up all of the width and height
         height: "98%",
         position: "absolute",
-        top: "43%",
-        left: 15,
+        top: 30,
+        left: 0,
         zIndex:1
       },
       section: {

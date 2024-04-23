@@ -4,7 +4,12 @@ import {COLORS} from '../utils/style_constants';
 import { setTesti } from './QueryContent';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-export function ResultReturnButton(props:any){
+type Probs = {
+  innerText:string,
+  setValittu:React.Dispatch<React.SetStateAction<number>>,
+}
+
+export function ResultReturnButton(props:Probs){
 
 return (
   <Button variant='contained' sx={{
@@ -22,7 +27,7 @@ return (
     <Stack direction="row" spacing={1}>
       <ArrowBackIcon/>
       <Typography>
-        Etusivulle
+        {props.innerText}
       </Typography>
     </Stack>
   </Button>
