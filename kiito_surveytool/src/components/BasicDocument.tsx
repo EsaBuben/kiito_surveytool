@@ -149,7 +149,7 @@ import {
         width: "98%", //the pdf viewer will take up all of the width and height
         height: "98%",
         position: "absolute",
-        top: "34%",
+        top: "43%",
         left: 15,
         zIndex:1
       },
