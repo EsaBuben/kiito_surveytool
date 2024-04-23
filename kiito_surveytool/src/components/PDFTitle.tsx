@@ -43,7 +43,15 @@ return (<Paper sx={container_style}>
   <Typography style={{marginLeft:"-100px",marginTop:"0.2rem", color:"white"}}>
     {props.title}
   </Typography>
-    <CloseIcon  sx={{color:'white',float:"right",marginRight:"10px", marginTop:"0.2rem"}}/>
+    <CloseIcon onClick={()=>props.setPDFContent(<span></span>)} sx={{
+    color:'white',
+    float:"right",
+    marginRight:"10px",
+    marginTop:"0.2rem",
+    "&:hover":{
+      opacity:0.6
+    }
+  }}/>
   </Stack>
   </Paper>
 )
