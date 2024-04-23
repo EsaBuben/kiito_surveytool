@@ -7,21 +7,23 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 type Probs = {
   innerText:string,
   setValittu:React.Dispatch<React.SetStateAction<number>>,
+  style:any
 }
 
 export function ResultReturnButton(props:Probs){
-
 return (
   <Button variant='contained' sx={{
     background: COLORS.primary,
     border:"none",
     padding: "10px",
     color: 'white',
-    marginLeft: "10%",
-    marginBottom: "10px",
+    // marginLeft: "10%",
+    // marginBottom: "10px",
     boxShadow:5,
     borderRadius:2
     }}
+    style={props.style}
+
     onClick={() => {props.setValittu(-1); setTesti(1)}}
     >
     <Stack direction="row" spacing={1}>

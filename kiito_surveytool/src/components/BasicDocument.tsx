@@ -65,8 +65,9 @@ import {
     return (
       <>
       {loading}
+      <div style={{position:'absolute', top:0, left:0, width:'100%', height:'100%'}}>
       <PDFTitle
-        title={"Test"}
+        title={props.localData.PDFotsikko}
         return_button_text={return_button_text}
         setValittu={props.setValittu}
         setPDFContent={props.setPDFContent}
@@ -122,6 +123,7 @@ import {
 
         </Document>
       </PDFViewer>
+    </div>
       </>
     );
   }

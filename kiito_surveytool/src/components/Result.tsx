@@ -104,7 +104,10 @@ export function Result({sivu, data, ...props}:TulosProbs){
 
   return(
   <div style={{width:"100%", marginTop:'30px', zIndex:1}}>
-    <ResultReturnButton innerText={PaluuButtonTeksti} setValittu={props.setValittu}/>
+    <ResultReturnButton innerText={PaluuButtonTeksti} setValittu={props.setValittu}
+    style={{ marginLeft: "10%",
+     marginBottom: "10px",}}
+    />
     <ResultTitle otsikko={otsikko} alaOtsikko={alaotsikko} PDFbutton={PDFbutton} createPDF={createPDF}/>
 
     <ResultTabs
