@@ -37,7 +37,7 @@ function FrontButtons(props : any) {
 
   <FrontInput setName = {props.setName} name = {props.name} setDate={props.setDate} date={props.date} localData = {props.localData}/>
 
-  <Typography variant="h5" align="center" fontWeight='bold' width='300px' paddingBottom='50px'>
+  <Typography variant="h5" align="center" fontWeight='bold' width='300px' paddingBottom='30px'>
   {localData.aiheotsikko}
   </Typography >
   <Box
@@ -47,7 +47,7 @@ function FrontButtons(props : any) {
           m: 1,
         },
         marginLeft: '120px',
-        marginBottom: 10
+        marginBottom: 8
       }}
     >
 

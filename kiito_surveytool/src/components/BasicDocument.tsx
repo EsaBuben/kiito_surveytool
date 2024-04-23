@@ -48,10 +48,10 @@ import {
       temp.concat(kategoria.tasot.map(( taso: { kysymykset:any[]; alaotsikko: string; }) => {
         temp.push(<Text style={styles.alaOtsikko}>{taso.alaotsikko}</Text>)
         for(let i =0 ; i < taso.kysymykset.length; i++) {
-          temp.push(<View style={styles.sectionC}>)
-          temp.push(<Text style={styles.kysymykset}>{taso.kysymykset[i]}</Text>)
-          temp.push(<Text style={styles.vastaukset}>{answers[answerCounter][i].toString()}</Text>)
-          temp.push(</View>)
+          temp.push(<View style={styles.sectionC}>
+            <Text style={styles.kysymykset}>{taso.kysymykset[i]}</Text>
+            <Text style={styles.vastaukset}>{answers[answerCounter][i].toString()}</Text>
+            </View>)
        }
        answerCounter +=1
     }))

@@ -17,13 +17,13 @@ const Header = (props : any) => {
   sx={{
       position: 'relative',
       display: 'flex',
-      padding: '30px 0px 30px 0px',
+      padding: '20px 0px 20px 0px',
       backgroundColor: 'rgba(255,255,255,1)',
       borderRadius: '0 0 100px 100px',
       color: 'black',
       textAlign: 'center',
   }}>
-    <Typography variant="h5" color="black" padding='0px 30px 0px 30px' margin="auto" fontWeight="bold">
+    <Typography variant="h5" color="black" padding='0px 20px 0px 20px' margin="auto" fontWeight="bold">
     {data.paaotsikko}
     </Typography>
     <img style={{marginRight: 30}} hidden={width > 1500 ?true :false} src='/KiitoLogo.png' alt='kiitologo' height={50} width={150}></img>

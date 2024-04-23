@@ -5,7 +5,7 @@ const Frontpage = (props : any) => {
   const { data, setupArr } = props;
   return (
     <Stack
-    spacing={5}
+    spacing={2}
     sx={{
       height: {sm: '100vh', md: '100vh', lg: '70dvh'},
       width: {sm: '820px', md: 'auto', lg: 'auto'},

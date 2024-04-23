@@ -3,7 +3,7 @@ import HelpRoundedIcon from '@mui/icons-material/HelpRounded';
 import { useState } from 'react';
 
 export default function QueryInstruction(props : any) {
-    const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
     let kysymysotsikko = props.localData.kysymysotsikko;
 
   const handleMouseEnter = (event : any) => {
@@ -13,6 +13,11 @@ export default function QueryInstruction(props : any) {
   const handleMouseLeave = () => {
     setAnchorEl(null);
   };
+
+
+  const handleClick = (event : any) => {
+    setAnchorEl(anchorEl ? null : event.currentTarget);
+  }
 
 
   const open = Boolean(anchorEl);
@@ -30,9 +35,10 @@ export default function QueryInstruction(props : any) {
        }}
        >
       <h3>{kysymysotsikko}</h3>
-      <HelpRoundedIcon 
+      <HelpRoundedIcon
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        onClick={handleClick}
         style={{ cursor: "pointer", color: '#40B7D7', paddingLeft: '30px'}}
       />
 <Popper 

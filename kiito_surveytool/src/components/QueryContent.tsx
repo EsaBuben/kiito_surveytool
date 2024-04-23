@@ -58,7 +58,7 @@ const QueryContent = (props : any) => {
           position: 'relative',
           bottom: '2%',
         }}>
-        <Button onClick={()=>handleChangeMinus()} style={{
+        <Button variant='contained' onClick={()=>handleChangeMinus()} sx={{
         visibility: exportPage !== 1
         ? "visible"
         : "hidden",
@@ -79,7 +79,7 @@ const QueryContent = (props : any) => {
         </Stack>
       </Button>
       
-      <Button onClick={()=>{if(page !== max)handleChangePlus()}} style={{
+      <Button variant='contained' onClick={()=>{if(page !== max)handleChangePlus()}} sx={{
         visibility: exportPage !== max
         ? "visible"
         : "hidden",
