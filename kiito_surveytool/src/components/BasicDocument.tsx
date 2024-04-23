@@ -146,11 +146,11 @@ import {
         right: 20,
       },
       viewer: {
-        width: "60%", //the pdf viewer will take up all of the width and height
+        width: "98%", //the pdf viewer will take up all of the width and height
         height: "98%",
         position: "absolute",
-        top: 350,
-        left: 350,
+        top: "34%",
+        left: 15,
         zIndex:1
       },
       section: {
