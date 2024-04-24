@@ -23,6 +23,8 @@ import {
     let sivu = props.sivu;
     let kuvat = props.kuvat
 
+    const KiitoLogo_path:string= '/images/KiitoLogo.png';
+
     let return_button_text:string = props.localData.napit.paluuEtusivulle;
 
     const [loading,setLoader] = useState<JSX.Element | null>(  <CircularProgress sx={{
@@ -82,7 +84,7 @@ import {
             <View fixed style={styles.header}>
               <Text>{paivamaara}</Text>
               <Text>{yname}</Text>
-              <Image style={styles.headerLogo} src={'/KiitoLogo.png'}/>
+              <Image style={styles.headerLogo} src={KiitoLogo_path}/>
               </View>
             <View fixed style={styles.footer}>
               <Text style={styles.pagenum} render={({ pageNumber, totalPages }) => (
@@ -104,7 +106,7 @@ import {
             <View fixed style={styles.header}>
               <Text>{paivamaara}</Text>
               <Text>{yname}</Text>
-              <Image style={styles.headerLogo} src={'/KiitoLogo.png'}/>
+              <Image style={styles.headerLogo} src={KiitoLogo_path}/>
             </View>
             <View fixed style={styles.footer}>
               <Text style={styles.pagenum} render={({ pageNumber, totalPages }) => (

@@ -1,0 +1,77 @@
+{
+      "sivu": "Jakamisalustat\n",
+      "tulosotsikko":"Nykytilakartoitus kiertotalouden potentiaalista",
+      "kategoriat": [
+        {
+          "otsikko": "Materiaalien kestävä käyttö\n",
+          "tasot": [
+            {
+              "alaotsikko": "Materiaalien käyttö, kierrätys ja uudelleenkäyttö\n",
+              "kysymykset": [
+                "Käytettyjen ja ylijäämämateriaalien hyödyntäminen tuotteiden tai palveluiden suunnittelussa ja valmistuksessa käyttämällä esimerkiksi Materiaalitori.fi -palvelua.\n",
+                "Tuotannon sivuvirroista syntyvän materiaalidatan avaaminen uusiokäyttäjille.\n"
+              ]
+            }
+          ]
+        },
+        {
+          "otsikko": "Kapasiteetin ja resurssien tehokas hyödyntäminen\n",
+          "tasot": [
+            {
+              "alaotsikko": "Valmistuskapasiteetin käyttöaste\n",
+              "kysymykset": [
+                "Kysynnän tarkka ennakointi, kausivaihtelujen huomioiminen ja  varastotasojen optimointi osana kestävää resurssien hallintaa.\n",
+                "Vähäisessä käytössä olevien koneiden, laitteiden ja muiden resurssien jakaminen omalla tai ulkoisella jakamisalustalla.\n"
+              ]
+            },
+            {
+              "alaotsikko": "Koneiden ja laitteiden suorituskyky ja resurssien kulutus\n",
+              "kysymykset": [
+                "Koneiden ja laitteiden suorituskyvyn jatkuva seuranta ja mittaaminen niiden koko käyttöiän aikana.\n"
+              ]
+            }
+          ]
+
+        },
+        {
+          "otsikko": "Koneiden ja laitteiden elinkaaren pidentäminen\n",
+          "tasot": [
+            {
+              "alaotsikko": "Kestävä hankinta ja käyttö\n",
+              "kysymykset": [
+                "Koneiden ja laitteiden joustava käyttö valmistusprosessien erilaisiin tarpeisiin uusien hankintojen vähentämiseksi.\n"
+              ]
+            }
+          ]
+        },
+        {
+          "otsikko": "Tuotteiden ja materiaalien arvo\n",
+          "tasot": [
+            {
+              "alaotsikko": "Arvo- ja toimitusketjujen kehittäminen\n",
+              "kysymykset": [
+                "Arviointi toimittajien ja muiden sidosryhmien sitoutumista kestävän ja vastuullisen liiketoiminnan perusarvoihin ja periaatteisiin.\n"
+              ]
+            }
+          ]
+        },
+        {
+          "otsikko": "Asiakassuhteiden hyödyntäminen\n",
+          "tasot": [
+            {
+              "alaotsikko": "Tuoton kasvattaminen asiakaslähtöisyydellä\n",
+              "kysymykset": [
+                "Asiakkaiden haasteiden, toiveiden ja tarpeiden vieminen tuote- tai palvelusuunnitteluun tiiviissä vuorovaikutuksessa omien myyntitiimien kanssa.\n",
+                "Lisäpalveluiden asiakaslähtöinen kehittäminen tuotteen koko elinkaaren ajan liiketoiminnan ja ympäristön kestävyyden edistämiseksi (mm. tuotteen myynti palveluna, huolto- ja kierrätyspalvelut).\n"
+              ]
+            },
+            {
+              "alaotsikko": "Riskien hallinta\n",
+              "kysymykset": [
+                "Asiakkaiden välittämän tiedon ymmärtäminen ja sen hyödyntäminen toimintaympäristön trendien ja muutossignaalien osalta.\n"
+              ]
+            }
+          ]
+        }
+      ]
+    }

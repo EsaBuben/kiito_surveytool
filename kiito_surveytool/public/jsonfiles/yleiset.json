@@ -1,0 +1,31 @@
+{
+  "paaotsikko":"Nykytilakartoitus kiertotalouden potentiaalista ja kyvykkyyden kypsyystasosta osana uusien liiketoimintamallien suunnittelua\n",
+  "aiheotsikko":"Valitse kiertotalouden liiketoimintamalli\n",
+  "kysymysotsikko":"Kuinka arvioisit seuraavien toimintojen/kyvykkyyksien kypsyystason?",
+  "PDFotsikko":"PDF - viewer",
+  "tasot": ["Taso 5",
+   "Uudistuva toiminto - toimintoa arvioidaan ja kehitetään jatkuvasti täyttämään kiertotalouden lainsäädännön ja asetusten vaatimukset, standardit ja käytännöt",
+    "Taso 4",
+    "Ohjattu toiminto - toimintoa ohjataan suunnitelmallisesti yrityksen selkeiden kiertotalouden tavoitteiden mukaisesti",
+    "Taso 3",
+    "Vakiintunut toiminto - toimintoa suoritetaan osana yrityksen vakiintuneita kiertotaloutta edistäviä toimintatapoja ja prosesseja",
+    "Taso 2",
+    "Hallittu toiminto - toimintoa suoritetaan hallitusti ilman vakiintuneita kiertotaloutta edistäviä toimintatapoja ja prosesseja",
+    "Taso 1",
+    "Perustason toiminto - toimintoa suoritetaan epäjohdonmukaisesti ilman kiertotalouden ajattelua"],
+    "napit":{
+      "etusivuTulos":"Tulokset",
+      "kyselyTulos":"Tuloksiin",
+      "kyselyEtusivu":"Etusivulle",
+      "kyselyTakas":"Palaa",
+      "kyselyJatka":"Jatka",
+      "tulosEtusivu":"Etusivulle",
+      "paluuEtusivulle":"Etusivulle",
+      "tulosPDF":"tulosta PDF",
+      "tulosKaavioTab":"kaavio",
+      "tulosTaulukkoTab":"taulukko",
+      "yrityksenNimi":"Yrityksen nimi",
+      "paivamaara":"Päivämäärä",
+      "keskiarvo":"keskiarvo"
+    }
+  }

@@ -13,7 +13,7 @@ const Header = (props : any) => {
   }, []);
   return (
     <>
-    <Box 
+    <Box
   sx={{
       position: 'relative',
       display: 'flex',
@@ -26,10 +26,10 @@ const Header = (props : any) => {
     <Typography variant="h5" color="black" padding='0px 20px 0px 20px' margin="auto" fontWeight="bold">
     {data.paaotsikko}
     </Typography>
-    <img style={{marginRight: 30}} hidden={width > 1500 ?true :false} src='/KiitoLogo.png' alt='kiitologo' height={50} width={150}></img>
+    <img style={{marginRight: 30}} hidden={width > 1500 ?true :false} src='/images/KiitoLogo.png' alt='kiitologo' height={50} width={150}></img>
   </Box>
   <div hidden={width < 1501 ?true :false} style={{position: 'absolute', right: -250,height: 200, width: 200}}>
-  <img src='/KiitoLogoAlt.png' alt='kiitologoalt' height={75} width={175}></img>
+  <img src='/images/KiitoLogoAlt.png' alt='kiitologoalt' height={75} width={175}></img>
   </div>
   </>
   )

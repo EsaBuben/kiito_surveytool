@@ -35,7 +35,7 @@ const Content = (props:any) => {
     {valittu < -1 && <Result sivu={(valittu*-1) - 2} setValittu = {setValittu} data = {data}
      localData={props.localData} answers={ans} yname = {name} date = {date} />}
      <Box sx={{display: valittu === -1 ?'flex' :'none', alignSelf: 'center', margin: '0 !important'}} >
-      <img src={'/logo.jpg'} alt="logo" />
+      <img src={'/images/logo.jpg'} alt="logo" />
       </Box>
     </Stack>
 

@@ -13,11 +13,12 @@ function showError(e : any)
 	console.log(e);
 }
 
-function configureApp(datalist : any, localdata:any)
+function configureApp(datalist : any)
 {
 	//first 2 list positions for localization data, tasot
 	//const datalistdepth:number = 4
 	setup_array = []
+	localData = datalist.shift()
 	// value state management
 	datalist.map((o:any) =>{
 		setup_array.push(o.kategoriat.flatMap((o:any)=>{
@@ -31,7 +32,6 @@ function configureApp(datalist : any, localdata:any)
 
 	//console.log(localdata)
 	data = datalist;
-	localData = localdata
 	brancher("etusivu");
 }
 
@@ -40,21 +40,25 @@ function FetchJSON() {
 	if (data == null)
 	{
 		const config :string = "sisallys.json";
-		let localdata:any={}
 		fetch(config,
 			{ method : "GET", mode : "cors", credentials : "include" }).
 			then( r => r.json()
 			).then(
 				 config => {
-					 localdata = config
-					 	let jsonPromises =  config.kyselyt.map((path:any) => fetch(path,
+					 // localdata = config
+					 	let jsonPromises:any[] = []
+						jsonPromises.push(fetch(config.yleiset,
+								{ method : "GET", mode : "cors", credentials : "include" }).then(
+								r => r.json()
+							))
+					 	jsonPromises.push.apply(jsonPromises, config.kyselyt.map((path:any) => fetch(path,
 								{ method : "GET", mode : "cors", credentials : "include" }).then(
 								r => r.json()
 							)
-						)
+						))
 						return Promise.all(jsonPromises)
 				 }
-			).then(data => configureApp(data, localdata)).catch(e => showError(e))
+			).then(data => configureApp(data)).catch(e => showError(e))
 	}
 
 	return (<Spinner state="init"/>);
