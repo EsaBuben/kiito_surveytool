@@ -19,6 +19,7 @@ ChartJS.register(
 )
 
 type GraphProps ={
+  valueLabel:string;
   resultRef:React.MutableRefObject<undefined>;
   data_array :string[];
   radio_values :number[];
@@ -26,7 +27,7 @@ type GraphProps ={
   setValittu:React.Dispatch<React.SetStateAction<number>>;
 }
 
-export function ResultGraph({data_array ,...props}:GraphProps){
+export function ResultGraph({data_array , valueLabel, ...props}:GraphProps){
 
   let labels:string[][] = data_array.map(
     (text:string) => {
@@ -51,7 +52,7 @@ export function ResultGraph({data_array ,...props}:GraphProps){
   const data = {
     labels: labels, //tasot alaotsikkot
     datasets:[{
-      label:"keskiarvo",  //keskiarvo
+      label:valueLabel,  //keskiarvo
       data: props.radio_values, //arvot
     }]
   };

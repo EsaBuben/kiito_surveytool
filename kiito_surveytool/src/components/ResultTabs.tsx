@@ -32,6 +32,7 @@ function TabPage(props: TabProps) {
 
 type TabProbs = {
   tabTekstit:string[];
+  graphLabelText:string;
   sivu:number;
   value:number;
   data:{
@@ -45,7 +46,7 @@ type TabProbs = {
   setValue:React.Dispatch<React.SetStateAction<number>>;
 }
 
-export function ResultTabs({sivu, answers, ...props}:TabProbs){
+export function ResultTabs({sivu, answers,graphLabelText, ...props}:TabProbs){
   let value = props.value
   let setValue = props.setValue
   const [hiddenContent, setHiddenContent] = useState(<span></span>)
@@ -76,6 +77,7 @@ export function ResultTabs({sivu, answers, ...props}:TabProbs){
 
 function ResultGraph_element(ref:React.MutableRefObject<any>) {
   return<ResultGraph
+  valueLabel={graphLabelText}
   resultRef={ref}
   data_array={data_array}
   radio_values={radio_values}

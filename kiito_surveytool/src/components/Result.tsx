@@ -21,7 +21,8 @@ type TulosProbs = {
       paluuEtusivulle:string,
       tulosKaavioTab:string,
       tulosTaulukkoTab:string,
-      tulosPDF:string
+      tulosPDF:string,
+      keskiarvo:string
     }
   };
   answers:number[][][];
@@ -112,6 +113,7 @@ export function Result({sivu, data, ...props}:TulosProbs){
 
     <ResultTabs
     setValue={setValue} value={value}
+    graphLabelText={props.localData.napit.keskiarvo}
     tabTekstit={tabTekstit} data={data[sivu]}
     answers={props.answers[sivu]} sivu={sivu}
     setValittu={props.setValittu}
