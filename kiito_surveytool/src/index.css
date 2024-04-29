@@ -12,12 +12,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("src/assets/tausta.jpg");
+  background-image: url("/images/tausta.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
-  
+
 }
 
 
@@ -33,3 +33,7 @@ body {
   padding: 0;
 }
 
+#hidden_content {
+  z-index: -1;
+  display: inline;
+}

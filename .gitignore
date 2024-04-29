@@ -7,7 +7,7 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 .fuse_hidden*
-.npm_sk_script.sh
+.node.sh
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
@@ -145,4 +145,7 @@ node-v21.6.1-win-x64/npm.cmd
 node-v21.6.1-win-x64/npx
 node-v21.6.1-win-x64/npx.cmd
 node-v21.6.1-win-x64/README.md
+tools/nodeenv.cmd
+tools/nodeenv.cmd
+tools/nodeenv.cmd
 tools/nodeenv.cmd
