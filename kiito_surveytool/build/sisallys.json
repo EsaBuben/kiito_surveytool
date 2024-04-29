@@ -1,0 +1,11 @@
+{
+  "yleiset":"jsonfiles/yleiset.json",
+  "kyselyt":[
+    "jsonfiles/nykytila.json",
+    "jsonfiles/kiertävät.json",
+    "jsonfiles/tuote.json",
+    "jsonfiles/jakamis.json",
+    "jsonfiles/elinkaari.json",
+    "jsonfiles/resurssi.json"
+  ]
+}
