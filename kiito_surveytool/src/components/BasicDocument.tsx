@@ -29,7 +29,7 @@ import {
 
     const [loading,setLoader] = useState<JSX.Element | null>(  <CircularProgress sx={{
       position:'relative',
-      zIndex:2,
+      zIndex:3,
       left:"50%",
       margin:'auto',
       display:"inline-block",
@@ -67,7 +67,7 @@ import {
     return (
       <>
       {loading}
-      <div style={{position:'absolute', top:0, left:0, width:'100%', height:'100%'}}>
+      <div style={{position:'fixed', top:0, left:0, width:'100%', height:'100%', zIndex:2}}>
       <PDFTitle
         title={props.localData.PDFotsikko}
         return_button_text={return_button_text}
