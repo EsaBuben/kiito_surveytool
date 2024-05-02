@@ -13,6 +13,9 @@
     "Hallittu toiminto - toimintoa suoritetaan hallitusti ilman vakiintuneita kiertotaloutta edistäviä toimintatapoja ja prosesseja",
     "Taso 1",
     "Perustason toiminto - toimintoa suoritetaan epäjohdonmukaisesti ilman kiertotalouden ajattelua"],
+    "pdfOtsikot":[
+      "Raportti", "Kysymykset ja vastaukset"
+    ],
     "napit":{
       "etusivuTulos":"Tulokset",
       "kyselyTulos":"Tuloksiin",

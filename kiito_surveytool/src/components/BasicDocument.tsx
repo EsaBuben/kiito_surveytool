@@ -63,7 +63,7 @@ import {
   }
 
 
-  let otsikko : string[] = ["Raportti", "Kysymykset ja vastaukset"]
+  let otsikko : string[] = props.localData.pdfOtsikot;
     return (
       <>
       {loading}
